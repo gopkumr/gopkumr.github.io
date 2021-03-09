@@ -1,4 +1,4 @@
-baseURL = "https://gopkumr.gihub.io/"
+baseURL = "https://gopkumr.github.io/"
 languageCode = "en-au"
 title = "Beneath Abstraction"
 theme = "github-style"
@@ -16,7 +16,7 @@ pygmentsUseClasses = true
   instagram = "gopkumr"
   tumblr = ""
   email = "gopakumar.r@live.com"
-  url = "https://gopkumr.gihub.io/"
+  url = "https://gopkumr.github.io/"
   keywords = "blog, google analytics"
   rss = true
   lastmod = true
