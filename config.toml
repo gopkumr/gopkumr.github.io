@@ -24,5 +24,10 @@ pygmentsUseClasses = true
   location = "Australia"
   avatar = "https://avatars.githubusercontent.com/u/1662197?s=400&u=d1fd525c38f21c760b5f73d3046d9cdee3debcc3&v=4"
 
+ [[params.links]]
+    title = "dev.to"
+    href = "https://dev.to/gopkumr"
+    icon = "/images/dev_to_icon.png"
+
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
