@@ -25,6 +25,7 @@ At the time of writing this article (Jan 2020) Blazor WebAssembly is in Preview,
 We will start by creating a new Blazor App project. And the template that Visual Studio creates for you has all that is required for you to get started (as always) 
 I am not going to detail each line of code, all the code written is in GitHub: https://github.com/gopkumr/BlazorTourOfHeroes
 
+![VS Blazor project](/blogimages/blazor1.png)
 
 The key points the Tour of Heroes project tries to cover is what we will touch up on below
 
