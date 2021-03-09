@@ -36,7 +36,6 @@ jobs:
         with:
           source_file: './public/.'
           destination_repo: 'gopkumr/gopkumr.github.io'
-          destination_branch: 'main'
-          destination_folder: 'public'
+          destination_branch: 'gh-pages'
           user_email: 'gopakumar.r@live.com'
           user_name: 'gopkumr'
