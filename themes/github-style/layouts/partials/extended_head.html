@@ -41,7 +41,7 @@
 {{ end }}
 
 <!-- Google Analytics -->
-{{ if eq (getenv "HUGO_ENV") "production"}}
+{{ if not .Site.IsServer }}
 {{ with .Site.GoogleAnalytics }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
