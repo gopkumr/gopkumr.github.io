@@ -2,7 +2,7 @@ baseURL = "https://www.beneathabstraction.com/"
 languageCode = "en-au"
 title = "Beneath Abstraction"
 theme = "github-style"
-googleAnalytics = ""
+googleAnalytics = "UA-171421715-1"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
