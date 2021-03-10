@@ -23,19 +23,8 @@ jobs:
       - name: Build
         run: hugo --minify --environment production
 
-      - name: Deploy
+      - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-
-      - name: Pushes files to githubpages
-        uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
-        env:
-           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: './public/.'
-          destination_repo: 'gopkumr/gopkumr.github.io'
-          destination_branch: 'gh-pages'
-          user_email: 'gopakumar.r@live.com'
-          user_name: 'gopkumr'
