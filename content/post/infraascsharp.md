@@ -2,6 +2,7 @@
 title: "Infrastructure as C#"
 date: 2020-07-26T18:52:19+11:00
 draft: false
+tags: ["c#", "pulumi", "infra as code", "Kubernetes", "YML", ".Net"]
 ---
 
 ## Introduction

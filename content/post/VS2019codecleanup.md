@@ -2,6 +2,7 @@
 title: "Clean your code using Code cleanup in Visual Studio 2019"
 date: 2016-09-16T14:22:48+11:00
 draft: false
+tags: ["developer", ".Net", "visual studio", "features"]
 ---
 
 All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.

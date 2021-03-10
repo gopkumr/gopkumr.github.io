@@ -2,6 +2,7 @@
 title: "How can I turn my Blazor WebAssembly to PWA?"
 date: 2020-06-04T18:52:19+11:00
 draft: false
+tags: ["blazor","WASM", ".Net","PWA", "c#"]
 ---
 
 ![PWAmeetsBlazor](https://dev-to-uploads.s3.amazonaws.com/i/g9e27g1fckgxdipathy2.png)

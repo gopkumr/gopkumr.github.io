@@ -2,6 +2,7 @@
 title: "ASP.Net MVC 5 and Security"
 date: 2017-10-14T10:51:44+11:00
 draft: false
+tags: ["ASP.Net","Security", ".Net", "c#", "MVC"]
 ---
 
 ## Security?

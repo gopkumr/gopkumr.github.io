@@ -2,6 +2,7 @@
 title: "An attempt to convert Blazor WebAssembly Project to Blazor Server App"
 date: 2020-04-25T18:52:19+11:00
 draft: false
+tags: ["blazor","WASM", ".Net","Blazore Server", "c#"]
 ---
 
 ## Blazor Web-Assembly Project

@@ -2,6 +2,7 @@
 title: "Hosting Blazor WebAssembly on ASP.Net Core WebAPI"
 date: 2020-06-09T18:52:19+11:00
 draft: false
+tags: ["blazor","WASM", ".Net","WebAPI", "c#"]
 ---
 
 ## Background

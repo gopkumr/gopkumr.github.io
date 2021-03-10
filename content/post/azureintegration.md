@@ -2,6 +2,7 @@
 title: "Azure for integration and process automation"
 date: 2020-06-21T18:52:19+11:00
 draft: false
+tags: ["azure", "integration", "LogicApp", "PowerAutomate", "Azure Functions"]
 ---
 
 ## Problem

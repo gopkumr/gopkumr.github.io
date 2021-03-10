@@ -2,6 +2,7 @@
 title: "Steps for Deploying a Blazor as Static Site with Docker and Nginx"
 date: 2020-06-11T18:52:19+11:00
 draft: false
+tags: ["blazor","WASM", ".Net", "Docker", "nginx", "c#"]
 ---
 
 ![Blazor meets nginx](https://dev-to-uploads.s3.amazonaws.com/i/57a76kbj8isstq42nlga.png)

@@ -2,6 +2,7 @@
 title: "a sneak peek into Blazor WebAssembly"
 date: 2020-01-12T18:52:19+11:00
 draft: false
+tags: ["blazor","WASM", ".Net", "c#"]
 ---
 
 # an attempt to create tour of heroes' using Blazor

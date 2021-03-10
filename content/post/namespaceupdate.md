@@ -2,6 +2,7 @@
 title: "Tired of updating namespaces? With VS2019 you won't."
 date: 2019-10-17T18:50:46+11:00
 draft: false
+tags: ["developer", ".Net", "visual studio", "features"]
 ---
 
 Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).

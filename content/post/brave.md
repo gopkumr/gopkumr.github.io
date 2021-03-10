@@ -2,6 +2,7 @@
 title: "A brave move by Brave"
 date: 2019-08-20T18:39:11+11:00
 draft: false
+tags: ["Crypto", "Browser", "Privacy","features"]
 ---
 
 **Current online ads landscape**  
