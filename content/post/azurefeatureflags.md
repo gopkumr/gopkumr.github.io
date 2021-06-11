@@ -1,5 +1,5 @@
 ---
-title: "Implementing Feature flags in azure "
+title: "Implementing Feature flags using azure "
 date: 2021-05-16T10:00:48+11:00
 draft: false
 tags: ["developer", ".Net", "visual studio", "feature flags", "azure"]
