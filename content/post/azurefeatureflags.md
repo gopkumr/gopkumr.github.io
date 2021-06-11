@@ -55,4 +55,16 @@ By adding the ```@addTagHelper *, Microsoft.FeatureManagement.AspNetCore```, tag
 
 ![Html feature tag usage](/blogimages/appconfig/featuretag.png)
 
-This should let you switch on/off the feature in azure and the application will respond to it by removing the link from navigation as well as responding with a HTTP 404 if user tried to access the link directly. With the above implementation, we need to restart the application for the flag to get reflected as the azure config is loaded only once when the app is launched, but with some changes and middleware this can be changed. 
+This should let you switch on/off the feature in azure and the application will respond to it by removing the link from navigation as well as responding with a HTTP 404 if user tried to access the link directly. With the above implementation, we need to restart the application for the flag to get reflected as the azure config is loaded only once when the app is launched. To have the config refreshed as soon as it is changed, we can register a refresh of the azure configure while adding it to the application, as below. 
+
+![Refresh key usage](/blogimages/appconfig/refreshkey.png)
+
+Here the application monitors the ```RefreshKey``` for any change every 5 seconds (as specified in the cache expiry timespan), when a change in ```RefreshKey``` is noted the azure configurations are refreshed from the service for all keys (specified by refresh all flag).
+The refresh key is created as a key-value in the app configuration explorer in azure app configuration.
+![Refresh key usage](/blogimages/appconfig/createrefreshkey.png)
+
+For the refresh to work, we need to add the AzureAppconfiguration middleware by making the below changes in startup.cs
+![Add configuration middleware](/blogimages/appconfig/AddAzureAppConfig.png)
+![Refresh configuration middleware](/blogimages/appconfig/useazureappconfig.png)
+
+After this is implemented, you can update your feature flag and then modify the feature key, which will cause the app to get the updated feature flag. Advantage of using a refresh key is that once single key change can trigger refresh of all the feature flags configured. Alternatively, you can register individual keys in the code.
