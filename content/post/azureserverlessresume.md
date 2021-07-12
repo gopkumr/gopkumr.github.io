@@ -43,7 +43,7 @@ referred the Azure ARM template quick start github (here)[https://github.com/Azu
 The ARM template has the Azure Static website and Azure Function configured.
 
 ## CI/D
-There are two github actions workflow, one is to deploy the infrastructure and another to deploy the code. The infrastructure is deployed manually on triggering a build as we don't want to spin up new infrastructure element automatically on any event. The
+There are two github actions workflow, one is to deploy the infrastructure and another to deploy the code. The infrastructure is deployed manually as we don't want to spin up new infrastructure element automatically on any event. The
 source code gets deployed on any commit on the ```master``` branch in the github repository.
 
 ### Deploying Infrastructure
