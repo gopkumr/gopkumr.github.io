@@ -1,5 +1,5 @@
 ---
-title: "Authentication in Microsoft Azure - How did we get here"
+title: "Authentication in Microsoft Azure - A bit of history"
 date: 2021-07-24T19:16:16+10:00
 draft: false 
 tags: ["Azure", "Security", "OAuth", "Authentication"]
