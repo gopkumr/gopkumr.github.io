@@ -1,12 +1,13 @@
 ---
-title: ""Authentication in Microsoft Azure - Modern Authentication""
+title: "Identity in Microsoft Azure - Modern Authentication"
 date: 2021-08-01T18:06:02+10:00
 draft: true 
 tags: ["Azure", "Security", "OAuth", "Authentication"]
 ---
 
 ## Introduction
-From the [previous post](/content/post/securingusingazure-part1.md) its clear that there was a need a new generation of authentication mechanism that can satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML.
+Continuing from the [previous post](/content/post/securingusingazure-part1.md), the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML.
+In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens. This service is both trusted by the client app as well as the resource api.
 
 ## Authentication
 OpenID connect is a protocol built on top of OAuth 2.0 to authenticate users and communicate the identify information to the service provider application. 
@@ -28,4 +29,24 @@ Access tokens are short lived for security, so while the user is using the appli
 
 [Flow]
 
-Now that the two flows in identity is discussed, we can look at different application scenarios where identity will be used.
+ Almost all the applications would talk to a resource to get required data and would need an access token to do so. An access token cannot be issued unless the user's identity is  established, hence in almost all scenarios, the flows described above are used together. Below are different scenarios where different authentication and authorizations flows are used.
+
+## Authentication and authorization flows
+
+### Authorization code flow
+The flow that is described under the *Authorization* section above is the authorization code flow. The flow in which the client application receives a authorization code after the IDP authenticates the user. This code is used along with the client apps secret to get the access token from the IDP's token end point. This access token is used to get the data from resource api.
+
+Auth code flow was primarily intended to be used by web application deployed on a server, hence the auth code has to be submitted over https to get the access token. But this was a challenge to apps like single page javascript based apps which executed completely on a browser with a supported server and at the time Javascript calls to a domain other than the one loaded it was prohibited (*before CORS enabling was a thing*). Hence the next flow.
+
+## Implicit flow
+This flow is like the authentication code flow, except that after authenticating the user, the IDP returns the Access token instead of the auth code. This was the client app can get hold of the access token and make direct calls to the API.
+
+This flow had security issues, where the client app could be injected with a malicious cross site scripted page and the response from the IDP could go directly to a malicious app. Once the malicious app gets the access token, it can perform actions as the user. Hence this flow is no more recommended. 
+
+Also since the app runs in an untrusted environment, it cannot be trusted with a secret like a client secret key etc, as anyone can inspect the app get to know the secret values.
+
+Because of these reason, it is recommended that the apps without a server behind can use the next flow.
+
+## Authorization code flow with Proof key for code exchange (PKCE)
+
+
