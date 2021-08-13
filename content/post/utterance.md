@@ -6,7 +6,7 @@ tags: ["utterances", "Hugo", "JAM Stack", "Static Web Site", "Comments section"]
 ---
 
 ## Problem
-When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on the contents you need a comments section. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.
+When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.
 
 ## Requirements
 - Simple to implement: Has to integrate well with my hugo site generator
