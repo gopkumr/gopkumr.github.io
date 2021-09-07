@@ -5,7 +5,7 @@ draft: false
 tags: ["Azure", "AzureDevOps", "ARM Template"]
 ---
 ## Problem
-The project has a bunch of ARM templates as part of IAC scripts and more often only couple, if not few templates get modified. But when deploying using Azure pipeline all the templates gets deployed. Even though ARM template deployment support incremental mode, if a templates is deployed with exact same properties, the resource gets recreated. The project does not want to recreate all the templates when only a few are changed. Currently there is no out-of-the-box tasks that support this behavior (*or I could not find any*).
+The project has a bunch of ARM templates as part of IAC scripts and more often only couple, if not few templates get modified. But when deploying using Azure pipeline all the templates gets deployed. Even though ARM template deployment support incremental mode, if a templates is deployed with exact same properties, the resource gets recreated. The project does not want to recreate all the templates when only a few are changed. Currently there is no out-of-the-box tasks that support this behavior (*or I could not find any*). [Deployment Mode Reference](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deployment-modes)
 
 ## Approach
 The lack of out-of-the-box capability to deploy modified ARM templates, force us to write scripts to implement the logic. The approach is to create a YML build pipeline and use git cli to get the modified files in the latest commit and use powershell script to copy the modified files and its related files into the staging directory drop location. The release pipeline would look at the drop location and use Azure CLI to deploy the templates and its parameter files to azure.    
