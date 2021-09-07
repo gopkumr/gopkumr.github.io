@@ -136,7 +136,7 @@ Javascript
 <p>The index component is the first component that is loaded and it contains the Radio player component. During initialization of the index component the radio server API is triggered to fetch all the radio stations for the selected genre. The fetched radio stations list is passed onto the Radio player component as a parameter, the first station of the list is passed into the radio player as a cascade value. The difference between the two is that cascading values can be passed onto to all the components within the CascadeValues section, where as for parameters the values would need to be passed to individual components.</p>
 <h2 id=css-isolation>CSS Isolation</h2>
 <p>One issue with CSS is bleeding of style, where style applied in one of the component affecting other components rendered in the same page. This was the issue with the genre LeftNavMenu component. As a was to get around this problem, blazor has introduced CSS isolation where you create a css file along with the component file and name the css file as .razor.css. The component styles are rewritten during compile time by appending a unique identifier to the css properties as well as to the HTML elements in the component UI.</p>
-<pre><code>HTML
+<pre tabindex=0><code>HTML
 &lt;li b-3xxtam6d07&gt;
 
 CSS

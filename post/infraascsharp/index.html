@@ -135,17 +135,17 @@ The search was over pretty soon after I found a framework called Pulumi, that le
 <p>To start with, use the default WeatherForecast web api project. Add a dockerfile from the dotnet tutorial link and create docket image. Publish the docker image to the docker hub repository. All the steps till here is exactly similar to what is mentioned in the tutorial.</p>
 <p>Install Pulumi from <a href=https://www.pulumi.com/>https://www.pulumi.com/</a>. In windows, it is as simple as extracting the zip file and adding the bin folder to the PATH environment variable.</p>
 <p>Using Pulumi CLI, create a new kubernetes-csharp project.</p>
-<pre><code>pulumi new kubernetes-csharp
+<pre tabindex=0><code>pulumi new kubernetes-csharp
 </code></pre><p>give the appropriate project name, description, stack (i choose to name my stack dev) and a C# project will be create for your use.</p>
 <p>Stack in pulumi represents different configurations that you require for each environments that you would deploy to. You can have dev, test, prod stacks based on your project&rsquo;s environment requirements. Each stack is represented my separate classes and hence separates the configuration between environments.</p>
 <p>The stack class representation uses similar class and property name as the YAML file, hence it is not very difficult to translate, but pulumi helps is giving the infrastructure config a object oriented approach,so we can reuse many repeated properties like the label.</p>
 <p>Use the pulumi API to define the deployment class configuration and the service class configuration. All the values in the configuration is directly from the YAML file. I used a variable to store the app label so that i can use it across both deployment and service configuration.</p>
 <p>To run the pulumi code, first create the required Azure resources like the resource group and the AKS cluster. You can follow the exact same steps as in the tutorial or use the portal via the browser. Using the az aks get-credential command to download and save the SSH keys in the local computer, which pulumi will use to deploy to the cluster.</p>
-<pre><code>pulumi up 
+<pre tabindex=0><code>pulumi up 
 </code></pre><p>Use Pulumi Up commend to deploy to the cluster, and the response of the execute will be the IP address of the load balancer as written in the code. The best part of pulumi is that you can modify the code and do a pulumi up again it will deploy only the difference or only the changes to the cluster.</p>
 <p>You can now test the route using <code>http://&lt;IP Address>/WeatherForecast</code></p>
 <p>Once all the testing is completed, you can delete the deployed code using pulumi destroy command.</p>
-<pre><code>pulumi destroy
+<pre tabindex=0><code>pulumi destroy
 </code></pre><p>All the code written for this attempt is available in github: <a href=https://github.com/gopkumr/pulimi-kubernetes.git>https://github.com/gopkumr/pulimi-kubernetes.git</a></p>
 </article>
 </div>

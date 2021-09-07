@@ -140,9 +140,9 @@ azure
 <h2 id=consuming-azure-app-configuration-in-a-webapp>Consuming Azure App Configuration in a WebApp</h2>
 <p>I am implementing a simple web application using ASP.Net Core MVC default app to consume the app configuration service. Adding a view and a controller for the new feature called Feature1. The feature for now will only have a single index page which displays the feature name. Add the feature link to the navigation menu too. While the Microsoft FeatureManagement libraries in aspnetcore can work with flags stored in application&rsquo;s local config files or a database, here I am trying to have it work with the azure app configuration service.</p>
 <p>To consume azure app configuration service we need add the below nuget package</p>
-<pre><code>Microsoft.Azure.AppConfiguration.AspNetCore
+<pre tabindex=0><code>Microsoft.Azure.AppConfiguration.AspNetCore
 </code></pre><p>aspnetcore feature management requires the below nuget pacakge</p>
-<pre><code>Microsoft.FeatureManagement.AspNetCore
+<pre tabindex=0><code>Microsoft.FeatureManagement.AspNetCore
 </code></pre><p>Add the Azure App Configuration connection string to the <code>appsettings.json</code> connection strings section with a key, i will use <code>AppConfiguration</code> . <br>
 To add the App Configuration from azure into the application, update the program.cs file <code> CreateWebHostBuilder</code> configuration. Within the configurewebhostdefaults method, add code to configure custom configuration source using <code>ConfigureAppConfiguration</code> method.<br>
 Within the method, retrieve the azure app configuration connection string from the <code>appsettings.json</code> and add the azure app configuration as a configuration source using <code>AddAzureAppConfiguration</code> method, also enable Feature flags.

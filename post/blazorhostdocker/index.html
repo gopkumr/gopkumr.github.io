@@ -137,15 +137,15 @@ c#
 <p>Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.</p>
 <h2 id=step-2-create-a-dockerfile>Step 2 Create a dockerfile</h2>
 <p>The docker file is very straightforward, pull the nginx image and copy the published Blazor WebAssembly file from the WWWRoot folder to the html folder in nginx</p>
-<pre><code>FROM nginx:alpine
+<pre tabindex=0><code>FROM nginx:alpine
 EXPOSE 80
 COPY bin/Release/netcoreapp3.1/publish/wwwroot /usr/share/nginx/html
 </code></pre><h2 id=step-3-build-the-docker-image>Step 3 Build the docker image</h2>
 <p>use the below command</p>
-<pre><code>docker build --tag blazorstatic . 
+<pre tabindex=0><code>docker build --tag blazorstatic . 
 </code></pre><h2 id=step-4-run-the-docker-container>Step 4 Run the docker container</h2>
 <p>Run the docker container mapping the port exposed from the container to a port on the host</p>
-<pre><code> docker run -p 8080:80 blazorstatic   
+<pre tabindex=0><code> docker run -p 8080:80 blazorstatic   
 </code></pre><h2 id=step-5-access-the-blazor-webapp-from-browser>Step 5 Access the Blazor WebApp from browser</h2>
 <p>Access the URL https://localhost:8080 which loads the WebApp
 <img src=https://dev-to-uploads.s3.amazonaws.com/i/0etothdadxr8h1v5mi6t.png alt="Alt Text"></p>
