@@ -9,27 +9,27 @@
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/light.css>
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/dark.css>
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/syntax.css>
-<title>How to move azure resources between resource groups - Beneath Abstraction</title>
+<title>Move azure resources between resource groups - Beneath Abstraction</title>
 <link rel=icon type=image/x-icon href=/images/github.png>
 <meta name=theme-color content="#1e2327">
 <meta name=description content="Problem While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.
-Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going throught a wizard like steps and clicking finish at the end of it.">
+Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it.">
 <meta name=keywords content="blog,techical blog,Microsoft .Net,Csharp,asp.net,docker,mvc,kubernetes,pulumi">
 <meta name=robots content="noodp">
 <link rel=canonical href=https://www.beneathabstraction.com/post/moveresources/>
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="How to move azure resources between resource groups - Beneath Abstraction">
+<meta name=twitter:title content="Move azure resources between resource groups - Beneath Abstraction">
 <meta name=twitter:description content="Problem While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.
-Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going throught a wizard like steps and clicking finish at the end of it.">
+Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it.">
 <meta name=twitter:site content="https://www.beneathabstraction.com/">
 <meta name=twitter:creator content>
 <meta name=twitter:image content="https://www.beneathabstraction.com/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to move azure resources between resource groups - Beneath Abstraction">
+<meta property="og:title" content="Move azure resources between resource groups - Beneath Abstraction">
 <meta property="og:description" content="Problem While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.
-Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going throught a wizard like steps and clicking finish at the end of it.">
+Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it.">
 <meta property="og:url" content="https://www.beneathabstraction.com/post/moveresources/">
-<meta property="og:site_name" content="How to move azure resources between resource groups">
+<meta property="og:site_name" content="Move azure resources between resource groups">
 <meta property="og:image" content="https://www.beneathabstraction.com/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -84,7 +84,7 @@ Solution In Azure resources can be moved across resource groups from the portal 
 <div class="d-flex flex-column">
 <h1 class="break-word f3 text-normal mb-md-0 mb-1">
 <span class=author>
-<a href=https://www.beneathabstraction.com/>Gopakumar</a></span><span class=path-divider>/</span><strong class="css-truncate-target mr-1" style=max-width:410px><a href=https://www.beneathabstraction.com/post/moveresources/>How to move azure resources between resource groups</a></strong>
+<a href=https://www.beneathabstraction.com/>Gopakumar</a></span><span class=path-divider>/</span><strong class="css-truncate-target mr-1" style=max-width:410px><a href=https://www.beneathabstraction.com/post/moveresources/>Move azure resources between resource groups</a></strong>
 </h1>
 <div class="note m-0">
 Created <relative-time datetime="Tue, 12 Oct 2021 17:20:59 +1100" class=no-wrap>
@@ -104,7 +104,7 @@ Tue, 12 Oct 2021 17:20:59 +1100</relative-time>
 <div class="file-header d-flex flex-md-items-center flex-items-start">
 <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
 <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-393 Words
+394 Words
 </div>
 <div class="file-actions flex-order-2 pt-0">
 <a class="muted-link mr-3" href=/tags/azure><svg class="octicon octicon-tag" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25.0 01.25-.25h5.025a.25.25.0 01.177.073l6.25 6.25a.25.25.0 010 .354l-5.025 5.025a.25.25.0 01-.354.0l-6.25-6.25A.25.25.0 012.5 7.775zm-1.5.0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464.0.91.184 1.238.513l6.25 6.25a1.75 1.75.0 010 2.474l-5.026 5.026a1.75 1.75.0 01-2.474.0l-6.25-6.25A1.75 1.75.0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg>
@@ -123,16 +123,16 @@ Resource Management
 <article class="markdown-body entry-content container-lg"><h2 id=problem>Problem</h2>
 <p>While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.</p>
 <h2 id=solution>Solution</h2>
-<p>In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going throught a wizard like steps and clicking finish at the end of it. The process also validates if the resource can be moved or not, for example an Azure SQL Database cannot be moved without moving the SQL Server instance, and when a SQL Server instance is moved across, all the databases gets moved automatically.</p>
+<p>In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it. The process also validates if the resource can be moved or not, for example an Azure SQL Database cannot be moved without moving the SQL Server instance, and when a SQL Server instance is moved across, all the databases gets moved automatically.</p>
 <p>From the UI, there are three ways of getting to the wizard.</p>
 <ol>
 <li>Azure Resource Mover service</li>
 <li>Move option at the top of the Resource Group Screen</li>
-<li>Move option at the top of the Resrouce Screen.</li>
+<li>Move option at the top of the Resource Screen.</li>
 </ol>
 <p>All the above options lead to the same wizard screen when you can choose the destination subscription and resource group and initiate the move. This will validate if the resource support moving as well as if all the criteria is satisfied for the resource to be moved.</p>
 <p>You can find all the information regarding what resources currently support moving <a href=https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources>here</a>. Also the criteria that any resource that supports moving needs to satisfy to be able to move can be found <a href=https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-limitations/app-service-move-limitations>here</a></p>
-<p>The move does not copy over the role assignements to the destination resource, so all the role assignements will have to redone after the move is completed. There is no downtime to the usage of the resource, but the resource will be locked for few hours to any changes eventhough the move is completed in lesser time.</p>
+<p>The move does not copy over the role assignments to the destination resource, so all the role assignments will have to redone after the move is completed. There is no downtime to the usage of the resource, but the resource will be locked for few hours to any changes even though the move is completed in lesser time.</p>
 <p><strong>Powershell</strong> command <a href="https://docs.microsoft.com/en-us/powershell/module/az.resources/move-azresource?view=azps-6.4.0">Move-AzResource</a> can be used to execute the move from Powershell</p>
 <p><strong>Azure CLI</strong> command <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest#az_resource_move">az resource move</a> can be used to execute move from any CLI that has Azure CLI installed.</p>
 <p><strong>Rest Endpoint</strong> POST <a href="https://management.azure.com/subscriptions/%7Bsource-subscription-id%7D/resourcegroups/%7Bsource-resource-group-name%7D/moveResources?api-version=%7Bapi-version%7D">https://management.azure.com/subscriptions/{source-subscription-id}/resourcegroups/{source-resource-group-name}/moveResources?api-version={api-version}</a> <a href=https://docs.microsoft.com/en-us/rest/api/resources/resources/move-resources>Details Here</a> can be used to trigger the source move passing the payload with resources ids and the target resource group names.</p>
@@ -140,7 +140,7 @@ Resource Management
  <span class=nt>&#34;resources&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;&lt;resource-id-1&gt;&#34;</span><span class=p>,</span> <span class=s2>&#34;&lt;resource-id-2&gt;&#34;</span><span class=p>],</span>
  <span class=nt>&#34;targetResourceGroup&#34;</span><span class=p>:</span> <span class=s2>&#34;/subscriptions/&lt;subscription-id&gt;/resourceGroups/&lt;target-group&gt;&#34;</span>
 <span class=p>}</span>
-</code></pre></div><p>The Azure resrouce mover also bring in the capability of moving the resources across regions more about it can be found <a href=https://docs.microsoft.com/en-us/azure/resource-mover/move-region-within-resource-group>here</a></p>
+</code></pre></div><p>The Azure resource mover also bring in the capability of moving the resources across regions more about it can be found <a href=https://docs.microsoft.com/en-us/azure/resource-mover/move-region-within-resource-group>here</a></p>
 </article>
 </div>
 </div>
