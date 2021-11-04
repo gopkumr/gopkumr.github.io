@@ -6,7 +6,7 @@ tags: ["Azure", "Security", "OAuth", "Authentication"]
 ---
 
 ## Introduction
-Continuing from the [previous post](/content/post/securingusingazure-part1.md), the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML.
+Continuing from the [previous post](/content/post/securingusingazure-part1), the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML.
 In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens. This service is both trusted by the client app as well as the resource api.
 
 ## Authentication
