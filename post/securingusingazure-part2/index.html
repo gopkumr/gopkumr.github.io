@@ -9,8 +9,7 @@
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/light.css>
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/dark.css>
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/syntax.css>
-<title>Identity in Microsoft Azure - Modern Authentication - Beneath Abstraction</title>
-<link rel=icon type=image/x-icon href=/images/github.png>
+<title>Identity in Microsoft Azure - Modern Authentication - Beneath Abstraction</title><link rel=icon type=image/x-icon href=/images/github.png>
 <meta name=theme-color content="#1e2327">
 <meta name=description content="Introduction Continuing from the previous post, the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML. In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens.">
 <meta name=keywords content="blog,techical blog,Microsoft .Net,Csharp,asp.net,docker,mvc,kubernetes,pulumi">
@@ -32,20 +31,17 @@
 <meta property="og:image:height" content="1024">
 <meta property="article:published_time" content="2021-08-01 18:06:02 +1000 +1000">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171421715-1"></script>
-<script>if(navigator.doNotTrack!=='1'){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-171421715-1')}</script>
-</head>
-<body>
+<script>if(navigator.doNotTrack!=="1"){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-171421715-1")}</script>
+</head><body>
 <div style=position:relative>
 <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
 <div class="Header-item mobile-none" style=margin-top:-4px;margin-bottom:-4px>
 <a class=Header-link href=https://www.beneathabstraction.com/><svg class="octicon" height="32" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58.0.0 3.58.0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38.0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95.0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12.0.0.67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15.0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48.0 1.07-.01 1.93-.01 2.2.0.21.15.46.55.38A8.013 8.013.0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 </a>
-</div>
-<div class="Header-item d-md-none">
-<button class="Header-link btn-link js-details-target" type=button onclick="document.querySelector('#header-search').style.display=document.querySelector('#header-search').style.display=='none'?'block':'none'"><svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg>
+</div><div class="Header-item d-md-none">
+<button class="Header-link btn-link js-details-target" type=button onclick='document.querySelector("#header-search").style.display=document.querySelector("#header-search").style.display=="none"?"block":"none"'><svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg>
 </button>
-</div>
-<div style=display:none id=header-search class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+</div><div style=display:none id=header-search class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
 <div class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
 <div class=position-relative>
 <form target=_blank action=https://www.google.com/search accept-charset=utf-8 method=get autocomplete=off>
@@ -53,21 +49,13 @@
 <input type=text class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" name=q placeholder=Search autocomplete=off>
 <input type=hidden name=q value=site:https://www.beneathabstraction.com/>
 </label>
-</form>
-</div>
-</div>
-</div>
-<div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+</form></div></div></div><div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
 <a class=Header-link href=https://www.beneathabstraction.com/><svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58.0.0 3.58.0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38.0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95.0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12.0.0.67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15.0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48.0 1.07-.01 1.93-.01 2.2.0.21.15.46.55.38A8.013 8.013.0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 </a>
-</div>
-<div class=Header-item style=margin-right:0>
+</div><div class=Header-item style=margin-right:0>
 <a href=javascript:void(0) class="Header-link no-select" onclick=switchTheme()><svg style="fill:var(--color-profile-color-modes-toggle-moon)" class="no-select" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.52208 7.71754c3.05612.0 5.53362-2.47748 5.53362-5.5336C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961 9.95801 1.07727 10.3495.771159 10.6474.99992c1.4679 1.12724 2.4141 2.90007 2.4141 4.89391.0 3.40575-2.7609 6.16667-6.16665 6.16667-2.94151.0-5.40199-2.0595-6.018122-4.81523C.794841 6.87902 1.23668 6.65289 1.55321 6.85451 2.41106 7.40095 3.4296 7.71754 4.52208 7.71754z"/></svg>
 </a>
-</div>
-</header>
-</div>
-<div>
+</div></header></div><div>
 <main>
 <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
 <div class=px-0>
@@ -77,23 +65,14 @@
 <div class="d-none d-md-block">
 <a class="avatar mr-2 flex-shrink-0" href=https://www.beneathabstraction.com/>
 <img class=avatar-user src="https://avatars.githubusercontent.com/u/1662197?s=400&u=d1fd525c38f21c760b5f73d3046d9cdee3debcc3&v=4" width=32 height=32></a>
-</div>
-<div class="d-flex flex-column">
+</div><div class="d-flex flex-column">
 <h1 class="break-word f3 text-normal mb-md-0 mb-1">
 <span class=author>
 <a href=https://www.beneathabstraction.com/>Gopakumar</a></span><span class=path-divider>/</span><strong class="css-truncate-target mr-1" style=max-width:410px><a href=https://www.beneathabstraction.com/post/securingusingazure-part2/>Identity in Microsoft Azure - Modern Authentication</a></strong>
-</h1>
-<div class="note m-0">
+</h1><div class="note m-0">
 Created <relative-time datetime="Sun, 01 Aug 2021 18:06:02 +1000" class=no-wrap>
 Sun, 01 Aug 2021 18:06:02 +1000</relative-time>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="container-lg px-3 new-discussion-timeline">
+</div></div></div></div></div></div></div><div class="container-lg px-3 new-discussion-timeline">
 <div class="repository-content gist-content">
 <div>
 <div class="js-gist-file-update-container js-task-list-container file-box">
@@ -102,8 +81,7 @@ Sun, 01 Aug 2021 18:06:02 +1000</relative-time>
 <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
 <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
 1238 Words
-</div>
-<div class="file-actions flex-order-2 pt-0">
+</div><div class="file-actions flex-order-2 pt-0">
 <a class="muted-link mr-3" href=/tags/azure><svg class="octicon octicon-tag" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25.0 01.25-.25h5.025a.25.25.0 01.177.073l6.25 6.25a.25.25.0 010 .354l-5.025 5.025a.25.25.0 01-.354.0l-6.25-6.25A.25.25.0 012.5 7.775zm-1.5.0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464.0.91.184 1.238.513l6.25 6.25a1.75 1.75.0 010 2.474l-5.026 5.026a1.75 1.75.0 01-2.474.0l-6.25-6.25A1.75 1.75.0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg>
 Azure
 </a>
@@ -116,72 +94,24 @@ OAuth
 <a class="muted-link mr-3" href=/tags/authentication><svg class="octicon octicon-tag" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25.0 01.25-.25h5.025a.25.25.0 01.177.073l6.25 6.25a.25.25.0 010 .354l-5.025 5.025a.25.25.0 01-.354.0l-6.25-6.25A.25.25.0 012.5 7.775zm-1.5.0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464.0.91.184 1.238.513l6.25 6.25a1.75 1.75.0 010 2.474l-5.026 5.026a1.75 1.75.0 01-2.474.0l-6.25-6.25A1.75 1.75.0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg>
 Authentication
 </a>
-</div>
-</div>
-</div>
-<div class="Box-body px-5 pb-5">
-<article class="markdown-body entry-content container-lg"><h2 id=introduction>Introduction</h2>
-<p>Continuing from the <a href=/content/post/securingusingazure-part1>previous post</a>, the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML.
-In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens. This service is both trusted by the client app as well as the resource api.</p>
-<h2 id=authentication>Authentication</h2>
-<p>OpenID connect is a protocol built on top of OAuth 2.0 to authenticate users and communicate the identify information to the service provider application.</p>
-<p><img src=/blogimages/security/OID.png alt="OpenID connect"></p>
-<p>When an anonymous user tries to access a service provider web application, the user is redirected to an identity provider which supports OpenID connect. Identity providers can use a username/password or any other means to identify the user and issue a token called ID token. This token is then passed onto the service provider application which can inspect the token to get the user identity information. User can access the application until the user logs out or the ID token expires, after which users will be redirected to identity provider for authentication.</p>
-<p>The ID token is often persisted in a cookie and is sent across in requests, so that the service provider application will know the user is an authenticated user.
-Due to the presence of this ID token, if the user tries to access another application that trusts the same identity provider, user will not be asked to authenticate again, only further consent if required might be asked and new ID token for the second application will be provided and redirect direct to the application, thus implementing a single sign-on behavior.</p>
-<p>ID Token contains a AUD claim which represents an audience which is the application that the token targets, hence each application needs a separate token. ID token is purely used for user identification and not for authorization. Authorization like in case of accessing an API should be always done using an access token.</p>
-<h2 id=authorization>Authorization</h2>
-<p>Once the user identity is known, the application or API needs to decide what functionality does the user have access to. The ID token cannot be used for this, as it just says who the user is, to know all the roles or groups that user belongs to, the application required a new token access token. Identity provider gives back the access token for the application or API when the user is authenticated.
+</div></div></div><div class="Box-body px-5 pb-5">
+<article class="markdown-body entry-content container-lg"><h2 id=introduction>Introduction</h2><p>Continuing from the <a href=/content/post/securingusingazure-part1>previous post</a>, the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML.
+In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens. This service is both trusted by the client app as well as the resource api.</p><h2 id=authentication>Authentication</h2><p>OpenID connect is a protocol built on top of OAuth 2.0 to authenticate users and communicate the identify information to the service provider application.</p><p><img src=/blogimages/security/OID.png alt="OpenID connect"></p><p>When an anonymous user tries to access a service provider web application, the user is redirected to an identity provider which supports OpenID connect. Identity providers can use a username/password or any other means to identify the user and issue a token called ID token. This token is then passed onto the service provider application which can inspect the token to get the user identity information. User can access the application until the user logs out or the ID token expires, after which users will be redirected to identity provider for authentication.</p><p>The ID token is often persisted in a cookie and is sent across in requests, so that the service provider application will know the user is an authenticated user.
+Due to the presence of this ID token, if the user tries to access another application that trusts the same identity provider, user will not be asked to authenticate again, only further consent if required might be asked and new ID token for the second application will be provided and redirect direct to the application, thus implementing a single sign-on behavior.</p><p>ID Token contains a AUD claim which represents an audience which is the application that the token targets, hence each application needs a separate token. ID token is purely used for user identification and not for authorization. Authorization like in case of accessing an API should be always done using an access token.</p><h2 id=authorization>Authorization</h2><p>Once the user identity is known, the application or API needs to decide what functionality does the user have access to. The ID token cannot be used for this, as it just says who the user is, to know all the roles or groups that user belongs to, the application required a new token access token. Identity provider gives back the access token for the application or API when the user is authenticated.
 If the user, through the application, accesses multiple APIs, the identity providers will give multiple access tokens for each APIs.
 Access token contains all the roles/groups that user are member as claims. Applications/APIs can access these token value to validate the roles/group and grant access to functionality.
-Access tokens are short lived for security, so while the user is using the application/API if the access token expires, the application/API can use another token called Refresh token to get a renewed access token.</p>
-<p><img src=/blogimages/security/AccessToken.png alt=AccessToken></p>
-<p>Almost all the applications would talk to a resource to get required data and would need an access token to do so. An access token cannot be issued unless the user&rsquo;s identity is established, hence in almost all scenarios, the flows described above are used together. Below are different scenarios where different authentication and authorizations flows are used.</p>
-<h2 id=authentication-and-authorization-flows>Authentication and authorization flows</h2>
-<h3 id=authorization-code-flow>Authorization code flow</h3>
-<p>The flow that is described under the <em>Authorization</em> section above is the authorization code flow. The flow in which the client application receives a authorization code after the IDP authenticates the user. This code is used along with the client apps secret to get the access token from the IDP&rsquo;s token end point. This access token is used to get the data from resource api.</p>
-<p>Auth code flow was primarily intended to be used by web application deployed on a server, hence the auth code and a client secret has to be submitted over https to get the access token. But this was a challenge to apps like single page javascript based apps which executed completely on a browser with no supported server. At the time Javascript calls to a domain other than the one loaded it was prohibited (<em>before CORS enabling was a thing</em>). Hence the next flow.</p>
-<h2 id=implicit-grant-flow>Implicit Grant flow</h2>
-<p>This flow is like the authentication code flow, except that after authenticating the user, the IDP returns the Access token instead of the auth code. This was the client app can get hold of the access token and make direct calls to the API.</p>
-<p><img src=/blogimages/security/ImpliciteGrant.png alt="Implicit Grant"></p>
-<p>This flow had security issues, where the client app could be injected with a malicious cross site scripted page and the response from the IDP could go directly to a malicious app. Once the malicious app gets the access token, it can perform actions as the user.
-Also since the app runs in an untrusted environment, it cannot be trusted with a secret like a client secret key etc, as anyone can inspect the app get to know the secret values.</p>
-<p>Because of these reasons, this flow is not recommended for client side running without a server behind. Hence the next flow.</p>
-<h2 id=authorization-code-flow-with-proof-key-for-code-exchange-pkce>Authorization code flow with Proof key for code exchange (PKCE)</h2>
-<p>To protect the authorization code flow from the above mentioned vulnerabilities, another layer of security is introduced. The flow is similar to the authorization code flow except that the client app generates a verifier code and produce a challenge word cryptographically and is submitted as part of the initial authentication redirection to IDP.
+Access tokens are short lived for security, so while the user is using the application/API if the access token expires, the application/API can use another token called Refresh token to get a renewed access token.</p><p><img src=/blogimages/security/AccessToken.png alt=AccessToken></p><p>Almost all the applications would talk to a resource to get required data and would need an access token to do so. An access token cannot be issued unless the user&rsquo;s identity is established, hence in almost all scenarios, the flows described above are used together. Below are different scenarios where different authentication and authorizations flows are used.</p><h2 id=authentication-and-authorization-flows>Authentication and authorization flows</h2><h3 id=authorization-code-flow>Authorization code flow</h3><p>The flow that is described under the <em>Authorization</em> section above is the authorization code flow. The flow in which the client application receives a authorization code after the IDP authenticates the user. This code is used along with the client apps secret to get the access token from the IDP&rsquo;s token end point. This access token is used to get the data from resource api.</p><p>Auth code flow was primarily intended to be used by web application deployed on a server, hence the auth code and a client secret has to be submitted over https to get the access token. But this was a challenge to apps like single page javascript based apps which executed completely on a browser with no supported server. At the time Javascript calls to a domain other than the one loaded it was prohibited (<em>before CORS enabling was a thing</em>). Hence the next flow.</p><h2 id=implicit-grant-flow>Implicit Grant flow</h2><p>This flow is like the authentication code flow, except that after authenticating the user, the IDP returns the Access token instead of the auth code. This was the client app can get hold of the access token and make direct calls to the API.</p><p><img src=/blogimages/security/ImpliciteGrant.png alt="Implicit Grant"></p><p>This flow had security issues, where the client app could be injected with a malicious cross site scripted page and the response from the IDP could go directly to a malicious app. Once the malicious app gets the access token, it can perform actions as the user.
+Also since the app runs in an untrusted environment, it cannot be trusted with a secret like a client secret key etc, as anyone can inspect the app get to know the secret values.</p><p>Because of these reasons, this flow is not recommended for client side running without a server behind. Hence the next flow.</p><h2 id=authorization-code-flow-with-proof-key-for-code-exchange-pkce>Authorization code flow with Proof key for code exchange (PKCE)</h2><p>To protect the authorization code flow from the above mentioned vulnerabilities, another layer of security is introduced. The flow is similar to the authorization code flow except that the client app generates a verifier code and produce a challenge word cryptographically and is submitted as part of the initial authentication redirection to IDP.
 IDP then stores this challenge and the auth code is sent back. The client app then posts the auth code and the verifier code that was generated previously (not the challenge) to the token end point, which the IDP validates and send back the access token.
-The introduction of the verifier and its challenge, which is runtime generated by the client app stops the malicious actors from using a CSRF the request and getting hold of the access token.</p>
-<p><img src=/blogimages/security/OID-PKCE.png alt=PKCE></p>
-<h2 id=client-credentials-flow>Client Credentials flow</h2>
-<p>The above described flows enable a resource owner to use a client application to access the resource (API) by authenticating/Authorizing himself and letting the client application perform the resource retrieval on behalf of the resource owner. But there are instances where there is no user involved, where the resource owner is an application/machine scenarios such as an IOT device pushing sensor data to the server or a demon service connecting to an API to get a persisted state or data. In such a scenario, the service/machine authenticates itself using a secret that is agreed between the service and IDP, this secret can be a key or a certificate. Once the service/machine sends the secret to the IDP, the IDP generates an access token with all the permissions that are configured for the service/machine and responds back.</p>
-<p><img src=/blogimages/security/OID-ClientCredential.png alt="Client Credential"></p>
-<h2 id=conclusion>Conclusion</h2>
-<p>The above mentioned flows covers majority of the interactions between the resource owner, client application, IDP and the API, but there are other flows which is variations of these used in difference scenarios and different IDPs implement different scenarios. Also, there are new ways to authentication/authorization being implement as newer scenarios/devices/user cases emerges.
-Azure AD is such an IDP which implements authentication/authorization flows and can be used by applications hosted in Microsoft Azure or elsewhere.</p>
-</article>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=post-comment>
+The introduction of the verifier and its challenge, which is runtime generated by the client app stops the malicious actors from using a CSRF the request and getting hold of the access token.</p><p><img src=/blogimages/security/OID-PKCE.png alt=PKCE></p><h2 id=client-credentials-flow>Client Credentials flow</h2><p>The above described flows enable a resource owner to use a client application to access the resource (API) by authenticating/Authorizing himself and letting the client application perform the resource retrieval on behalf of the resource owner. But there are instances where there is no user involved, where the resource owner is an application/machine scenarios such as an IOT device pushing sensor data to the server or a demon service connecting to an API to get a persisted state or data. In such a scenario, the service/machine authenticates itself using a secret that is agreed between the service and IDP, this secret can be a key or a certificate. Once the service/machine sends the secret to the IDP, the IDP generates an access token with all the permissions that are configured for the service/machine and responds back.</p><p><img src=/blogimages/security/OID-ClientCredential.png alt="Client Credential"></p><h2 id=conclusion>Conclusion</h2><p>The above mentioned flows covers majority of the interactions between the resource owner, client application, IDP and the API, but there are other flows which is variations of these used in difference scenarios and different IDPs implement different scenarios. Also, there are new ways to authentication/authorization being implement as newer scenarios/devices/user cases emerges.
+Azure AD is such an IDP which implements authentication/authorization flows and can be used by applications hosted in Microsoft Azure or elsewhere.</p></article></div></div></div></div></div></div><div class=post-comment>
 <script src=https://utteranc.es/client.js repo=gopkumr/gopkumr.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</main>
-</div>
-<div class="footer container-xl width-full p-responsive">
+</div></main></div><div class="footer container-xl width-full p-responsive">
 <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light">
 <a aria-label=Homepage title=GitHub class="footer-octicon d-none d-lg-block mr-lg-4" href=https://www.beneathabstraction.com/><svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58.0.0 3.58.0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38.0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95.0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12.0.0.67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15.0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48.0 1.07-.01 1.93-.01 2.2.0.21.15.46.55.38A8.013 8.013.0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 </a>
 <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-<li class="mr-3 mr-lg-0">Theme by <a href=https://github.com/MeiK2333/github-style>github-style</a></li>
-</ul>
-</div>
-<div class="d-flex flex-justify-center pb-6">
+<li class="mr-3 mr-lg-0">Theme by <a href=https://github.com/MeiK2333/github-style>github-style</a></li></ul></div><div class="d-flex flex-justify-center pb-6">
 <span class="f6 text-gray-light"></span>
-</div>
-</div>
-</body>
-<script type=application/javascript src=https://www.beneathabstraction.com/js/github-style.js></script>
+</div></div></body><script type=application/javascript src=https://www.beneathabstraction.com/js/github-style.js></script>
 </html>

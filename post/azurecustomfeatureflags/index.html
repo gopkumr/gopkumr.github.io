@@ -9,8 +9,7 @@
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/light.css>
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/dark.css>
 <link rel=stylesheet href=https://www.beneathabstraction.com/css/syntax.css>
-<title>Implementing Custom Feature flags - Your own logic to shutoff a feature - Azure App Configuration - Beneath Abstraction</title>
-<link rel=icon type=image/x-icon href=/images/github.png>
+<title>Implementing Custom Feature flags - Your own logic to shutoff a feature - Azure App Configuration - Beneath Abstraction</title><link rel=icon type=image/x-icon href=/images/github.png>
 <meta name=theme-color content="#1e2327">
 <meta name=description content="This is a continuation from the previous article on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.
 Introduction The previous article described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag.">
@@ -35,20 +34,17 @@ Introduction The previous article described about implementing a boolean feature
 <meta property="og:image:height" content="1024">
 <meta property="article:published_time" content="2021-06-22 10:18:48 +1100 +1100">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171421715-1"></script>
-<script>if(navigator.doNotTrack!=='1'){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-171421715-1')}</script>
-</head>
-<body>
+<script>if(navigator.doNotTrack!=="1"){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-171421715-1")}</script>
+</head><body>
 <div style=position:relative>
 <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
 <div class="Header-item mobile-none" style=margin-top:-4px;margin-bottom:-4px>
 <a class=Header-link href=https://www.beneathabstraction.com/><svg class="octicon" height="32" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58.0.0 3.58.0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38.0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95.0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12.0.0.67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15.0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48.0 1.07-.01 1.93-.01 2.2.0.21.15.46.55.38A8.013 8.013.0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 </a>
-</div>
-<div class="Header-item d-md-none">
-<button class="Header-link btn-link js-details-target" type=button onclick="document.querySelector('#header-search').style.display=document.querySelector('#header-search').style.display=='none'?'block':'none'"><svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg>
+</div><div class="Header-item d-md-none">
+<button class="Header-link btn-link js-details-target" type=button onclick='document.querySelector("#header-search").style.display=document.querySelector("#header-search").style.display=="none"?"block":"none"'><svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"/></svg>
 </button>
-</div>
-<div style=display:none id=header-search class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+</div><div style=display:none id=header-search class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
 <div class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
 <div class=position-relative>
 <form target=_blank action=https://www.google.com/search accept-charset=utf-8 method=get autocomplete=off>
@@ -56,21 +52,13 @@ Introduction The previous article described about implementing a boolean feature
 <input type=text class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable" name=q placeholder=Search autocomplete=off>
 <input type=hidden name=q value=site:https://www.beneathabstraction.com/>
 </label>
-</form>
-</div>
-</div>
-</div>
-<div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+</form></div></div></div><div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
 <a class=Header-link href=https://www.beneathabstraction.com/><svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58.0.0 3.58.0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38.0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95.0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12.0.0.67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15.0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48.0 1.07-.01 1.93-.01 2.2.0.21.15.46.55.38A8.013 8.013.0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 </a>
-</div>
-<div class=Header-item style=margin-right:0>
+</div><div class=Header-item style=margin-right:0>
 <a href=javascript:void(0) class="Header-link no-select" onclick=switchTheme()><svg style="fill:var(--color-profile-color-modes-toggle-moon)" class="no-select" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.52208 7.71754c3.05612.0 5.53362-2.47748 5.53362-5.5336C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961 9.95801 1.07727 10.3495.771159 10.6474.99992c1.4679 1.12724 2.4141 2.90007 2.4141 4.89391.0 3.40575-2.7609 6.16667-6.16665 6.16667-2.94151.0-5.40199-2.0595-6.018122-4.81523C.794841 6.87902 1.23668 6.65289 1.55321 6.85451 2.41106 7.40095 3.4296 7.71754 4.52208 7.71754z"/></svg>
 </a>
-</div>
-</header>
-</div>
-<div>
+</div></header></div><div>
 <main>
 <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
 <div class=px-0>
@@ -80,23 +68,14 @@ Introduction The previous article described about implementing a boolean feature
 <div class="d-none d-md-block">
 <a class="avatar mr-2 flex-shrink-0" href=https://www.beneathabstraction.com/>
 <img class=avatar-user src="https://avatars.githubusercontent.com/u/1662197?s=400&u=d1fd525c38f21c760b5f73d3046d9cdee3debcc3&v=4" width=32 height=32></a>
-</div>
-<div class="d-flex flex-column">
+</div><div class="d-flex flex-column">
 <h1 class="break-word f3 text-normal mb-md-0 mb-1">
 <span class=author>
 <a href=https://www.beneathabstraction.com/>Gopakumar</a></span><span class=path-divider>/</span><strong class="css-truncate-target mr-1" style=max-width:410px><a href=https://www.beneathabstraction.com/post/azurecustomfeatureflags/>Implementing Custom Feature flags - Your own logic to shutoff a feature - Azure App Configuration </a></strong>
-</h1>
-<div class="note m-0">
+</h1><div class="note m-0">
 Created <relative-time datetime="Tue, 22 Jun 2021 10:18:48 +1100" class=no-wrap>
 Tue, 22 Jun 2021 10:18:48 +1100</relative-time>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="container-lg px-3 new-discussion-timeline">
+</div></div></div></div></div></div></div><div class="container-lg px-3 new-discussion-timeline">
 <div class="repository-content gist-content">
 <div>
 <div class="js-gist-file-update-container js-task-list-container file-box">
@@ -105,8 +84,7 @@ Tue, 22 Jun 2021 10:18:48 +1100</relative-time>
 <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
 <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
 666 Words
-</div>
-<div class="file-actions flex-order-2 pt-0">
+</div><div class="file-actions flex-order-2 pt-0">
 <a class="muted-link mr-3" href=/tags/developer><svg class="octicon octicon-tag" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25.0 01.25-.25h5.025a.25.25.0 01.177.073l6.25 6.25a.25.25.0 010 .354l-5.025 5.025a.25.25.0 01-.354.0l-6.25-6.25A.25.25.0 012.5 7.775zm-1.5.0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464.0.91.184 1.238.513l6.25 6.25a1.75 1.75.0 010 2.474l-5.026 5.026a1.75 1.75.0 01-2.474.0l-6.25-6.25A1.75 1.75.0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg>
 developer
 </a>
@@ -131,114 +109,77 @@ c#
 <a class="muted-link mr-3" href=/tags/dotnetcore><svg class="octicon octicon-tag" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25.0 01.25-.25h5.025a.25.25.0 01.177.073l6.25 6.25a.25.25.0 010 .354l-5.025 5.025a.25.25.0 01-.354.0l-6.25-6.25A.25.25.0 012.5 7.775zm-1.5.0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464.0.91.184 1.238.513l6.25 6.25a1.75 1.75.0 010 2.474l-5.026 5.026a1.75 1.75.0 01-2.474.0l-6.25-6.25A1.75 1.75.0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg>
 dotnetcore
 </a>
-</div>
-</div>
-</div>
-<div class="Box-body px-5 pb-5">
-<article class="markdown-body entry-content container-lg"><p>This is a continuation from the <a href=../azurefeatureflags>previous article</a> on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.</p>
-<h2 id=introduction>Introduction</h2>
-<p>The <a href=../azurefeatureflags>previous article</a> described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag. Microsoft provides few predefined custom feature flags or feature filters (as they are called) Targeting, TimeWindow, and Percentage (more about it <a href=https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-feature-filters-aspnet-core>here</a>), which covers most usecases, however, there might be situations where you find the predefined ones falling short. In this article I am building a filter ground up with a made up custom logic.</p>
-<h2 id=code-updates>Code Updates</h2>
-<p>Create a customer filter is as simple as creating a class and implementing the <code>Microsoft.FeatureManagement.IFeatureFilter</code>, override the <code>EvaluateAsync</code> method add the logic to decide if feature should be enabled. Thats it! What i want to show is how do we wire up this class into the application flow and configure the flag in Azure app configurations.</p>
-<p>Below is our feature filter class and some supporting class for logic implementation</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c# data-lang=c#><span class=c1>//The feature filter will be known my this name in the configuration.
-</span><span class=c1></span><span class=na>[FilterAlias(&#34;ShortTimeFeature&#34;)]</span>
-<span class=k>public</span> <span class=k>class</span> <span class=nc>SecondsFeatureFilter</span> <span class=p>:</span> <span class=n>Microsoft</span><span class=p>.</span><span class=n>FeatureManagement</span><span class=p>.</span><span class=n>IFeatureFilter</span>
-    <span class=p>{</span>
-        <span class=k>private</span> <span class=k>readonly</span> <span class=n>IMinuteFeaturePropertyAccessor</span> <span class=n>minuteFeatureContextAccessor</span><span class=p>;</span>
-
-        <span class=c1>//The IMinuteFeaturePropertyAccessor is an implementation that I have used to capture first load 
-</span><span class=c1></span>        <span class=c1>// time of the application. The IMinuteFeaturePropertyAccessor is loaded as a singleton in DI.
-</span><span class=c1></span>        <span class=k>public</span> <span class=n>SecondsFeatureFilter</span><span class=p>(</span><span class=n>IMinuteFeaturePropertyAccessor</span> <span class=n>minuteFeatureContextAccessor</span><span class=p>)</span>
-        <span class=p>{</span>
-            <span class=k>this</span><span class=p>.</span><span class=n>minuteFeatureContextAccessor</span> <span class=p>=</span> <span class=n>minuteFeatureContextAccessor</span><span class=p>;</span>
-        <span class=p>}</span>
-
-        <span class=k>public</span> <span class=n>Task</span><span class=p>&lt;</span><span class=kt>bool</span><span class=p>&gt;</span> <span class=n>EvaluateAsync</span><span class=p>(</span><span class=n>FeatureFilterEvaluationContext</span> <span class=n>context</span><span class=p>)</span>
-        <span class=p>{</span>
-            <span class=c1>//The logic is to disable the feature after configured seconds the user has used the application
-</span><span class=c1></span>            <span class=c1>//The seconds is configured as parameter in the feature flag.
-</span><span class=c1></span>            <span class=kt>var</span> <span class=n>EnabledSeconds</span> <span class=p>=</span> <span class=kt>int</span><span class=p>.</span><span class=n>Parse</span><span class=p>(</span><span class=n>context</span><span class=p>.</span><span class=n>Parameters</span><span class=p>.</span><span class=n>GetSection</span><span class=p>(</span><span class=s>&#34;EnabledSeconds&#34;</span><span class=p>).</span><span class=n>Value</span><span class=p>);</span>
-            <span class=k>if</span> <span class=p>(</span><span class=n>DateTime</span><span class=p>.</span><span class=n>Now</span><span class=p>.</span><span class=n>Subtract</span><span class=p>(</span><span class=n>minuteFeatureContextAccessor</span><span class=p>.</span><span class=n>GetStartTime</span><span class=p>()).</span><span class=n>TotalSeconds</span> <span class=p>&gt;</span> <span class=n>EnabledSeconds</span><span class=p>)</span>
-            <span class=p>{</span>
-                <span class=k>return</span> <span class=n>Task</span><span class=p>.</span><span class=n>FromResult</span><span class=p>(</span><span class=k>false</span><span class=p>);</span>
-            <span class=p>}</span>
-            <span class=k>return</span> <span class=n>Task</span><span class=p>.</span><span class=n>FromResult</span><span class=p>(</span><span class=k>true</span><span class=p>);</span>
-        <span class=p>}</span>
-    <span class=p>}</span>
-
-    <span class=k>public</span> <span class=k>class</span> <span class=nc>MinuteFeturePropertyAccessor</span> <span class=p>:</span> <span class=n>IMinuteFeaturePropertyAccessor</span>
-    <span class=p>{</span>
-        <span class=k>readonly</span> <span class=n>DateTime</span> <span class=n>startTime</span><span class=p>;</span>
-        <span class=k>public</span> <span class=n>MinuteFeturePropertyAccessor</span><span class=p>()</span>
-        <span class=p>{</span>
-            <span class=n>startTime</span> <span class=p>=</span> <span class=n>DateTime</span><span class=p>.</span><span class=n>Now</span><span class=p>;</span>
-        <span class=p>}</span>
-
-        <span class=k>public</span> <span class=n>DateTime</span> <span class=n>GetStartTime</span><span class=p>()</span>
-        <span class=p>{</span>
-            <span class=k>return</span> <span class=n>startTime</span><span class=p>;</span>
-        <span class=p>}</span>
-    <span class=p>}</span>
-
-    <span class=k>public</span> <span class=k>interface</span> <span class=n>IMinuteFeaturePropertyAccessor</span>
-    <span class=p>{</span>
-        <span class=n>DateTime</span> <span class=n>GetStartTime</span><span class=p>();</span>
-    <span class=p>}</span>
-</code></pre></div><p>Once the feature filter is create, it needs to be added into the feature management middleware. The middleware will make sure that the filter class is invoked when the flag check is triggers in the application flow (navigation link, action filter, filtermanager check).</p>
-<p>Below the configure service method, where the feature filter is added as well as the supporting classes in my sample.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c# data-lang=c#> <span class=k>public</span> <span class=k>void</span> <span class=n>ConfigureServices</span><span class=p>(</span><span class=n>IServiceCollection</span> <span class=n>services</span><span class=p>)</span>
-        <span class=p>{</span>
-            <span class=n>services</span><span class=p>.</span><span class=n>AddSession</span><span class=p>();</span>
-            <span class=n>services</span><span class=p>.</span><span class=n>AddHttpContextAccessor</span><span class=p>();</span>
-            <span class=n>services</span><span class=p>.</span><span class=n>AddControllersWithViews</span><span class=p>();</span>
-            <span class=n>services</span><span class=p>.</span><span class=n>AddSingleton</span><span class=p>&lt;</span><span class=n>IMinuteFeaturePropertyAccessor</span><span class=p>,</span> <span class=n>MinuteFeturePropertyAccessor</span><span class=p>&gt;();</span>
-            <span class=n>services</span><span class=p>.</span><span class=n>AddFeatureManagement</span><span class=p>().</span><span class=n>AddFeatureFilter</span><span class=p>&lt;</span><span class=n>SecondsFeatureFilter</span><span class=p>&gt;();</span>
-            <span class=n>services</span><span class=p>.</span><span class=n>AddAzureAppConfiguration</span><span class=p>();</span>
-        <span class=p>}</span>
-</code></pre></div><p>The ways feature flag can be used in the app is exactly same as described in the previous article. The feature flag is going to called <em>TimeLimit</em>. example code is as below</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-c# data-lang=c#><span class=na> [FeatureGate(&#34;TimeLimit&#34;)]</span>
- <span class=k>public</span> <span class=k>async</span> <span class=n>Task</span><span class=p>&lt;</span><span class=n>IActionResult</span><span class=p>&gt;</span> <span class=n>Index</span><span class=p>()</span>
-    <span class=p>{</span>
-        <span class=k>return</span> <span class=n>View</span><span class=p>();</span>
-    <span class=p>}</span>
-</code></pre></div><p>Rest of the startup and program class will be same as the <a href=../azurefeatureflags>previous article</a>, which basically implements Azure app configuration integration.</p>
-<p>To create the configuration entry in Azure, we use the feature explorer in Azure App configuration service.</p>
-<ul>
-<li>Add a feature flag, enter a feature name same as what was used in the code <em>TimeLimit</em> and check <em>Use feature filter</em> and select <em>Custom</em>.</li>
-<li>In the custom feature filter name, enter the FeatureFilter name as given in the FeatureFilter alias attribute <em>ShortTimeFeature</em>.
-<img src=/blogimages/appconfig/featurefilter-create.png alt="Add feature flag"></li>
-<li>Click the three dots and edit parameters and enter the parameter name and value used in the feature filter implementation <em>EnabledSeconds</em> and 60
+</div></div></div><div class="Box-body px-5 pb-5">
+<article class="markdown-body entry-content container-lg"><p>This is a continuation from the <a href=../azurefeatureflags>previous article</a> on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.</p><h2 id=introduction>Introduction</h2><p>The <a href=../azurefeatureflags>previous article</a> described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag. Microsoft provides few predefined custom feature flags or feature filters (as they are called) Targeting, TimeWindow, and Percentage (more about it <a href=https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-feature-filters-aspnet-core>here</a>), which covers most usecases, however, there might be situations where you find the predefined ones falling short. In this article I am building a filter ground up with a made up custom logic.</p><h2 id=code-updates>Code Updates</h2><p>Create a customer filter is as simple as creating a class and implementing the <code>Microsoft.FeatureManagement.IFeatureFilter</code>, override the <code>EvaluateAsync</code> method add the logic to decide if feature should be enabled. Thats it! What i want to show is how do we wire up this class into the application flow and configure the flag in Azure app configurations.</p><p>Below is our feature filter class and some supporting class for logic implementation</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-c# data-lang=c#><span class=line><span class=cl><span class=c1>//The feature filter will be known my this name in the configuration.</span>
+</span></span><span class=line><span class=cl><span class=na>[FilterAlias(&#34;ShortTimeFeature&#34;)]</span>
+</span></span><span class=line><span class=cl><span class=k>public</span> <span class=k>class</span> <span class=nc>SecondsFeatureFilter</span> <span class=p>:</span> <span class=n>Microsoft</span><span class=p>.</span><span class=n>FeatureManagement</span><span class=p>.</span><span class=n>IFeatureFilter</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>private</span> <span class=k>readonly</span> <span class=n>IMinuteFeaturePropertyAccessor</span> <span class=n>minuteFeatureContextAccessor</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>//The IMinuteFeaturePropertyAccessor is an implementation that I have used to capture first load </span>
+</span></span><span class=line><span class=cl>        <span class=c1>// time of the application. The IMinuteFeaturePropertyAccessor is loaded as a singleton in DI.</span>
+</span></span><span class=line><span class=cl>        <span class=k>public</span> <span class=n>SecondsFeatureFilter</span><span class=p>(</span><span class=n>IMinuteFeaturePropertyAccessor</span> <span class=n>minuteFeatureContextAccessor</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>this</span><span class=p>.</span><span class=n>minuteFeatureContextAccessor</span> <span class=p>=</span> <span class=n>minuteFeatureContextAccessor</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>public</span> <span class=n>Task</span><span class=p>&lt;</span><span class=kt>bool</span><span class=p>&gt;</span> <span class=n>EvaluateAsync</span><span class=p>(</span><span class=n>FeatureFilterEvaluationContext</span> <span class=n>context</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=c1>//The logic is to disable the feature after configured seconds the user has used the application</span>
+</span></span><span class=line><span class=cl>            <span class=c1>//The seconds is configured as parameter in the feature flag.</span>
+</span></span><span class=line><span class=cl>            <span class=kt>var</span> <span class=n>EnabledSeconds</span> <span class=p>=</span> <span class=kt>int</span><span class=p>.</span><span class=n>Parse</span><span class=p>(</span><span class=n>context</span><span class=p>.</span><span class=n>Parameters</span><span class=p>.</span><span class=n>GetSection</span><span class=p>(</span><span class=s>&#34;EnabledSeconds&#34;</span><span class=p>).</span><span class=n>Value</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=n>DateTime</span><span class=p>.</span><span class=n>Now</span><span class=p>.</span><span class=n>Subtract</span><span class=p>(</span><span class=n>minuteFeatureContextAccessor</span><span class=p>.</span><span class=n>GetStartTime</span><span class=p>()).</span><span class=n>TotalSeconds</span> <span class=p>&gt;</span> <span class=n>EnabledSeconds</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=n>Task</span><span class=p>.</span><span class=n>FromResult</span><span class=p>(</span><span class=k>false</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>Task</span><span class=p>.</span><span class=n>FromResult</span><span class=p>(</span><span class=k>true</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>class</span> <span class=nc>MinuteFeturePropertyAccessor</span> <span class=p>:</span> <span class=n>IMinuteFeaturePropertyAccessor</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>readonly</span> <span class=n>DateTime</span> <span class=n>startTime</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>public</span> <span class=n>MinuteFeturePropertyAccessor</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>startTime</span> <span class=p>=</span> <span class=n>DateTime</span><span class=p>.</span><span class=n>Now</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>public</span> <span class=n>DateTime</span> <span class=n>GetStartTime</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>startTime</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=k>interface</span> <span class=nc>IMinuteFeaturePropertyAccessor</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>DateTime</span> <span class=n>GetStartTime</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span></code></pre></div><p>Once the feature filter is create, it needs to be added into the feature management middleware. The middleware will make sure that the filter class is invoked when the flag check is triggers in the application flow (navigation link, action filter, filtermanager check).</p><p>Below the configure service method, where the feature filter is added as well as the supporting classes in my sample.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-c# data-lang=c#><span class=line><span class=cl> <span class=k>public</span> <span class=k>void</span> <span class=n>ConfigureServices</span><span class=p>(</span><span class=n>IServiceCollection</span> <span class=n>services</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>services</span><span class=p>.</span><span class=n>AddSession</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>services</span><span class=p>.</span><span class=n>AddHttpContextAccessor</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>services</span><span class=p>.</span><span class=n>AddControllersWithViews</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>services</span><span class=p>.</span><span class=n>AddSingleton</span><span class=p>&lt;</span><span class=n>IMinuteFeaturePropertyAccessor</span><span class=p>,</span> <span class=n>MinuteFeturePropertyAccessor</span><span class=p>&gt;();</span>
+</span></span><span class=line><span class=cl>            <span class=n>services</span><span class=p>.</span><span class=n>AddFeatureManagement</span><span class=p>().</span><span class=n>AddFeatureFilter</span><span class=p>&lt;</span><span class=n>SecondsFeatureFilter</span><span class=p>&gt;();</span>
+</span></span><span class=line><span class=cl>            <span class=n>services</span><span class=p>.</span><span class=n>AddAzureAppConfiguration</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span></code></pre></div><p>The ways feature flag can be used in the app is exactly same as described in the previous article. The feature flag is going to called <em>TimeLimit</em>. example code is as below</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-c# data-lang=c#><span class=line><span class=cl><span class=na> [FeatureGate(&#34;TimeLimit&#34;)]</span>
+</span></span><span class=line><span class=cl> <span class=k>public</span> <span class=k>async</span> <span class=n>Task</span><span class=p>&lt;</span><span class=n>IActionResult</span><span class=p>&gt;</span> <span class=n>Index</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>View</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span></code></pre></div><p>Rest of the startup and program class will be same as the <a href=../azurefeatureflags>previous article</a>, which basically implements Azure app configuration integration.</p><p>To create the configuration entry in Azure, we use the feature explorer in Azure App configuration service.</p><ul>
+<li>Add a feature flag, enter a feature name same as what was used in the code <em>TimeLimit</em> and check <em>Use feature filter</em> and select <em>Custom</em>.</li><li>In the custom feature filter name, enter the FeatureFilter name as given in the FeatureFilter alias attribute <em>ShortTimeFeature</em>.
+<img src=/blogimages/appconfig/featurefilter-create.png alt="Add feature flag"></li><li>Click the three dots and edit parameters and enter the parameter name and value used in the feature filter implementation <em>EnabledSeconds</em> and 60
 <img src=/blogimages/appconfig/featurefilter-addparameter.png alt="Enable feature filter">
-<img src=/blogimages/appconfig/featurefilter-addparameter-1.png alt="Add parameters "></li>
-</ul>
-<p>Also, remember to have the Azure App Configuration connection string to be added/updated in the config filer of the application and make sure that the feature flag is enabled in the feature explorer.Now we have wired up the feature flag and dependent configurations and the app is ready to executed.</p>
-<h2 id=conclusion>Conclusion</h2>
-<p>This code now will make your feature enabled for 60secs after the user has opened the application. Post 60secs the feature will get disabled, like short preview of a beta code. As mentioned earlier this is just to demonstrate how easy it is to implement a custom feature flag and control features based on different business needs.</p>
-</article>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class=post-comment>
+<img src=/blogimages/appconfig/featurefilter-addparameter-1.png alt="Add parameters "></li></ul><p>Also, remember to have the Azure App Configuration connection string to be added/updated in the config filer of the application and make sure that the feature flag is enabled in the feature explorer.Now we have wired up the feature flag and dependent configurations and the app is ready to executed.</p><h2 id=conclusion>Conclusion</h2><p>This code now will make your feature enabled for 60secs after the user has opened the application. Post 60secs the feature will get disabled, like short preview of a beta code. As mentioned earlier this is just to demonstrate how easy it is to implement a custom feature flag and control features based on different business needs.</p></article></div></div></div></div></div></div><div class=post-comment>
 <script src=https://utteranc.es/client.js repo=gopkumr/gopkumr.github.io issue-term=pathname theme=github-light crossorigin=anonymous async></script>
-</div>
-</main>
-</div>
-<div class="footer container-xl width-full p-responsive">
+</div></main></div><div class="footer container-xl width-full p-responsive">
 <div class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light">
 <a aria-label=Homepage title=GitHub class="footer-octicon d-none d-lg-block mr-lg-4" href=https://www.beneathabstraction.com/><svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58.0.0 3.58.0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38.0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95.0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12.0.0.67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15.0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48.0 1.07-.01 1.93-.01 2.2.0.21.15.46.55.38A8.013 8.013.0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 </a>
 <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-<li class="mr-3 mr-lg-0">Theme by <a href=https://github.com/MeiK2333/github-style>github-style</a></li>
-</ul>
-</div>
-<div class="d-flex flex-justify-center pb-6">
+<li class="mr-3 mr-lg-0">Theme by <a href=https://github.com/MeiK2333/github-style>github-style</a></li></ul></div><div class="d-flex flex-justify-center pb-6">
 <span class="f6 text-gray-light"></span>
-</div>
-</div>
-</body>
-<script type=application/javascript src=https://www.beneathabstraction.com/js/github-style.js></script>
+</div></div></body><script type=application/javascript src=https://www.beneathabstraction.com/js/github-style.js></script>
 </html>

@@ -1,0 +1,170 @@
+---
+title: "SFTP On Azure using SSH Keys"
+date: 2022-03-07T18:39:11+11:00
+draft: true
+tags: ["Azure", "Container Instances", "Docker","SFTP", "Storage Account"]
+---
+
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+		"sftpContainerGroupName": {
+            "type": "string",
+            "defaultValue": "ci-sftp-ase-dev01"
+        },
+        "inboundFileShareName": {
+            "type": "string",
+            "defaultValue": "inbound"
+        },
+		"outboundFileShareName": {
+            "type": "string",
+            "defaultValue": "outbound"
+        },
+		"sshkeyFileShareName": {
+            "type": "string",
+            "defaultValue": "melairsftpsshkey"
+        },
+        "sftpUser": {
+            "type": "string",
+			 "defaultValue": "melairsftp"
+			
+        },
+        "sftpPassword": {
+            "type": "securestring",
+			 "defaultValue": ""
+        },
+        "location": {
+            "type": "string",
+            "defaultValue": "[resourceGroup().location]"
+        },
+		"storageAccountName":{
+		  "type": "string",
+          "defaultValue": "meldriveasedev01"
+		},
+		"storageAccountKey":{
+		  "type": "string",
+          "defaultValue": "95siq7kxuqZ+kvsKcQbo2wPt1Po7vNGb6EmfEsddf4zVb8RBAodBlu8hLfLh1/CG4tMygm3jiRv7e+2S7XCIpw=="
+		},
+		"storageResourceGroupName":{
+		  "type": "string",
+          "defaultValue": "rg-apac-data-ase-dev01"
+		}
+    },
+    "variables": {
+        "sftpContainerName": "apac-sftp",
+        "sftpContainerImage": "atmoz/sftp:latest",
+        "sftpEnvVariable": "[concat(parameters('sftpUser'), ':', parameters('sftpPassword'), ':1001')]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Resources/deployments",
+            "name": "pid-18f281fe-d1e1-502c-8b87-d945383dc75b",
+            "apiVersion": "2015-01-01",
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": []
+                }
+            }
+        },
+        {
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "name": "[parameters('sftpContainerGroupName')]",
+            "apiVersion": "2019-12-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "containers": [
+                    {
+                        "name": "[variables('sftpContainerName')]",
+                        "properties": {
+                            "image": "[variables('sftpContainerImage')]",
+                            "environmentVariables": [
+                                {
+                                    "name": "SFTP_USERS",
+                                    "secureValue": "[variables('sftpEnvVariable')]"
+                                }
+                            ],
+                            "resources": {
+                                "requests": {
+                                    "cpu": 2,
+                                    "memoryInGB": 1
+                                }
+                            },
+                            "ports": [
+                                {
+                                    "port": 22
+                                }
+                            ],
+                            "volumeMounts": [
+                                {
+                                    "mountPath": "[concat('/home/', parameters('sftpUser'), '/', parameters('inboundFileShareName'))]",
+                                    "name": "inboundvolume",
+                                    "readOnly": false
+                                },
+								{
+                                    "mountPath": "[concat('/home/', parameters('sftpUser'), '/', parameters('outboundFileShareName'))]",
+                                    "name": "outboundvolume",
+                                    "readOnly": false
+                                },
+								{
+                                    "mountPath": "[concat('/home/', parameters('sftpUser'), '/.ssh/keys')]",
+                                    "name": "sshkeyvolume",
+                                    "readOnly": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "osType": "Linux",
+                "ipAddress": {
+                    "type": "Public",
+                    "ports": [
+                        {
+                            "protocol": "TCP",
+                            "port": 22
+                        }
+                    ]
+                },
+                "restartPolicy": "OnFailure",
+                "volumes": [
+                    {
+                        "name": "inboundvolume",
+                        "azureFile": {
+                            "readOnly": false,
+                            "shareName": "[parameters('inboundFileShareName')]",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[parameters('storageAccountKey')]"
+                        }
+                    },
+					{
+                        "name": "outboundvolume",
+                        "azureFile": {
+                            "readOnly": false,
+                            "shareName": "[parameters('outboundFileShareName')]",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[parameters('storageAccountKey')]"
+                        }
+                    },
+					{
+                        "name": "sshkeyvolume",
+                        "azureFile": {
+                            "readOnly": true,
+                            "shareName": "[parameters('sshkeyFileShareName')]",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[parameters('storageAccountKey')]"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "outputs": {
+        "containerIPv4Address": {
+            "type": "string",
+            "value": "[reference(resourceId('Microsoft.ContainerInstance/containerGroups/', parameters('sftpContainerGroupName'))).ipAddress.ip]"
+        }
+    }
+}
