@@ -11,7 +11,7 @@ tags: ["Azure", "Container Instances", "Docker","SFTP", "Storage Account"]
     "parameters": {
 		"sftpContainerGroupName": {
             "type": "string",
-            "defaultValue": "ci-sftp-ase-dev01"
+            "defaultValue": "ci-sftp-dev01"
         },
         "inboundFileShareName": {
             "type": "string",
@@ -23,11 +23,11 @@ tags: ["Azure", "Container Instances", "Docker","SFTP", "Storage Account"]
         },
 		"sshkeyFileShareName": {
             "type": "string",
-            "defaultValue": "melairsftpsshkey"
+            "defaultValue": "mysftpsshkey"
         },
         "sftpUser": {
             "type": "string",
-			 "defaultValue": "melairsftp"
+			 "defaultValue": "mysftp"
 			
         },
         "sftpPassword": {
@@ -40,19 +40,19 @@ tags: ["Azure", "Container Instances", "Docker","SFTP", "Storage Account"]
         },
 		"storageAccountName":{
 		  "type": "string",
-          "defaultValue": "meldriveasedev01"
+          "defaultValue": "drivedev01"
 		},
 		"storageAccountKey":{
 		  "type": "string",
-          "defaultValue": "95siq7kxuqZ+kvsKcQbo2wPt1Po7vNGb6EmfEsddf4zVb8RBAodBlu8hLfLh1/CG4tMygm3jiRv7e+2S7XCIpw=="
+          "defaultValue": "samplekey"
 		},
 		"storageResourceGroupName":{
 		  "type": "string",
-          "defaultValue": "rg-apac-data-ase-dev01"
+          "defaultValue": "rg-data-dev01"
 		}
     },
     "variables": {
-        "sftpContainerName": "apac-sftp",
+        "sftpContainerName": "mysftp",
         "sftpContainerImage": "atmoz/sftp:latest",
         "sftpEnvVariable": "[concat(parameters('sftpUser'), ':', parameters('sftpPassword'), ':1001')]"
     },
