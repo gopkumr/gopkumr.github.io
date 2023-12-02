@@ -15,7 +15,7 @@ The requirement is to route incoming traffic through an Azure Application Gatewa
 Specifically, requests with the path /nonprod/* should be directed to the non-production API Management instance, while requests without this path should be forwarded to the production instance.
 
 ## Solution
-Prerequisite: Two separate API Management instances are created - one for non-production and one for production and base URLs (FQDN) for both instances are known.
+Prerequisite: Two separate API Management instances are created - one for non-production and one for production and FQDN for both instances are known.
 
 - **Step 1**: Configure Listener & Backend Pools in Application Gateway  
 Create a listener with a public IP address  
