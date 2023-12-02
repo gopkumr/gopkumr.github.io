@@ -22,7 +22,7 @@ Create a listener with a public IP address
 Create two backend pools, one for non-production and one for production. Add the respective API Management FQDN  to each.  
 
 - **Step 2**: Create a health probe  
-Create a custom health probe to the API Management instance that sends request to /status-0123456789abcdef  
+Create a custom health probe to the API Management instance that sends request to path /status-0123456789abcdef  
 Pick the hostname and port from the backend settings.  
 
 - **Step 3**: Set up Backend Settings   
