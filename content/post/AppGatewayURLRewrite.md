@@ -17,34 +17,36 @@ Specifically, requests with the path /nonprod/* should be directed to the non-pr
 ## Solution
 Prerequisite: Two separate API Management instances are created - one for non-production and one for production and base URLs (FQDN) for both instances are known.
 
-- **Step 1**: Configure Listener & Backend Pools in Application Gateway
-Create a listener with a public IP address
-Create two backend pools, one for non-production and one for production. Add the respective API Management FQDN  to each.
+- **Step 1**: Configure Listener & Backend Pools in Application Gateway  
+Create a listener with a public IP address  
+Create two backend pools, one for non-production and one for production. Add the respective API Management FQDN  to each.  
 
-- **Step 2**: Create a health probe
-Create a custom health probe to the API Management instance that sends request to /status-0123456789abcdef
-Pick the hostname and port from the backend settings.
+- **Step 2**: Create a health probe  
+Create a custom health probe to the API Management instance that sends request to /status-0123456789abcdef  
+Pick the hostname and port from the backend settings.  
 
-- **Step 3**: Set up Backend Settings 
-Create Backend settings, a single setting can be shared by both API Management instance. 
-Set the protocol to HTTPs, use the backend services well-known certificate, Override hostname from the backend target. 
-Use the health probe from step 2
+- **Step 3**: Set up Backend Settings   
+Create Backend settings, a single setting can be shared by both API Management instance.   
+Set the protocol to HTTPs, use the backend services well-known certificate, Override hostname from the backend target.   
+Use the health probe from step 2  
 
-- **Step 4**: Create new rule
-Create a path based rule for selecting the listener from step 1.
-In the backend targets select the APIM Settings and the production backend pool  
-Add a path base rule
-matching the path /nonprod/*,  select the backend settings and non production backend pool
+- **Step 4**: Create new rule  
+Create a path based rule for selecting the listener from step 1.  
+In the backend targets select the backend settings and the production backend pool    
+Add a path base rule  
+ matching the path /nonprod/*:  select the backend settings and non production backend pool  
 
-- **Step 5**: URL Rewrite Configuration
-Navigate the "Rewrites" and add a new rewrite rule set. 
-In the ruleset 
-Associate with the  the path based rule
-Add the below condition
- IF  Server_Variable > uri_path equals /nonprod/(.+)
+- **Step 5**: URL Rewrite Configuration  
+Navigate the "Rewrites" and add a new rewrite rule set.   
+In the ruleset   
+Associate with the  the path based rule  
+Add the below condition  
+ ```
+ IF  server_variable:uri_path equals(=) /nonprod/(.+)  
  THEN set URL Path = /{var_uri_path_1}
+``` 
 
-![image](https://github.com/gopkumr/gopkumr.github.io/assets/1662197/59b71fd8-fde0-4e22-991b-cd5c9adef30a)
+![image](https://github.com/gopkumr/gopkumr.github.io/assets/1662197/59b71fd8-fde0-4e22-991b-cd5c9adef30a)  
 
 
 ## Conclusion
