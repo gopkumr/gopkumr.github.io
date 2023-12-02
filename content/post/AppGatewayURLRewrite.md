@@ -44,6 +44,9 @@ Add the below condition
  IF  Server_Variable > uri_path equals /nonprod/(.+)
  THEN set URL Path = /{var_uri_path_1}
 
+![image](https://github.com/gopkumr/gopkumr.github.io/assets/1662197/59b71fd8-fde0-4e22-991b-cd5c9adef30a)
+
+
 ## Conclusion
 Configuring Azure Application Gateway to route traffic based on URL paths to different API Management instances provides a  solution for managing non-production and production environments with same API routes. 
 By setting up URL rewrite configurations when a request with nonprod in the path is processed by App Gateway, it matches the path to the non production API Management instance however, when app gateway forwards the requesty
