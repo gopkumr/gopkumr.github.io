@@ -1,7 +1,7 @@
 ---
 title: "Configuring Azure Application Gateway for API Management Traffic Routing"
 date: 2023-12-02T14:00:48+11:00
-draft: true
+draft: false
 tags: ["Azure", "App Gateway", "API Management", "URL Rewrite", "Config"]
 ---
 
