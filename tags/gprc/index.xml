@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gprc on Beneath Abstraction</title>
+    <link>http://localhost:1313/tags/gprc/</link>
+    <description>Recent content in Gprc on Beneath Abstraction</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 22 Jun 2024 11:22:45 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gprc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing Gprc service using aspnetcore &amp; SQLite</title>
+      <link>http://localhost:1313/post/aspnetgprcsqllite/</link>
+      <pubDate>Fri, 02 Apr 2021 20:21:00 +1100</pubDate>
+      <guid>http://localhost:1313/post/aspnetgprcsqllite/</guid>
+      <description>add proto files, properties compile action to proto compiler modify csproject to include proto file in item groups as Protobuf incase of multiple proto files&#xA;Add microosft.data. sqllite.core nuger add dapper nuget</description>
+    </item>
+  </channel>
+</rss>
