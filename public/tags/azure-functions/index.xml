@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure Functions on Beneath Abstraction</title>
+    <link>http://localhost:1313/tags/azure-functions/</link>
+    <description>Recent content in Azure Functions on Beneath Abstraction</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 22 Jun 2024 11:22:45 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/azure-functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Resume Challenge - Azure Serverless </title>
+      <link>http://localhost:1313/post/azureserverlessresume/</link>
+      <pubDate>Mon, 28 Jun 2021 10:18:48 +1100</pubDate>
+      <guid>http://localhost:1313/post/azureserverlessresume/</guid>
+      <description>I recently came across the site https://cloudresumechallenge.dev/ and decided to give it a try using Azure services. To start simple I decided to ignore the DB, CDN part etc and just have the the UI and the middler layer of the app. Below is the high level architecture.&#xA;The front end of the app will be hosted a static web site in Azure Blob storage. Backend will be an Azure function that will feed the resume data to the frontend over HTTP, the azure function will be a HTTP triggered function.</description>
+    </item>
+    <item>
+      <title>Azure for integration and process automation</title>
+      <link>http://localhost:1313/post/azureintegration/</link>
+      <pubDate>Sun, 21 Jun 2020 18:52:19 +1100</pubDate>
+      <guid>http://localhost:1313/post/azureintegration/</guid>
+      <description>Problem Businesses run on multiple applications and services, how well the business runs is often impacted on how efficiently data is distributed to the correct task. Automating this flow of data is a way to streamline the business. The problem here is to choose the right technology for this data integration and process automation.&#xA;Objective This article is describing the azure technologies that are available during time of writing to solve the business need.</description>
+    </item>
+  </channel>
+</rss>

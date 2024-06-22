@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebAPI on Beneath Abstraction</title>
+    <link>http://localhost:1313/tags/webapi/</link>
+    <description>Recent content in WebAPI on Beneath Abstraction</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 22 Jun 2024 11:22:45 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/webapi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hosting Blazor WebAssembly on ASP.Net Core WebAPI</title>
+      <link>http://localhost:1313/post/blazorhostwebapi/</link>
+      <pubDate>Tue, 09 Jun 2020 18:52:19 +1100</pubDate>
+      <guid>http://localhost:1313/post/blazorhostwebapi/</guid>
+      <description>Background My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.&#xA;The Changes Create a new solution and add the already created Blazor WebAssembly project Add a new ASPNet core web project and choose WebAPI template and call it the .</description>
+    </item>
+  </channel>
+</rss>

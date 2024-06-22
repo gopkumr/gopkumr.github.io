@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-au">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='http://localhost:1313/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='http://localhost:1313/css/frameworks.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github.min.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/github-style.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/light.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/dark.css' />
+    <link rel="stylesheet" href='http://localhost:1313/css/syntax.css' />
+    <title>Policy Execution in Azure APIM. - Beneath Abstraction</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/logo.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="What are APIM Policies? APIM policies are statements executed by Azure APIM to modify the behavior of API request, response and exception flows. The logic/conditions written as part of the policies are executed at various stages of API execution like, request received (inbound), before request sent to backend service/API (backend), before sending response to requester (outbound) and in case of any exceptions during the request processing (on-error). Policies are defined as an XML format with different tag to define the execution stage and the actual policy." />
+<meta name="keywords"
+  content='blog, techical blog, Microsoft .Net, Csharp, asp.net, docker, mvc, kubernetes, pulumi' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://localhost:1313/post/apimpolicyexecution/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Policy Execution in Azure APIM. - Beneath Abstraction" />
+<meta name="twitter:description"
+  content="What are APIM Policies? APIM policies are statements executed by Azure APIM to modify the behavior of API request, response and exception flows. The logic/conditions written as part of the policies are executed at various stages of API execution like, request received (inbound), before request sent to backend service/API (backend), before sending response to requester (outbound) and in case of any exceptions during the request processing (on-error). Policies are defined as an XML format with different tag to define the execution stage and the actual policy." />
+<meta name="twitter:site" content="http://localhost:1313/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="http://localhost:1313/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Policy Execution in Azure APIM. - Beneath Abstraction">
+<meta property="og:description"
+  content="What are APIM Policies? APIM policies are statements executed by Azure APIM to modify the behavior of API request, response and exception flows. The logic/conditions written as part of the policies are executed at various stages of API execution like, request received (inbound), before request sent to backend service/API (backend), before sending response to requester (outbound) and in case of any exceptions during the request processing (on-error). Policies are defined as an XML format with different tag to define the execution stage and the actual policy." />
+<meta property="og:url" content="http://localhost:1313/post/apimpolicyexecution/" />
+<meta property="og:site_name" content="Policy Execution in Azure APIM." />
+<meta property="og:image"
+  content="http://localhost:1313/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2021-10-27 18:50:46 &#43;1100 AEDT" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="http://localhost:1313/">
+        <img class="octicon" height="32" width="32" src="/images/logo.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <img height="24" class="octicon octicon-three-bars" width="24" src="/images/logo.png">
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:http://localhost:1313/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="http://localhost:1313/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/logo.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="http://localhost:1313/">
+                  <img class=" avatar-user"
+                    src="https://avatars.githubusercontent.com/u/1662197?s=400&amp;u=d1fd525c38f21c760b5f73d3046d9cdee3debcc3&amp;v=4"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="http://localhost:1313/">Gopakumar</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="http://localhost:1313/post/apimpolicyexecution/">Policy Execution in Azure APIM.</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Wed, 27 Oct 2021 18:50:46 &#43;1100"
+                    class="no-wrap">
+                    Wed, 27 Oct 2021 18:50:46 &#43;1100</relative-time>
+
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      626 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                    
+                    <a class="muted-link mr-3" href="/tags/azure">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      Azure
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/api">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      API
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/api-management">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      API Management
+                    </a>
+                    
+                    <a class="muted-link mr-3" href="/tags/api-gateway">
+                      <svg class="octicon octicon-tag" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                          d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z">
+                        </path>
+                      </svg>
+                      API Gateway
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h2 id="what-are-apim-policies">What are APIM Policies?</h2>
+<p>APIM policies are statements executed by Azure APIM to modify the behavior of API request, response and exception flows. The logic/conditions written as part of the policies are executed at various stages of API execution like,  <em>request received (inbound)</em>, <em>before request sent to backend service/API (backend)</em>, <em>before sending  response to requester (outbound)</em> and <em>in case of any exceptions during the request processing (on-error)</em>. Policies are defined as an XML format with different tag to define the execution stage and the actual policy.</p>
+<p>Structure of a policy XML (as mentioned in Microsoft documentation)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;policies&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;inbound&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- statements to be applied to the request go here --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/inbound&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;backend&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- statements to be applied before the request is forwarded to 
+</span></span></span><span class="line"><span class="cl"><span class="c">       the backend service go here --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/backend&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;outbound&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- statements to be applied to the response go here --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/outbound&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;on-error&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- statements to be applied if there is an error condition go here --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/on-error&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/policies&gt;</span>
+</span></span></code></pre></div><h2 id="different-levels-of-policies">Different levels of Policies</h2>
+<p><img src="/blogimages/apim-policylevels.png" alt="APIM Policy Hierarchy"></p>
+<p>Policy statements for each execution stage can be defined at 4 level, Global policies defined at the <em>All APIs</em> section, Product level defined at the product details page, API level defined at each specific API section and Operation level defined at the specific operation section. The execution of the higher hierarchy level policy can be controlled using a special tag <code>&lt;base /&gt;</code> defined at each of the lower levels. The base tag can be used to control the order of execution as well as to skip execution of higher level policies.</p>
+<p>Below is an example to illustrate the use of base tag.</p>
+<p>Global Level Policy</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;policies&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;inbound&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;ip-filter</span> <span class="na">action=</span><span class="s">&#34;allow&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;address&gt;</span>10.0.0.120<span class="nt">&lt;/address&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/ip-filter&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/inbound&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/policies&gt;</span>
+</span></span></code></pre></div><p>Operation Level Policy</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;policies&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;inbound&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;rate-limit</span> <span class="na">calls=</span><span class="s">&#34;20&#34;</span> <span class="na">renewal-period=</span><span class="s">&#34;90&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;base</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/inbound&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/policies&gt;</span>
+</span></span></code></pre></div><p>Even though the Global policies are at a higher level in the hierarchy, the ip-filter policy is executed after the rate-limit policy as the operation level policy specifies the <code>&lt;base /&gt;</code> after the rate-limit policy. This was each lower level policies can control the way the policies are executed in the hierarchy.</p>
+<p>You can even skip the execution of upper level policies by removing the base tag. So of the base tag is removed at the operation level then all the policies defined at  Global, Product or API level will be ignored and only the operation level policy will be executed.</p>
+<p>You can view the effective policy on an operation by opening the policy window at the operation level and choosing to view effective policy. This option will look at the hierarchy and show the policies applies on the operation along with the order in which it is applied.</p>
+<p><img src="/blogimages/apim-effectivepolicy.png" alt="APIM Effective Policy"></p>
+<h2 id="product-level-policies">Product Level policies</h2>
+<p>When an API is added to a product, the policies that are defined at the product level gets applied to the API calls. An API can be added to more than one product, in such a case APIM will look at the subscription key passed in the request to apply the corresponding products policies. In the event the API method is triggered using a subscription key that does not belong with a product (e.g. a master subscription key) none of the product policies are applied and the operation is trigger passing through the Global, API and operation level policies.</p>
+<p>One such use case would be an API listed under a starter product where a rate limit policy is applied and also list under an unlimited product where there is no rate limit restriction.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>APIM policies are powerful yet easy to implement feature that helps in implementing many common use cases using <a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-policies">built in policies</a>. For more advanced and custom scenarios, the policy definition also support <a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-policy-expressions">C# syntax expressions</a> and a subset of .Net Framework types, so the opportunity to extend the policies are limitless.</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='http://localhost:1313/js/toc.js'></script>
+<link rel="stylesheet" href='http://localhost:1313/css/toc.css' />
+
+
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="http://localhost:1313/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="http://localhost:1313/js/github-style.js"></script>
+
+
+
+
+
+</html>

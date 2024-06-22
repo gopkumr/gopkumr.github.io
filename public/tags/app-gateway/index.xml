@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>App Gateway on Beneath Abstraction</title>
+    <link>http://localhost:1313/tags/app-gateway/</link>
+    <description>Recent content in App Gateway on Beneath Abstraction</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sat, 22 Jun 2024 11:22:45 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/app-gateway/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configuring Azure Application Gateway for API Management Traffic Routing</title>
+      <link>http://localhost:1313/post/appgatewayurlrewrite/</link>
+      <pubDate>Sat, 02 Dec 2023 14:00:48 +1100</pubDate>
+      <guid>http://localhost:1313/post/appgatewayurlrewrite/</guid>
+      <description>Introduction Azure Application Gateway provides a powerful solution for load balancing, SSL termination, and URL-based routing. In this blog post, we will discuss a common scenario where we need to forward traffic to two different Azure API Management instances based on the incoming URL, distinguishing between non-production and production environments.&#xA;Problem Statement Consider a scenario where you have two separate instances of Azure API Management (Sku: any non consumption tier): one for non-production/testing (nonprod) and the other for production (prod).</description>
+    </item>
+  </channel>
+</rss>
