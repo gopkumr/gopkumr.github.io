@@ -13,6 +13,8 @@ Retrieval-Augmented Generation (RAG) enhances Large Language Model (LLM) capabil
 
 A pre-trained language model uses its training data to answer prompts. However, this data might not align with the prompt’s context. Grounding a prompt with relevant data transforms how a language model responds, making them more contextualized and accurate.
 
+![RAG Architecture](/blogimages/RAG.webp)
+
 ### Introducing Azure AI Studio
 
 Azure AI Studio improves the AI application development by providing a unified platform combining the capabilities of Azure AI Services, Azure AI Search, and Azure Machine Learning. This integration helps developers to effortlessly build, manage, and deploy AI applications. With Azure AI Studio, you can easily deploy a language model, import data, and integrate with services like Azure AI Search.
