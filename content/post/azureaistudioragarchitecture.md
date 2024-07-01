@@ -1,11 +1,11 @@
 ---
-title: "Enhancing Language Models with RAG Architecture"
+title: "Enhancing Language Models Using RAG Architecture in Azure AI Studio"
 date: 2024-06-21T18:50:46+10:00
 draft: false
 tags: ["Azure AI", "AI Studio", "Artificial Intelligence", "Retrieval-Augmented Generation (RAG)", "LLM"]
 ---
 
-# Enhancing Language Models with RAG Architecture
+# Enhancing Language Models Using RAG Architecture in Azure AI Studio
 
 In this guide, we’ll walk you through the process of enhancing language models using RAG architecture in Azure AI Studio. Retrieval-Augmented Generation (RAG) enhances Large Language Model (LLM) capabilities, like those of GPTs, by integrating an information retrieval system. This addition grounds data and controls the context for the LLM’s response generation.
 
