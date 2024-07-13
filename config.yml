@@ -80,7 +80,7 @@ params:
 
   analytics:
     google:
-      SiteVerificationTag: "UA-171421715-1"
+      SiteVerificationTag: "G-GMEVCEV281"
     bing:
       SiteVerificationTag: "XYZabc"
     yandex:
