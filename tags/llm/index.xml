@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LLM on Beneath Abstraction</title><link>https://www.beneathabstraction.com/tags/llm/</link><description>Recent content in LLM on Beneath Abstraction</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Sat, 13 Jul 2024 04:27:37 +0000</lastBuildDate><atom:link href="https://www.beneathabstraction.com/tags/llm/index.xml" rel="self" type="application/rss+xml"/><item><title>Enhancing Language Models Using RAG Architecture in Azure AI Studio</title><link>https://www.beneathabstraction.com/post/rag-using-azure-ai-studio/</link><pubDate>Fri, 21 Jun 2024 18:50:46 +1000</pubDate><guid>https://www.beneathabstraction.com/post/rag-using-azure-ai-studio/</guid><description>This guide will walk you through the process of enhancing language models using RAG architecture in Azure AI Studio. Retrieval-Augmented Generation (RAG) enhances Large Language Model (LLM) capabilities, like those of GPTs, by integrating an information retrieval system. This addition grounds data and controls the context for the LLM’s response generation.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LLM on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/llm/</link>
+    <description>Recent content in LLM on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 21 Jun 2024 18:50:46 +1000</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enhancing Language Models Using RAG Architecture in Azure AI Studio</title>
+      <link>https://www.beneathabstraction.com/post/rag-using-azure-ai-studio/</link>
+      <pubDate>Fri, 21 Jun 2024 18:50:46 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/rag-using-azure-ai-studio/</guid>
+      <description>This guide will walk you through the process of enhancing language models using RAG architecture in Azure AI Studio. Retrieval-Augmented Generation (RAG) enhances Large Language Model (LLM) capabilities, like those of GPTs, by integrating an information retrieval system. This addition grounds data and controls the context for the LLM’s response generation.</description>
+    </item>
+  </channel>
+</rss>

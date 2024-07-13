@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AzureDevOps on Beneath Abstraction</title><link>https://www.beneathabstraction.com/tags/azuredevops/</link><description>Recent content in AzureDevOps on Beneath Abstraction</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Sat, 13 Jul 2024 04:27:37 +0000</lastBuildDate><atom:link href="https://www.beneathabstraction.com/tags/azuredevops/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploying 'JUST' the modified ARM templates</title><link>https://www.beneathabstraction.com/post/selectedarmdeployment/</link><pubDate>Sun, 05 Sep 2021 10:00:46 +1000</pubDate><guid>https://www.beneathabstraction.com/post/selectedarmdeployment/</guid><description>Problem The project has a bunch of ARM templates as part of IAC scripts and more often only couple, if not few templates get modified. But when deploying using Azure pipeline all the templates gets deployed. Even though ARM template deployment support incremental mode, if a templates is deployed with exact same properties, the resource gets recreated. The project does not want to recreate all the templates when only a few are changed.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AzureDevOps on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/azuredevops/</link>
+    <description>Recent content in AzureDevOps on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Sep 2021 10:00:46 +1000</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/azuredevops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying &#39;JUST&#39; the modified ARM templates</title>
+      <link>https://www.beneathabstraction.com/post/selectedarmdeployment/</link>
+      <pubDate>Sun, 05 Sep 2021 10:00:46 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/selectedarmdeployment/</guid>
+      <description>Problem The project has a bunch of ARM templates as part of IAC scripts and more often only couple, if not few templates get modified. But when deploying using Azure pipeline all the templates gets deployed. Even though ARM template deployment support incremental mode, if a templates is deployed with exact same properties, the resource gets recreated. The project does not want to recreate all the templates when only a few are changed.</description>
+    </item>
+  </channel>
+</rss>

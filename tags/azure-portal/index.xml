@@ -1,3 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Azure Portal on Beneath Abstraction</title><link>https://www.beneathabstraction.com/tags/azure-portal/</link><description>Recent content in Azure Portal on Beneath Abstraction</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Sat, 13 Jul 2024 04:27:37 +0000</lastBuildDate><atom:link href="https://www.beneathabstraction.com/tags/azure-portal/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloning a Azure Function App</title><link>https://www.beneathabstraction.com/post/functionappclone/</link><pubDate>Thu, 10 Feb 2022 14:22:48 +1100</pubDate><guid>https://www.beneathabstraction.com/post/functionappclone/</guid><description>Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.
-One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch.</description></item><item><title>Move azure resources between resource groups</title><link>https://www.beneathabstraction.com/post/moveresources/</link><pubDate>Tue, 12 Oct 2021 17:20:59 +1100</pubDate><guid>https://www.beneathabstraction.com/post/moveresources/</guid><description>Problem While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.
-Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Azure Portal on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/azure-portal/</link>
+    <description>Recent content in Azure Portal on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Feb 2022 14:22:48 +1100</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/azure-portal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloning a Azure Function App</title>
+      <link>https://www.beneathabstraction.com/post/functionappclone/</link>
+      <pubDate>Thu, 10 Feb 2022 14:22:48 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/functionappclone/</guid>
+      <description>Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.
+One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch.</description>
+    </item>
+    <item>
+      <title>Move azure resources between resource groups</title>
+      <link>https://www.beneathabstraction.com/post/moveresources/</link>
+      <pubDate>Tue, 12 Oct 2021 17:20:59 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/moveresources/</guid>
+      <description>Problem While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.
+Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it.</description>
+    </item>
+  </channel>
+</rss>

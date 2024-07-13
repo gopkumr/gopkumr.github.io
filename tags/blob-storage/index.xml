@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blob Storage on Beneath Abstraction</title><link>https://www.beneathabstraction.com/tags/blob-storage/</link><description>Recent content in Blob Storage on Beneath Abstraction</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Sat, 13 Jul 2024 04:27:37 +0000</lastBuildDate><atom:link href="https://www.beneathabstraction.com/tags/blob-storage/index.xml" rel="self" type="application/rss+xml"/><item><title>Exposing Azure Storage container via SFTP</title><link>https://www.beneathabstraction.com/post/azurestoragesftp/</link><pubDate>Mon, 13 Jun 2022 12:05:53 +1000</pubDate><guid>https://www.beneathabstraction.com/post/azurestoragesftp/</guid><description>Context While most of the application integration patterns are moving towards real-time, near-real-time and stream based solutions, there are still requirement to have batch file based data movement. These requirements are often for reporting or data warehousing scenario or while integrating with a legacy system. While there are many products that help setup SFTP server, Azure was missing a SaaS offering for hosted SFTP server, like Amazon&amp;rsquo;s AWS Transfer on top of S3.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blob Storage on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/blob-storage/</link>
+    <description>Recent content in Blob Storage on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Jun 2022 12:05:53 +1000</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/blob-storage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exposing Azure Storage container via SFTP</title>
+      <link>https://www.beneathabstraction.com/post/azurestoragesftp/</link>
+      <pubDate>Mon, 13 Jun 2022 12:05:53 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/azurestoragesftp/</guid>
+      <description>Context While most of the application integration patterns are moving towards real-time, near-real-time and stream based solutions, there are still requirement to have batch file based data movement. These requirements are often for reporting or data warehousing scenario or while integrating with a legacy system. While there are many products that help setup SFTP server, Azure was missing a SaaS offering for hosted SFTP server, like Amazon&amp;rsquo;s AWS Transfer on top of S3.</description>
+    </item>
+  </channel>
+</rss>

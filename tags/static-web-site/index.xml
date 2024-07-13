@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Static Web Site on Beneath Abstraction</title><link>https://www.beneathabstraction.com/tags/static-web-site/</link><description>Recent content in Static Web Site on Beneath Abstraction</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Sat, 13 Jul 2024 04:27:37 +0000</lastBuildDate><atom:link href="https://www.beneathabstraction.com/tags/static-web-site/index.xml" rel="self" type="application/rss+xml"/><item><title>utterances: Comments section for your static web site</title><link>https://www.beneathabstraction.com/post/utterance/</link><pubDate>Fri, 13 Aug 2021 09:49:48 +1000</pubDate><guid>https://www.beneathabstraction.com/post/utterance/</guid><description>Problem When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Static Web Site on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/static-web-site/</link>
+    <description>Recent content in Static Web Site on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Aug 2021 09:49:48 +1000</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/static-web-site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>utterances: Comments section for your static web site</title>
+      <link>https://www.beneathabstraction.com/post/utterance/</link>
+      <pubDate>Fri, 13 Aug 2021 09:49:48 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/utterance/</guid>
+      <description>Problem When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.</description>
+    </item>
+  </channel>
+</rss>

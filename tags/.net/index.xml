@@ -1,12 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>.Net on Beneath Abstraction</title><link>https://www.beneathabstraction.com/tags/.net/</link><description>Recent content in .Net on Beneath Abstraction</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Sat, 13 Jul 2024 04:27:37 +0000</lastBuildDate><atom:link href="https://www.beneathabstraction.com/tags/.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloning a Azure Function App</title><link>https://www.beneathabstraction.com/post/functionappclone/</link><pubDate>Thu, 10 Feb 2022 14:22:48 +1100</pubDate><guid>https://www.beneathabstraction.com/post/functionappclone/</guid><description>Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.
-One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch.</description></item><item><title>Implementing Custom Feature flags - Your own logic to shutoff a feature - Azure App Configuration</title><link>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</link><pubDate>Tue, 22 Jun 2021 10:18:48 +1100</pubDate><guid>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</guid><description>This is a continuation from the previous article on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.
-Introduction The previous article described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag.</description></item><item><title>Implementing Feature flags using azure</title><link>https://www.beneathabstraction.com/post/azurefeatureflags/</link><pubDate>Sun, 16 May 2021 10:00:48 +1100</pubDate><guid>https://www.beneathabstraction.com/post/azurefeatureflags/</guid><description>Feature flag is a very popular practice in modern application development, which is used to specifically hide features implemented that are not yet ready to be used by wider audience, and when ready can be enabled by a flip of a switch. The flags can also be used as a kill switch for application feature when it not working as expected.
-With feature flags implemented, it would be effective to have the features enabled or disabled from a location outside of the application infrastructure or configuration, this way we can have features spanning across applications be controlled via a centralized flag.</description></item><item><title>Infrastructure as C#</title><link>https://www.beneathabstraction.com/post/infraascsharp/</link><pubDate>Sun, 26 Jul 2020 18:52:19 +1100</pubDate><guid>https://www.beneathabstraction.com/post/infraascsharp/</guid><description>Introduction After attempting the .Net tutorial on deploying a simple WebAPI based microservice to Azure Kubernetes Service (AKS), wanted a better way to represent my infrastructure than the YAML.xml file. This was partly because of me being novice in YAML format and partly to have a way to abstract the infrastructure in order to make it repeatable and it should be not just confined to AKS. The first solution to this problem was to use a framework like Terraform to define my infrastructure as code.</description></item><item><title>Steps for Deploying a Blazor as Static Site with Docker and Nginx</title><link>https://www.beneathabstraction.com/post/blazorhostdocker/</link><pubDate>Thu, 11 Jun 2020 18:52:19 +1100</pubDate><guid>https://www.beneathabstraction.com/post/blazorhostdocker/</guid><description>Step 1 Publish the Blazor WebAssembly project Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>.Net on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/.net/</link>
+    <description>Recent content in .Net on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.128.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Feb 2022 14:22:48 +1100</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloning a Azure Function App</title>
+      <link>https://www.beneathabstraction.com/post/functionappclone/</link>
+      <pubDate>Thu, 10 Feb 2022 14:22:48 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/functionappclone/</guid>
+      <description>Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.
+One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch.</description>
+    </item>
+    <item>
+      <title>Implementing Custom Feature flags - Your own logic to shutoff a feature - Azure App Configuration </title>
+      <link>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</link>
+      <pubDate>Tue, 22 Jun 2021 10:18:48 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</guid>
+      <description>This is a continuation from the previous article on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.
+Introduction The previous article described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag.</description>
+    </item>
+    <item>
+      <title>Implementing Feature flags using azure </title>
+      <link>https://www.beneathabstraction.com/post/azurefeatureflags/</link>
+      <pubDate>Sun, 16 May 2021 10:00:48 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/azurefeatureflags/</guid>
+      <description>Feature flag is a very popular practice in modern application development, which is used to specifically hide features implemented that are not yet ready to be used by wider audience, and when ready can be enabled by a flip of a switch. The flags can also be used as a kill switch for application feature when it not working as expected.
+With feature flags implemented, it would be effective to have the features enabled or disabled from a location outside of the application infrastructure or configuration, this way we can have features spanning across applications be controlled via a centralized flag.</description>
+    </item>
+    <item>
+      <title>Infrastructure as C#</title>
+      <link>https://www.beneathabstraction.com/post/infraascsharp/</link>
+      <pubDate>Sun, 26 Jul 2020 18:52:19 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/infraascsharp/</guid>
+      <description>Introduction After attempting the .Net tutorial on deploying a simple WebAPI based microservice to Azure Kubernetes Service (AKS), wanted a better way to represent my infrastructure than the YAML.xml file. This was partly because of me being novice in YAML format and partly to have a way to abstract the infrastructure in order to make it repeatable and it should be not just confined to AKS. The first solution to this problem was to use a framework like Terraform to define my infrastructure as code.</description>
+    </item>
+    <item>
+      <title>Steps for Deploying a Blazor as Static Site with Docker and Nginx</title>
+      <link>https://www.beneathabstraction.com/post/blazorhostdocker/</link>
+      <pubDate>Thu, 11 Jun 2020 18:52:19 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/blazorhostdocker/</guid>
+      <description>Step 1 Publish the Blazor WebAssembly project Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.
 Step 2 Create a dockerfile The docker file is very straightforward, pull the nginx image and copy the published Blazor WebAssembly file from the WWWRoot folder to the html folder in nginx
-FROM nginx:alpine EXPOSE 80 COPY bin/Release/netcoreapp3.</description></item><item><title>Hosting Blazor WebAssembly on ASP.Net Core WebAPI</title><link>https://www.beneathabstraction.com/post/blazorhostwebapi/</link><pubDate>Tue, 09 Jun 2020 18:52:19 +1100</pubDate><guid>https://www.beneathabstraction.com/post/blazorhostwebapi/</guid><description>Background My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.
-The Changes Create a new solution and add the already created Blazor WebAssembly project Add a new ASPNet core web project and choose WebAPI template and call it the .</description></item><item><title>How can I turn my Blazor WebAssembly to PWA?</title><link>https://www.beneathabstraction.com/post/blazorwasntopwa/</link><pubDate>Thu, 04 Jun 2020 18:52:19 +1100</pubDate><guid>https://www.beneathabstraction.com/post/blazorwasntopwa/</guid><description>Lets get started with an existing Blazor WebAssembly project I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here Repo: https://github.com/gopkumr/BlazorTourOfHeroes.git Branch: Release
-Next step is making this into PWA As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.</description></item><item><title>An attempt to convert Blazor WebAssembly Project to Blazor Server App</title><link>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</link><pubDate>Sat, 25 Apr 2020 18:52:19 +1100</pubDate><guid>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</guid><description>Blazor Web-Assembly Project This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in GitHub
-This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.</description></item><item><title>a sneak peek into Blazor WebAssembly</title><link>https://www.beneathabstraction.com/post/introblazor/</link><pubDate>Sun, 12 Jan 2020 18:52:19 +1100</pubDate><guid>https://www.beneathabstraction.com/post/introblazor/</guid><description>an attempt to create tour of heroes&amp;rsquo; using Blazor preface WebAssembly is an exciting piece of software, along with HTML, CSS and JavaScript WebAssembly (or WASM) is the fourth language that modern browsers can run natively, WASM is run in the browser in the same security sandbox as the JavaScript frameworks run. WASM also lets you invoke JavaScript and vice versa, making it coexist with JavaScript, More on WebAssembly here: https://webassembly.</description></item><item><title>Tired of updating namespaces? With VS2019 you won't.</title><link>https://www.beneathabstraction.com/post/namespaceupdate/</link><pubDate>Thu, 17 Oct 2019 18:50:46 +1100</pubDate><guid>https://www.beneathabstraction.com/post/namespaceupdate/</guid><description>Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).
-With Visual Studio 2019, this mundane task of changing the namespaces while moving folder is now automated, which means, visual studio updates the namespace to match the folder structure by itself.</description></item><item><title>ASP.Net MVC 5 and Security</title><link>https://www.beneathabstraction.com/post/mvc5security/</link><pubDate>Sat, 14 Oct 2017 10:51:44 +1100</pubDate><guid>https://www.beneathabstraction.com/post/mvc5security/</guid><description>Security? Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.
+FROM nginx:alpine EXPOSE 80 COPY bin/Release/netcoreapp3.</description>
+    </item>
+    <item>
+      <title>Hosting Blazor WebAssembly on ASP.Net Core WebAPI</title>
+      <link>https://www.beneathabstraction.com/post/blazorhostwebapi/</link>
+      <pubDate>Tue, 09 Jun 2020 18:52:19 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/blazorhostwebapi/</guid>
+      <description>Background My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.
+The Changes Create a new solution and add the already created Blazor WebAssembly project Add a new ASPNet core web project and choose WebAPI template and call it the .</description>
+    </item>
+    <item>
+      <title>How can I turn my Blazor WebAssembly to PWA?</title>
+      <link>https://www.beneathabstraction.com/post/blazorwasntopwa/</link>
+      <pubDate>Thu, 04 Jun 2020 18:52:19 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/blazorwasntopwa/</guid>
+      <description>Lets get started with an existing Blazor WebAssembly project I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here Repo: https://github.com/gopkumr/BlazorTourOfHeroes.git Branch: Release
+Next step is making this into PWA As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.</description>
+    </item>
+    <item>
+      <title>An attempt to convert Blazor WebAssembly Project to Blazor Server App</title>
+      <link>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</link>
+      <pubDate>Sat, 25 Apr 2020 18:52:19 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</guid>
+      <description>Blazor Web-Assembly Project This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in GitHub
+This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.</description>
+    </item>
+    <item>
+      <title>a sneak peek into Blazor WebAssembly</title>
+      <link>https://www.beneathabstraction.com/post/introblazor/</link>
+      <pubDate>Sun, 12 Jan 2020 18:52:19 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/introblazor/</guid>
+      <description>an attempt to create tour of heroes&amp;rsquo; using Blazor preface WebAssembly is an exciting piece of software, along with HTML, CSS and JavaScript WebAssembly (or WASM) is the fourth language that modern browsers can run natively, WASM is run in the browser in the same security sandbox as the JavaScript frameworks run. WASM also lets you invoke JavaScript and vice versa, making it coexist with JavaScript, More on WebAssembly here: https://webassembly.</description>
+    </item>
+    <item>
+      <title>Tired of updating namespaces? With VS2019 you won&#39;t.</title>
+      <link>https://www.beneathabstraction.com/post/namespaceupdate/</link>
+      <pubDate>Thu, 17 Oct 2019 18:50:46 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/namespaceupdate/</guid>
+      <description>Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).
+With Visual Studio 2019, this mundane task of changing the namespaces while moving folder is now automated, which means, visual studio updates the namespace to match the folder structure by itself.</description>
+    </item>
+    <item>
+      <title>ASP.Net MVC 5 and Security</title>
+      <link>https://www.beneathabstraction.com/post/mvc5security/</link>
+      <pubDate>Sat, 14 Oct 2017 10:51:44 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/mvc5security/</guid>
+      <description>Security? Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.
 Authentication Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.
-Authorization Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.</description></item><item><title>Clean your code using Code cleanup in Visual Studio 2019</title><link>https://www.beneathabstraction.com/post/vs2019codecleanup/</link><pubDate>Fri, 16 Sep 2016 14:22:48 +1100</pubDate><guid>https://www.beneathabstraction.com/post/vs2019codecleanup/</guid><description>All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.</description></item></channel></rss>
+Authorization Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.</description>
+    </item>
+    <item>
+      <title>Clean your code using Code cleanup in Visual Studio 2019</title>
+      <link>https://www.beneathabstraction.com/post/vs2019codecleanup/</link>
+      <pubDate>Fri, 16 Sep 2016 14:22:48 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/vs2019codecleanup/</guid>
+      <description>All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.</description>
+    </item>
+  </channel>
+</rss>
