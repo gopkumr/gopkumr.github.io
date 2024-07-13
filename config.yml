@@ -1,7 +1,7 @@
 baseURL: "https://www.beneathabstraction.com/"
 title: "Beneath Abstraction"
 paginate: 7
-theme: PaperMod
+theme: PaperModLocal
 
 enableRobotsTXT: true
 buildDrafts: false
