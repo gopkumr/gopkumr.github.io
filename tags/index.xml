@@ -11,27 +11,55 @@
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 21 Jun 2024 18:50:46 +1000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2024 21:45:08 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Security</title>
+      <link>https://www.beneathabstraction.com/tags/ai-security/</link>
+      <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/ai-security/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI Studio</title>
       <link>https://www.beneathabstraction.com/tags/ai-studio/</link>
-      <pubDate>Fri, 21 Jun 2024 18:50:46 +1000</pubDate>
+      <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/tags/ai-studio/</guid>
       <description></description>
     </item>
     <item>
       <title>Artificial Intelligence</title>
       <link>https://www.beneathabstraction.com/tags/artificial-intelligence/</link>
-      <pubDate>Fri, 21 Jun 2024 18:50:46 +1000</pubDate>
+      <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/tags/artificial-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure AI</title>
       <link>https://www.beneathabstraction.com/tags/azure-ai/</link>
-      <pubDate>Fri, 21 Jun 2024 18:50:46 +1000</pubDate>
+      <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/tags/azure-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prompt Injection</title>
+      <link>https://www.beneathabstraction.com/tags/prompt-injection/</link>
+      <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/prompt-injection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prompt Shield</title>
+      <link>https://www.beneathabstraction.com/tags/prompt-shield/</link>
+      <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/prompt-shield/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://www.beneathabstraction.com/tags/security/</link>
+      <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/security/</guid>
       <description></description>
     </item>
     <item>
@@ -144,13 +172,6 @@
       <link>https://www.beneathabstraction.com/tags/powerplatform/</link>
       <pubDate>Sun, 19 Jun 2022 19:23:15 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/tags/powerplatform/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security</title>
-      <link>https://www.beneathabstraction.com/tags/security/</link>
-      <pubDate>Sun, 19 Jun 2022 19:23:15 +1000</pubDate>
-      <guid>https://www.beneathabstraction.com/tags/security/</guid>
       <description></description>
     </item>
     <item>

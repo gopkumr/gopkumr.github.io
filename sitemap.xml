@@ -2,20 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.beneathabstraction.com/</loc>
-    <lastmod>2024-07-07T21:45:08+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/post/</loc>
-    <lastmod>2024-07-07T21:45:08+10:00</lastmod>
+    <loc>https://www.beneathabstraction.com/tags/ai-security/</loc>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/ai-studio/</loc>
-    <lastmod>2024-06-21T18:50:46+10:00</lastmod>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/artificial-intelligence/</loc>
-    <lastmod>2024-06-21T18:50:46+10:00</lastmod>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/azure-ai/</loc>
-    <lastmod>2024-06-21T18:50:46+10:00</lastmod>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/</loc>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/post/</loc>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/prompt-injection/</loc>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/prompt-shield/</loc>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/security/</loc>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/</loc>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/post/ai-security-against-prompt-injection/</loc>
+    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/post/rag-using-azure-ai-studio/</loc>
     <lastmod>2024-06-21T18:50:46+10:00</lastmod>
@@ -24,9 +42,6 @@
     <lastmod>2024-06-21T18:50:46+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/retrieval-augmented-generation-rag/</loc>
-    <lastmod>2024-06-21T18:50:46+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/tags/</loc>
     <lastmod>2024-06-21T18:50:46+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/api-management/</loc>
@@ -78,9 +93,6 @@
     <lastmod>2022-06-19T19:23:15+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/post/powerportalapicall/</loc>
-    <lastmod>2022-06-19T19:23:15+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/tags/security/</loc>
     <lastmod>2022-06-19T19:23:15+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/blob-storage/</loc>
