@@ -62,7 +62,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Beneath Abstraction"
+    Title: "<code>Beneath Abstraction</code>"
     Content: >
      👋 Welcome to my blog!  
        - Dive into the in web, cloud, AI and application development tools, techniques and technology. 
