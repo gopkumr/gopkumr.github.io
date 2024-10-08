@@ -19,7 +19,7 @@
       <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/microservice-deployment-with-azure-container-apps/</guid>
       <description>&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;In this blog post we look into a scalable and flexible platforms to run microservices on Azure without the complexity of managing infrastructure. &lt;strong&gt;Azure Container Apps&lt;/strong&gt; allows you to run containerized microservices and integrating &lt;strong&gt;Dapr (Distributed Application Runtime)&lt;/strong&gt; can simplify the communication between services, manage state, and handle pub/sub messaging. This blog also shows how to set up Azure Container Apps, and how to deploy two Dapr-enabled microservices that communicate with each other using .NET.&lt;/p&gt;</description>
+&lt;p&gt;In this blog post we look into a scalable and flexible platform to run microservices on Azure without the complexity of managing infrastructure. &lt;strong&gt;Azure Container Apps&lt;/strong&gt; allows you to run containerized microservices and integrating &lt;strong&gt;Dapr (Distributed Application Runtime)&lt;/strong&gt; can simplify the communication between services, manage state, and handle pub/sub messaging. This blog also shows how to set up Azure Container Apps, and how to deploy Dapr-enabled microservices that communicate with each other.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio</title>
