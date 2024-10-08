@@ -28,7 +28,7 @@ AKS offers more control over the underlying infrastructure and is ideal for more
 
 Below we are deploying two microservices using **Azure Container Apps** and **Dapr**. One microservice will call another service privately using Dapr's service-to-service invocation feature.
 
-Components that we are implementing
+Components we are implementing
 ![Container App Solution](/blogimages/container-app.svg)
 
 #### Step 1: Prerequisites
