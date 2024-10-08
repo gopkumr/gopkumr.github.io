@@ -8,11 +8,11 @@ tags: ["Azure", "Microservices", "Azure Container Apps", "Dapr", "Security", "Sc
 
 ### Introduction
 
-In this blog post we look into a scalable and flexible platforms to run microservices on Azure without the complexity of managing infrastructure. **Azure Container Apps** allows you to run containerized microservices and integrating **Dapr (Distributed Application Runtime)** can simplify the communication between services, manage state, and handle pub/sub messaging. This blog also shows how to set up Azure Container Apps, and how to deploy two Dapr-enabled microservices that communicate with each other using .NET.
+In this blog post we look into a scalable and flexible platform to run microservices on Azure without the complexity of managing infrastructure. **Azure Container Apps** allows you to run containerized microservices and integrating **Dapr (Distributed Application Runtime)** can simplify the communication between services, manage state, and handle pub/sub messaging. This blog also shows how to set up Azure Container Apps, and how to deploy Dapr-enabled microservices that communicate with each other.
 
 ### What is Dapr?
 
-Dapr is an open-source, portable runtime that simplifies building microservices by providing building blocks for common microservice scenarios, such as service-to-service invocation, pub/sub messaging, state management, and distributed tracing. By combining **Azure Container Apps** with **Dapr**, you get the power of Kubernetes without its complexities.
+Dapr is an open-source, portable runtime that simplifies building microservices by providing building blocks for common microservice scenarios, such as service-to-service invocation, pub/sub messaging, state management, and distributed tracing. Dapr is deployed as a separate process or container to provide isolation and encapsulation and this pattern is known as [sidecar pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/side-car). By combining **Azure Container Apps** with **Dapr**, you get the power of Kubernetes without its complexities.
 
 ### Key Benefits of Azure Container Apps + Dapr
 
@@ -34,13 +34,13 @@ Components we are implementing
 #### Step 1: Prerequisites
 
 - [**Azure CLI**](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [**Dapr CLI**](https://docs.dapr.io/getting-started/install-dapr-cli/)
 - [**Docker**](https://docs.docker.com/get-docker/)
 - [**.NET SDK**](https://dotnet.microsoft.com/download)
+- **Azure Subscription** with sufficient permission
 
-#### Step 2: Create Two .NET Microservices with Dapr
+#### Step 2: Create .NET Web APIs
 
-We will create two simple services: **Products Service** and **Orders Service**. The **Orders Service** will invoke the **Products Service** using Dapr's service invocation.
+We will create two simple APIs: **Products Service** and **Orders Service**. The **Orders Service** will invoke the **Products Service** using Dapr's service invocation.
 
 1. **Create the Products Service**:
    ```bash
@@ -78,7 +78,7 @@ We will create two simple services: **Products Service** and **Orders Service**.
 
    Note the URL format for invoking Dapr: `http://localhost:3500/v1.0/invoke/{app-id}/method/{method}`. The `app-id` here is `products-service`.
 
-#### Step 3: Dockerize Both Services
+#### Step 3: Dockerize Both APIs
 
 1. **`Dockerfile` for Products Service**:
    ```Dockerfile
@@ -133,7 +133,7 @@ We will create two simple services: **Products Service** and **Orders Service**.
    ```
 
 2. **Push Docker images**:
-   - Tag and push the **Products Service**:
+   - Build, Tag and push the **Products Service** image:
      ```bash
      docker build -t productsservice .
      docker tag productsservice <your-registry-name>.azurecr.io/productsservice:v1
@@ -141,7 +141,7 @@ We will create two simple services: **Products Service** and **Orders Service**.
      docker push <your-registry-name>.azurecr.io/productsservice:v1
      ```
 
-   - Tag and push the **Orders Service**:
+   - Build, Tag and push the **Orders Service** image:
      ```bash
      docker build -t ordersservice .
      docker tag ordersservice <your-registry-name>.azurecr.io/ordersservice:v1
@@ -149,7 +149,7 @@ We will create two simple services: **Products Service** and **Orders Service**.
      docker push <your-registry-name>.azurecr.io/ordersservice:v1
      ```
 
-#### Step 5: Set Up Azure Container Apps with Dapr
+#### Step 5: Set Up Azure Container Apps with Dapr enabled
 
 1. **Create an Azure Container Apps Environment**:
    ```bash
@@ -203,7 +203,7 @@ Here, both services are Dapr enabled, and the **Orders Service** invokes the **P
 >   az extension add --name containerapp --upgrade
 > ```
 
-#### Step 6: Test the Application
+#### Step 6: Test the Order Service
 
 Retrieve the external URL for the **Orders Service**:
 ```bash
