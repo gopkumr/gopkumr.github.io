@@ -6,7 +6,7 @@ slug: "Microservice Deployment with Azure Container Apps "
 tags: ["Azure", "Microservices", "Azure Container Apps", "Dapr", "Security", "Scalability", "Containers", "AKS", "Kubernetes"]
 ---
 
-## Introduction
+### Introduction
 
 In this blog post we look into a scalable and flexible platforms to run microservices on Azure without the complexity of managing infrastructure. **Azure Container Apps** allows you to run containerized microservices and integrating **Dapr (Distributed Application Runtime)** can simplify the communication between services, manage state, and handle pub/sub messaging. This blog also shows how to set up Azure Container Apps, and how to deploy two Dapr-enabled microservices that communicate with each other using .NET.
 
