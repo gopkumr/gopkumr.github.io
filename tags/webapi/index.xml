@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 09 Jun 2020 18:52:19 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/webapi/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,31 @@
       <link>https://www.beneathabstraction.com/post/blazorhostwebapi/</link>
       <pubDate>Tue, 09 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorhostwebapi/</guid>
-      <description>Background My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.
-The Changes Create a new solution and add the already created Blazor WebAssembly project Add a new ASPNet core web project and choose WebAPI template and call it the .</description>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.&lt;/p&gt;
+&lt;h2 id=&#34;the-changes&#34;&gt;The Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new solution and add the already created Blazor WebAssembly project&lt;/li&gt;
+&lt;li&gt;Add a new ASPNet core web project and choose WebAPI template and call it the .Server project&lt;/li&gt;
+&lt;li&gt;Add reference of the WebAssembly Project to the .Server project.&lt;/li&gt;
+&lt;li&gt;Install package Microsoft.AspNetCore.Components.WebAssembly.Server to the .Server project. This package contains the runtime server for Blazor application.&lt;/li&gt;
+&lt;li&gt;In the startup class add configuration to the request pipeline to handle Blazor and its routing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// This methods serves the WebAssembly framework files when a request is made to root path. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//This method also take path parameter that can be used if the WebAssembly project is only served &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//from part of the project, giving options to combine web assembly project with a web application&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UseBlazorFrameworkFiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//This configuration helps in serving the static files like &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Javascript and CSS that is part of the Blazor WebAssembly&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UseStaticFiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Add the below configuration to the end of the UseEndpoint configuration, &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//this will serve the index.html file from the WebAssembly when the WebAPI route &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//does not find a match in the routing table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;endpoints&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MapFallbackToFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;index.html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your ASPNet Core hosted WebAssembly project is ready to be published and deployed. Pretty easy!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

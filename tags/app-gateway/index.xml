@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Sat, 02 Dec 2023 14:00:48 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/app-gateway/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,13 @@
       <link>https://www.beneathabstraction.com/post/appgatewayurlrewrite/</link>
       <pubDate>Sat, 02 Dec 2023 14:00:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/appgatewayurlrewrite/</guid>
-      <description>Introduction Azure Application Gateway provides a powerful solution for load balancing, SSL termination, and URL-based routing. In this blog post, we will discuss a common scenario where we need to forward traffic to two different Azure API Management instances based on the incoming URL, distinguishing between non-production and production environments.
-Problem Statement Consider a scenario where you have two separate instances of Azure API Management (Sku: any non consumption tier): one for non-production/testing (nonprod) and the other for production (prod).</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Azure Application Gateway provides a powerful solution for load balancing, SSL termination, and URL-based routing. In this blog post, we will discuss a common scenario
+where we need to forward traffic to two different Azure API Management instances based on the incoming URL, distinguishing between non-production and production environments.&lt;/p&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;p&gt;Consider a scenario where you have two separate instances of Azure API Management (Sku: any non consumption tier): one for non-production/testing (nonprod) and the other for production (prod).
+The requirement is to route incoming traffic through an Azure Application Gateway, forwarding requests to the appropriate API Management instance based on the path specified in the URL.
+Specifically, requests with the path /nonprod/* should be directed to the non-production API Management instance, while requests without this path should be forwarded to the production instance.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

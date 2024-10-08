@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Sat, 25 Apr 2020 18:52:19 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/blazore-server/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,9 @@
       <link>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</link>
       <pubDate>Sat, 25 Apr 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</guid>
-      <description>Blazor Web-Assembly Project This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in GitHub
-This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.</description>
+      <description>&lt;h2 id=&#34;blazor-web-assembly-project&#34;&gt;Blazor Web-Assembly Project&lt;/h2&gt;
+&lt;p&gt;This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in &lt;a href=&#34;https://github.com/gopkumr/BlazorTourOfHeroes.git&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

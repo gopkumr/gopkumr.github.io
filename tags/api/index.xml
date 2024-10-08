@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Wed, 27 Oct 2021 18:50:46 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,8 @@
       <link>https://www.beneathabstraction.com/post/apimpolicyexecution/</link>
       <pubDate>Wed, 27 Oct 2021 18:50:46 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/apimpolicyexecution/</guid>
-      <description>What are APIM Policies? APIM policies are statements executed by Azure APIM to modify the behavior of API request, response and exception flows. The logic/conditions written as part of the policies are executed at various stages of API execution like, request received (inbound), before request sent to backend service/API (backend), before sending response to requester (outbound) and in case of any exceptions during the request processing (on-error). Policies are defined as an XML format with different tag to define the execution stage and the actual policy.</description>
+      <description>&lt;h2 id=&#34;what-are-apim-policies&#34;&gt;What are APIM Policies?&lt;/h2&gt;
+&lt;p&gt;APIM policies are statements executed by Azure APIM to modify the behavior of API request, response and exception flows. The logic/conditions written as part of the policies are executed at various stages of API execution like,  &lt;em&gt;request received (inbound)&lt;/em&gt;, &lt;em&gt;before request sent to backend service/API (backend)&lt;/em&gt;, &lt;em&gt;before sending  response to requester (outbound)&lt;/em&gt; and &lt;em&gt;in case of any exceptions during the request processing (on-error)&lt;/em&gt;. Policies are defined as an XML format with different tag to define the execution stage and the actual policy.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

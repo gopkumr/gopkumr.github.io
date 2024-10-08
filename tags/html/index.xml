@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 11 May 2021 16:35:28 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
       <link>https://www.beneathabstraction.com/post/blazor5/</link>
       <pubDate>Tue, 11 May 2021 16:35:28 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazor5/</guid>
-      <description>I have been reading the Blazor 5 documentation and decided to create a simple project to give its features a try. As always, there were a ton of ideas in my mind but while scanning through dev.to i came across a post by Aleks Popovic, where he made a Radio player using react, so i decided to create one using Blazor 5. I used the same service as Aleks to get the radio stations, called the Radio-Browser.</description>
+      <description>&lt;p&gt;I have been reading the Blazor 5 documentation and decided to create a simple project to give its features a try. As always, there were a ton of ideas in my mind but while scanning through dev.to i came across a post by &lt;a href=&#34;https://dev.to/alekswritescode/radio-player-app-in-react-84k&#34;&gt;Aleks Popovic, where he made a Radio player using react&lt;/a&gt;, so i decided to create one using Blazor 5. I used the same service as Aleks to get the radio stations, called the &lt;a href=&#34;https://www.radio-browser.info/&#34;&gt;Radio-Browser&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

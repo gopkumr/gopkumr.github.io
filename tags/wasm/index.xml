@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 11 Jun 2020 18:52:19 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/wasm/index.xml" rel="self" type="application/rss+xml" />
@@ -18,40 +18,75 @@
       <link>https://www.beneathabstraction.com/post/blazorhostdocker/</link>
       <pubDate>Thu, 11 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorhostdocker/</guid>
-      <description>Step 1 Publish the Blazor WebAssembly project Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.
-Step 2 Create a dockerfile The docker file is very straightforward, pull the nginx image and copy the published Blazor WebAssembly file from the WWWRoot folder to the html folder in nginx
-FROM nginx:alpine EXPOSE 80 COPY bin/Release/netcoreapp3.</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dev-to-uploads.s3.amazonaws.com/i/57a76kbj8isstq42nlga.png&#34; alt=&#34;Blazor meets nginx&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;step-1-publish-the-blazor-webassembly-project&#34;&gt;Step 1 Publish the Blazor WebAssembly project&lt;/h2&gt;
+&lt;p&gt;Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.&lt;/p&gt;
+&lt;h2 id=&#34;step-2-create-a-dockerfile&#34;&gt;Step 2 Create a dockerfile&lt;/h2&gt;
+&lt;p&gt;The docker file is very straightforward, pull the nginx image and copy the published Blazor WebAssembly file from the WWWRoot folder to the html folder in nginx&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hosting Blazor WebAssembly on ASP.Net Core WebAPI</title>
       <link>https://www.beneathabstraction.com/post/blazorhostwebapi/</link>
       <pubDate>Tue, 09 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorhostwebapi/</guid>
-      <description>Background My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.
-The Changes Create a new solution and add the already created Blazor WebAssembly project Add a new ASPNet core web project and choose WebAPI template and call it the .</description>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.&lt;/p&gt;
+&lt;h2 id=&#34;the-changes&#34;&gt;The Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new solution and add the already created Blazor WebAssembly project&lt;/li&gt;
+&lt;li&gt;Add a new ASPNet core web project and choose WebAPI template and call it the .Server project&lt;/li&gt;
+&lt;li&gt;Add reference of the WebAssembly Project to the .Server project.&lt;/li&gt;
+&lt;li&gt;Install package Microsoft.AspNetCore.Components.WebAssembly.Server to the .Server project. This package contains the runtime server for Blazor application.&lt;/li&gt;
+&lt;li&gt;In the startup class add configuration to the request pipeline to handle Blazor and its routing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// This methods serves the WebAssembly framework files when a request is made to root path. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//This method also take path parameter that can be used if the WebAssembly project is only served &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//from part of the project, giving options to combine web assembly project with a web application&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UseBlazorFrameworkFiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//This configuration helps in serving the static files like &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Javascript and CSS that is part of the Blazor WebAssembly&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UseStaticFiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Add the below configuration to the end of the UseEndpoint configuration, &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//this will serve the index.html file from the WebAssembly when the WebAPI route &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//does not find a match in the routing table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;endpoints&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MapFallbackToFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;index.html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your ASPNet Core hosted WebAssembly project is ready to be published and deployed. Pretty easy!&lt;/p&gt;</description>
     </item>
     <item>
       <title>How can I turn my Blazor WebAssembly to PWA?</title>
       <link>https://www.beneathabstraction.com/post/blazorwasntopwa/</link>
       <pubDate>Thu, 04 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorwasntopwa/</guid>
-      <description>Lets get started with an existing Blazor WebAssembly project I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here Repo: https://github.com/gopkumr/BlazorTourOfHeroes.git Branch: Release
-Next step is making this into PWA As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dev-to-uploads.s3.amazonaws.com/i/g9e27g1fckgxdipathy2.png&#34; alt=&#34;PWAmeetsBlazor&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;lets-get-started-with-an-existing-blazor-webassembly-project&#34;&gt;Lets get started with an existing Blazor WebAssembly project&lt;/h2&gt;
+&lt;p&gt;I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here
+Repo: &lt;a href=&#34;https://github.com/gopkumr/BlazorTourOfHeroes.git&#34;&gt;https://github.com/gopkumr/BlazorTourOfHeroes.git&lt;/a&gt;
+Branch: Release&lt;/p&gt;
+&lt;h2 id=&#34;next-step-is-making-this-into-pwa&#34;&gt;Next step is making this into PWA&lt;/h2&gt;
+&lt;p&gt;As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.&lt;/p&gt;</description>
     </item>
     <item>
       <title>An attempt to convert Blazor WebAssembly Project to Blazor Server App</title>
       <link>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</link>
       <pubDate>Sat, 25 Apr 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</guid>
-      <description>Blazor Web-Assembly Project This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in GitHub
-This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.</description>
+      <description>&lt;h2 id=&#34;blazor-web-assembly-project&#34;&gt;Blazor Web-Assembly Project&lt;/h2&gt;
+&lt;p&gt;This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in &lt;a href=&#34;https://github.com/gopkumr/BlazorTourOfHeroes.git&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.&lt;/p&gt;</description>
     </item>
     <item>
       <title>a sneak peek into Blazor WebAssembly</title>
       <link>https://www.beneathabstraction.com/post/introblazor/</link>
       <pubDate>Sun, 12 Jan 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/introblazor/</guid>
-      <description>an attempt to create tour of heroes&amp;rsquo; using Blazor preface WebAssembly is an exciting piece of software, along with HTML, CSS and JavaScript WebAssembly (or WASM) is the fourth language that modern browsers can run natively, WASM is run in the browser in the same security sandbox as the JavaScript frameworks run. WASM also lets you invoke JavaScript and vice versa, making it coexist with JavaScript, More on WebAssembly here: https://webassembly.</description>
+      <description>&lt;h1 id=&#34;an-attempt-to-create-tour-of-heroes-using-blazor&#34;&gt;an attempt to create tour of heroes&amp;rsquo; using Blazor&lt;/h1&gt;
+&lt;h2 id=&#34;preface&#34;&gt;preface&lt;/h2&gt;
+&lt;p&gt;WebAssembly is an exciting piece of software, along with HTML, CSS and JavaScript WebAssembly (or WASM) is the fourth language that modern browsers can run natively, WASM is run in the browser in the same security sandbox as the JavaScript frameworks run. WASM also lets you invoke JavaScript and vice versa, making it coexist with JavaScript, More on WebAssembly here: &lt;a href=&#34;https://webassembly.org/&#34;&gt;https://webassembly.org/&lt;/a&gt; and Blazor is an open-source implementation of WASM by Microsoft and it has made web development even more exciting by letting run the ever loved C# in the browser. Lets dive right into writing some code, you can read more about Blazor right from its creators here: &lt;a href=&#34;http://blazor.net/&#34;&gt;http://blazor.net/&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

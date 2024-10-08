@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Wed, 10 Feb 2021 20:42:44 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,8 @@
       <link>https://www.beneathabstraction.com/post/deploypihole/</link>
       <pubDate>Wed, 10 Feb 2021 20:42:44 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/deploypihole/</guid>
-      <description>Problem We all have seen and annoyed seeing those google ads or facebook ads on websites and apps. Mostly of the times the ads over takes the actual content of the website, especially on those forums. Ads also shows up on free email services, apps on your phones, smart tv, they are everywhere. More than annoyance, they eat up a lot of bandwidth and ofter makes the website/apps slower to respond.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;We all have seen and annoyed seeing those google ads or facebook ads on websites and apps. Mostly of the times the ads over takes the actual content of the website, especially on those forums. Ads also shows up on free email services, apps on your phones, smart tv, they are everywhere. More than annoyance, they eat up a lot of bandwidth and ofter makes the website/apps slower to respond. There are ad blockers available for your browsers, but that just solves the problem on that device, but devices like smart tv doesn&amp;rsquo;t have an easy way to block ad on the device.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

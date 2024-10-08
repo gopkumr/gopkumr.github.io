@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Wed, 10 Feb 2021 18:07:46 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/jamstack/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,8 @@
       <link>https://www.beneathabstraction.com/post/blogonhugo/</link>
       <pubDate>Wed, 10 Feb 2021 18:07:46 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blogonhugo/</guid>
-      <description>Problem While blogger is an amazing platform for hosting your blog, with perks of easy linking custom domains and google analytics integration, the main issue is with styling/rendering of your website and most of all blogger &amp;ldquo;owns&amp;rdquo; the content and if its decides it can just take it out or make parts paid. I had bitter experience with another hosting platform, where my account was in-accessible and had to spend hours writing to customer support with little support from them .</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;While blogger is an amazing platform for hosting your blog, with perks of easy linking custom domains and google analytics integration, the main issue is with styling/rendering of your website and most of all blogger &amp;ldquo;owns&amp;rdquo; the content and if its decides it can just take it out or make parts paid. I had bitter experience with another hosting platform, where my account was in-accessible and had to spend hours writing to customer support with little support from them . So decided to make the big move.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

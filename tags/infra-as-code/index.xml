@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Sun, 26 Jul 2020 18:52:19 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/infra-as-code/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,10 @@
       <link>https://www.beneathabstraction.com/post/infraascsharp/</link>
       <pubDate>Sun, 26 Jul 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/infraascsharp/</guid>
-      <description>Introduction After attempting the .Net tutorial on deploying a simple WebAPI based microservice to Azure Kubernetes Service (AKS), wanted a better way to represent my infrastructure than the YAML.xml file. This was partly because of me being novice in YAML format and partly to have a way to abstract the infrastructure in order to make it repeatable and it should be not just confined to AKS. The first solution to this problem was to use a framework like Terraform to define my infrastructure as code.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;After attempting the .Net tutorial on deploying a simple WebAPI based microservice to Azure Kubernetes Service (AKS), wanted a better way to represent my infrastructure than the YAML.xml file. This was partly because of me being novice in YAML format and partly to have a way to abstract the infrastructure in order to make it repeatable and it should be not just confined to AKS.
+The first solution to this problem was to use a framework like Terraform to define my infrastructure as code. But this will lead me learn new language and language constructs like loops, conditions etc.
+The search was over pretty soon after I found a framework called Pulumi, that lets me write my infrastructure in many of the populate programming language including C#. So i decided to convert the .Net tutorial YAML into a pulumi project and see how well it runs.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

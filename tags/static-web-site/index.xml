@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Fri, 13 Aug 2021 09:49:48 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/static-web-site/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,8 @@
       <link>https://www.beneathabstraction.com/post/utterance/</link>
       <pubDate>Fri, 13 Aug 2021 09:49:48 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/utterance/</guid>
-      <description>Problem When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

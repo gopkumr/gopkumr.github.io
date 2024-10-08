@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 04 Jun 2020 18:52:19 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/pwa/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,14 @@
       <link>https://www.beneathabstraction.com/post/blazorwasntopwa/</link>
       <pubDate>Thu, 04 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorwasntopwa/</guid>
-      <description>Lets get started with an existing Blazor WebAssembly project I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here Repo: https://github.com/gopkumr/BlazorTourOfHeroes.git Branch: Release
-Next step is making this into PWA As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dev-to-uploads.s3.amazonaws.com/i/g9e27g1fckgxdipathy2.png&#34; alt=&#34;PWAmeetsBlazor&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;lets-get-started-with-an-existing-blazor-webassembly-project&#34;&gt;Lets get started with an existing Blazor WebAssembly project&lt;/h2&gt;
+&lt;p&gt;I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here
+Repo: &lt;a href=&#34;https://github.com/gopkumr/BlazorTourOfHeroes.git&#34;&gt;https://github.com/gopkumr/BlazorTourOfHeroes.git&lt;/a&gt;
+Branch: Release&lt;/p&gt;
+&lt;h2 id=&#34;next-step-is-making-this-into-pwa&#34;&gt;Next step is making this into PWA&lt;/h2&gt;
+&lt;p&gt;As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

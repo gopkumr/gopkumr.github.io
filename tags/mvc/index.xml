@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Sat, 14 Oct 2017 10:51:44 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
@@ -18,9 +18,12 @@
       <link>https://www.beneathabstraction.com/post/mvc5security/</link>
       <pubDate>Sat, 14 Oct 2017 10:51:44 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/mvc5security/</guid>
-      <description>Security? Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.
-Authentication Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.
-Authorization Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.</description>
+      <description>&lt;h2 id=&#34;security&#34;&gt;Security?&lt;/h2&gt;
+&lt;p&gt;Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.&lt;/p&gt;
+&lt;h2 id=&#34;authentication&#34;&gt;Authentication&lt;/h2&gt;
+&lt;p&gt;Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.&lt;/p&gt;
+&lt;h2 id=&#34;authorization&#34;&gt;Authorization&lt;/h2&gt;
+&lt;p&gt;Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 20 Aug 2019 18:39:11 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/browser/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,9 @@
       <link>https://www.beneathabstraction.com/post/brave/</link>
       <pubDate>Tue, 20 Aug 2019 18:39:11 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/brave/</guid>
-      <description>Current online ads landscape
-Advertisers and publishers are always in search of targeting the right user group and the actual presenting of ads to the user. Users are the most undervalued actor of the use case. The ads intrude into the viewing area, uses up bandwidth, make the overall experience poor. In most cases, the users enjoy the service for free by viewing the ads e.g. Youtube. Brave browser has taken this use case and improvised to make it a win-win situation for all.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Current online ads landscape&lt;/strong&gt;&lt;br&gt;
+Advertisers and publishers are always in search of targeting the right user group and the actual presenting of ads to the user. Users are the most undervalued actor of the use case. The ads intrude into the viewing area, uses up bandwidth, make the overall experience poor. In most cases, the users enjoy the service for free by viewing the ads e.g. Youtube.
+Brave browser has taken this use case and improvised to make it a win-win situation for all. Here is what Brave has done.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

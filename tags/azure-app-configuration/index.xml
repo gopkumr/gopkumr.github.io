@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 22 Jun 2021 10:18:48 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/azure-app-configuration/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,9 @@
       <link>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</link>
       <pubDate>Tue, 22 Jun 2021 10:18:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</guid>
-      <description>This is a continuation from the previous article on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.
-Introduction The previous article described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag.</description>
+      <description>&lt;p&gt;This is a continuation from the &lt;a href=&#34;../azurefeatureflags&#34;&gt;previous article&lt;/a&gt; on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;../azurefeatureflags&#34;&gt;previous article&lt;/a&gt; described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag. Microsoft provides few predefined custom feature flags or feature filters (as they are called) Targeting, TimeWindow, and Percentage (more about it &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-feature-filters-aspnet-core&#34;&gt;here&lt;/a&gt;), which covers most usecases, however, there might be situations where you find the predefined ones falling short. In this article I am building a filter ground up with a made up custom logic.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

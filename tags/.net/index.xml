@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 10 Feb 2022 14:22:48 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
@@ -18,95 +18,138 @@
       <link>https://www.beneathabstraction.com/post/functionappclone/</link>
       <pubDate>Thu, 10 Feb 2022 14:22:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/functionappclone/</guid>
-      <description>Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.
-One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch.</description>
+      <description>&lt;p&gt;Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.&lt;/p&gt;
+&lt;p&gt;One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch. So we had to setup a pipeline, give the pipeline service account access to the POC resource group, then actually triggering the deployment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Implementing Custom Feature flags - Your own logic to shutoff a feature - Azure App Configuration </title>
       <link>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</link>
       <pubDate>Tue, 22 Jun 2021 10:18:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</guid>
-      <description>This is a continuation from the previous article on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.
-Introduction The previous article described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag.</description>
+      <description>&lt;p&gt;This is a continuation from the &lt;a href=&#34;../azurefeatureflags&#34;&gt;previous article&lt;/a&gt; on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;../azurefeatureflags&#34;&gt;previous article&lt;/a&gt; described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag. Microsoft provides few predefined custom feature flags or feature filters (as they are called) Targeting, TimeWindow, and Percentage (more about it &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-feature-filters-aspnet-core&#34;&gt;here&lt;/a&gt;), which covers most usecases, however, there might be situations where you find the predefined ones falling short. In this article I am building a filter ground up with a made up custom logic.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Implementing Feature flags using azure </title>
       <link>https://www.beneathabstraction.com/post/azurefeatureflags/</link>
       <pubDate>Sun, 16 May 2021 10:00:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/azurefeatureflags/</guid>
-      <description>Feature flag is a very popular practice in modern application development, which is used to specifically hide features implemented that are not yet ready to be used by wider audience, and when ready can be enabled by a flip of a switch. The flags can also be used as a kill switch for application feature when it not working as expected.
-With feature flags implemented, it would be effective to have the features enabled or disabled from a location outside of the application infrastructure or configuration, this way we can have features spanning across applications be controlled via a centralized flag.</description>
+      <description>&lt;p&gt;Feature flag is a very popular practice in modern application development, which is used to specifically hide features implemented that are not yet ready to be used by wider audience, and when ready can be enabled by a flip of a switch. The flags can also be used as a kill switch for application feature when it not working as expected.&lt;/p&gt;
+&lt;p&gt;With feature flags implemented, it would be effective to have the features enabled or disabled from a location outside of the application infrastructure or configuration, this way we can have features spanning across applications be controlled via a centralized flag. Azure has feature management as part of the Azure App configuration service which can manage feature flags and maintain it separate from your hosting model and will act as a centralized repository for feature flags. Microsoft also provides libraries for different programing languages to consume Azure App Configuration service. More about it can be &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-app-configuration/manage-feature-flags&#34;&gt;found here&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Infrastructure as C#</title>
       <link>https://www.beneathabstraction.com/post/infraascsharp/</link>
       <pubDate>Sun, 26 Jul 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/infraascsharp/</guid>
-      <description>Introduction After attempting the .Net tutorial on deploying a simple WebAPI based microservice to Azure Kubernetes Service (AKS), wanted a better way to represent my infrastructure than the YAML.xml file. This was partly because of me being novice in YAML format and partly to have a way to abstract the infrastructure in order to make it repeatable and it should be not just confined to AKS. The first solution to this problem was to use a framework like Terraform to define my infrastructure as code.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;After attempting the .Net tutorial on deploying a simple WebAPI based microservice to Azure Kubernetes Service (AKS), wanted a better way to represent my infrastructure than the YAML.xml file. This was partly because of me being novice in YAML format and partly to have a way to abstract the infrastructure in order to make it repeatable and it should be not just confined to AKS.
+The first solution to this problem was to use a framework like Terraform to define my infrastructure as code. But this will lead me learn new language and language constructs like loops, conditions etc.
+The search was over pretty soon after I found a framework called Pulumi, that lets me write my infrastructure in many of the populate programming language including C#. So i decided to convert the .Net tutorial YAML into a pulumi project and see how well it runs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Steps for Deploying a Blazor as Static Site with Docker and Nginx</title>
       <link>https://www.beneathabstraction.com/post/blazorhostdocker/</link>
       <pubDate>Thu, 11 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorhostdocker/</guid>
-      <description>Step 1 Publish the Blazor WebAssembly project Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.
-Step 2 Create a dockerfile The docker file is very straightforward, pull the nginx image and copy the published Blazor WebAssembly file from the WWWRoot folder to the html folder in nginx
-FROM nginx:alpine EXPOSE 80 COPY bin/Release/netcoreapp3.</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dev-to-uploads.s3.amazonaws.com/i/57a76kbj8isstq42nlga.png&#34; alt=&#34;Blazor meets nginx&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;step-1-publish-the-blazor-webassembly-project&#34;&gt;Step 1 Publish the Blazor WebAssembly project&lt;/h2&gt;
+&lt;p&gt;Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.&lt;/p&gt;
+&lt;h2 id=&#34;step-2-create-a-dockerfile&#34;&gt;Step 2 Create a dockerfile&lt;/h2&gt;
+&lt;p&gt;The docker file is very straightforward, pull the nginx image and copy the published Blazor WebAssembly file from the WWWRoot folder to the html folder in nginx&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hosting Blazor WebAssembly on ASP.Net Core WebAPI</title>
       <link>https://www.beneathabstraction.com/post/blazorhostwebapi/</link>
       <pubDate>Tue, 09 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorhostwebapi/</guid>
-      <description>Background My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.
-The Changes Create a new solution and add the already created Blazor WebAssembly project Add a new ASPNet core web project and choose WebAPI template and call it the .</description>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.&lt;/p&gt;
+&lt;h2 id=&#34;the-changes&#34;&gt;The Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new solution and add the already created Blazor WebAssembly project&lt;/li&gt;
+&lt;li&gt;Add a new ASPNet core web project and choose WebAPI template and call it the .Server project&lt;/li&gt;
+&lt;li&gt;Add reference of the WebAssembly Project to the .Server project.&lt;/li&gt;
+&lt;li&gt;Install package Microsoft.AspNetCore.Components.WebAssembly.Server to the .Server project. This package contains the runtime server for Blazor application.&lt;/li&gt;
+&lt;li&gt;In the startup class add configuration to the request pipeline to handle Blazor and its routing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// This methods serves the WebAssembly framework files when a request is made to root path. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//This method also take path parameter that can be used if the WebAssembly project is only served &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//from part of the project, giving options to combine web assembly project with a web application&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UseBlazorFrameworkFiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//This configuration helps in serving the static files like &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Javascript and CSS that is part of the Blazor WebAssembly&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UseStaticFiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Add the below configuration to the end of the UseEndpoint configuration, &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//this will serve the index.html file from the WebAssembly when the WebAPI route &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//does not find a match in the routing table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;endpoints&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MapFallbackToFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;index.html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your ASPNet Core hosted WebAssembly project is ready to be published and deployed. Pretty easy!&lt;/p&gt;</description>
     </item>
     <item>
       <title>How can I turn my Blazor WebAssembly to PWA?</title>
       <link>https://www.beneathabstraction.com/post/blazorwasntopwa/</link>
       <pubDate>Thu, 04 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorwasntopwa/</guid>
-      <description>Lets get started with an existing Blazor WebAssembly project I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here Repo: https://github.com/gopkumr/BlazorTourOfHeroes.git Branch: Release
-Next step is making this into PWA As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dev-to-uploads.s3.amazonaws.com/i/g9e27g1fckgxdipathy2.png&#34; alt=&#34;PWAmeetsBlazor&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;lets-get-started-with-an-existing-blazor-webassembly-project&#34;&gt;Lets get started with an existing Blazor WebAssembly project&lt;/h2&gt;
+&lt;p&gt;I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here
+Repo: &lt;a href=&#34;https://github.com/gopkumr/BlazorTourOfHeroes.git&#34;&gt;https://github.com/gopkumr/BlazorTourOfHeroes.git&lt;/a&gt;
+Branch: Release&lt;/p&gt;
+&lt;h2 id=&#34;next-step-is-making-this-into-pwa&#34;&gt;Next step is making this into PWA&lt;/h2&gt;
+&lt;p&gt;As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.&lt;/p&gt;</description>
     </item>
     <item>
       <title>An attempt to convert Blazor WebAssembly Project to Blazor Server App</title>
       <link>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</link>
       <pubDate>Sat, 25 Apr 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</guid>
-      <description>Blazor Web-Assembly Project This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in GitHub
-This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.</description>
+      <description>&lt;h2 id=&#34;blazor-web-assembly-project&#34;&gt;Blazor Web-Assembly Project&lt;/h2&gt;
+&lt;p&gt;This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in &lt;a href=&#34;https://github.com/gopkumr/BlazorTourOfHeroes.git&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.&lt;/p&gt;</description>
     </item>
     <item>
       <title>a sneak peek into Blazor WebAssembly</title>
       <link>https://www.beneathabstraction.com/post/introblazor/</link>
       <pubDate>Sun, 12 Jan 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/introblazor/</guid>
-      <description>an attempt to create tour of heroes&amp;rsquo; using Blazor preface WebAssembly is an exciting piece of software, along with HTML, CSS and JavaScript WebAssembly (or WASM) is the fourth language that modern browsers can run natively, WASM is run in the browser in the same security sandbox as the JavaScript frameworks run. WASM also lets you invoke JavaScript and vice versa, making it coexist with JavaScript, More on WebAssembly here: https://webassembly.</description>
+      <description>&lt;h1 id=&#34;an-attempt-to-create-tour-of-heroes-using-blazor&#34;&gt;an attempt to create tour of heroes&amp;rsquo; using Blazor&lt;/h1&gt;
+&lt;h2 id=&#34;preface&#34;&gt;preface&lt;/h2&gt;
+&lt;p&gt;WebAssembly is an exciting piece of software, along with HTML, CSS and JavaScript WebAssembly (or WASM) is the fourth language that modern browsers can run natively, WASM is run in the browser in the same security sandbox as the JavaScript frameworks run. WASM also lets you invoke JavaScript and vice versa, making it coexist with JavaScript, More on WebAssembly here: &lt;a href=&#34;https://webassembly.org/&#34;&gt;https://webassembly.org/&lt;/a&gt; and Blazor is an open-source implementation of WASM by Microsoft and it has made web development even more exciting by letting run the ever loved C# in the browser. Lets dive right into writing some code, you can read more about Blazor right from its creators here: &lt;a href=&#34;http://blazor.net/&#34;&gt;http://blazor.net/&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tired of updating namespaces? With VS2019 you won&#39;t.</title>
       <link>https://www.beneathabstraction.com/post/namespaceupdate/</link>
       <pubDate>Thu, 17 Oct 2019 18:50:46 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/namespaceupdate/</guid>
-      <description>Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).
-With Visual Studio 2019, this mundane task of changing the namespaces while moving folder is now automated, which means, visual studio updates the namespace to match the folder structure by itself.</description>
+      <description>&lt;p&gt;Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).&lt;/p&gt;
+&lt;p&gt;With Visual Studio 2019, this mundane task of changing the namespaces while moving folder is now automated, which means, visual studio updates the namespace to match the folder structure by itself.
+Even if for some reason, you move the folder using the file explorer rather than the visual studio, in such case, you can go into the code file and you get an option to update the namespace to match the folder structure or change it any other existing namespace from your project.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ASP.Net MVC 5 and Security</title>
       <link>https://www.beneathabstraction.com/post/mvc5security/</link>
       <pubDate>Sat, 14 Oct 2017 10:51:44 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/mvc5security/</guid>
-      <description>Security? Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.
-Authentication Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.
-Authorization Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.</description>
+      <description>&lt;h2 id=&#34;security&#34;&gt;Security?&lt;/h2&gt;
+&lt;p&gt;Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.&lt;/p&gt;
+&lt;h2 id=&#34;authentication&#34;&gt;Authentication&lt;/h2&gt;
+&lt;p&gt;Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.&lt;/p&gt;
+&lt;h2 id=&#34;authorization&#34;&gt;Authorization&lt;/h2&gt;
+&lt;p&gt;Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Clean your code using Code cleanup in Visual Studio 2019</title>
       <link>https://www.beneathabstraction.com/post/vs2019codecleanup/</link>
       <pubDate>Fri, 16 Sep 2016 14:22:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/vs2019codecleanup/</guid>
-      <description>All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.</description>
+      <description>&lt;p&gt;All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

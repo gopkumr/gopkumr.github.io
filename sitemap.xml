@@ -2,6 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.beneathabstraction.com/tags/aks/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/azure/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/azure-container-apps/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/containers/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/dapr/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/kubernetes/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/microservices/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/post/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/scalability/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/security/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/post/microservice-deployment-with-azure-container-apps/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/</loc>
+    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
+  </url><url>
     <loc>https://www.beneathabstraction.com/tags/ai-security/</loc>
     <lastmod>2024-07-13T21:45:08+10:00</lastmod>
   </url><url>
@@ -14,22 +53,10 @@
     <loc>https://www.beneathabstraction.com/tags/azure-ai/</loc>
     <lastmod>2024-07-13T21:45:08+10:00</lastmod>
   </url><url>
-    <loc>https://www.beneathabstraction.com/</loc>
-    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/post/</loc>
-    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
-  </url><url>
     <loc>https://www.beneathabstraction.com/tags/prompt-injection/</loc>
     <lastmod>2024-07-13T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/prompt-shield/</loc>
-    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/tags/security/</loc>
-    <lastmod>2024-07-13T21:45:08+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/tags/</loc>
     <lastmod>2024-07-13T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/post/ai-security-against-prompt-injection/</loc>
@@ -48,9 +75,6 @@
     <lastmod>2023-12-02T14:00:48+11:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/app-gateway/</loc>
-    <lastmod>2023-12-02T14:00:48+11:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/tags/azure/</loc>
     <lastmod>2023-12-02T14:00:48+11:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/config/</loc>
@@ -273,9 +297,6 @@
     <lastmod>2020-07-26T18:52:19+11:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/post/infraascsharp/</loc>
-    <lastmod>2020-07-26T18:52:19+11:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/tags/kubernetes/</loc>
     <lastmod>2020-07-26T18:52:19+11:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/pulumi/</loc>

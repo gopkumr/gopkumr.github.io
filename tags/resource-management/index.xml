@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Tue, 12 Oct 2021 17:20:59 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/resource-management/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,10 @@
       <link>https://www.beneathabstraction.com/post/moveresources/</link>
       <pubDate>Tue, 12 Oct 2021 17:20:59 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/moveresources/</guid>
-      <description>Problem While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.
-Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it. The process also validates if the resource can be moved or not, for example an Azure SQL Database cannot be moved without moving the SQL Server instance, and when a SQL Server instance is moved across, all the databases gets moved automatically.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Fri, 13 Aug 2021 09:49:48 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
@@ -18,14 +18,16 @@
       <link>https://www.beneathabstraction.com/post/utterance/</link>
       <pubDate>Fri, 13 Aug 2021 09:49:48 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/utterance/</guid>
-      <description>Problem When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Migrated my blog out of Blogger</title>
       <link>https://www.beneathabstraction.com/post/blogonhugo/</link>
       <pubDate>Wed, 10 Feb 2021 18:07:46 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blogonhugo/</guid>
-      <description>Problem While blogger is an amazing platform for hosting your blog, with perks of easy linking custom domains and google analytics integration, the main issue is with styling/rendering of your website and most of all blogger &amp;ldquo;owns&amp;rdquo; the content and if its decides it can just take it out or make parts paid. I had bitter experience with another hosting platform, where my account was in-accessible and had to spend hours writing to customer support with little support from them .</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;While blogger is an amazing platform for hosting your blog, with perks of easy linking custom domains and google analytics integration, the main issue is with styling/rendering of your website and most of all blogger &amp;ldquo;owns&amp;rdquo; the content and if its decides it can just take it out or make parts paid. I had bitter experience with another hosting platform, where my account was in-accessible and had to spend hours writing to customer support with little support from them . So decided to make the big move.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

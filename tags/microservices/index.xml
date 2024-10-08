@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Microservices on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/microservices/</link>
+    <description>Recent content in Microservices on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.135.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Oct 2024 21:45:08 +1000</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simplified Microservice Deployment with Azure Container Apps and Dapr</title>
+      <link>https://www.beneathabstraction.com/post/microservice-deployment-with-azure-container-apps/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/microservice-deployment-with-azure-container-apps/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this blog post we look into a scalable and flexible platforms to run microservices on Azure without the complexity of managing infrastructure. &lt;strong&gt;Azure Container Apps&lt;/strong&gt; allows you to run containerized microservices and integrating &lt;strong&gt;Dapr (Distributed Application Runtime)&lt;/strong&gt; can simplify the communication between services, manage state, and handle pub/sub messaging. This blog also shows how to set up Azure Container Apps, and how to deploy two Dapr-enabled microservices that communicate with each other using .NET.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

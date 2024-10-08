@@ -9,53 +9,72 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Jul 2024 21:45:08 +1000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2024 21:45:08 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simplified Microservice Deployment with Azure Container Apps and Dapr</title>
+      <link>https://www.beneathabstraction.com/post/microservice-deployment-with-azure-container-apps/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/microservice-deployment-with-azure-container-apps/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this blog post we look into a scalable and flexible platforms to run microservices on Azure without the complexity of managing infrastructure. &lt;strong&gt;Azure Container Apps&lt;/strong&gt; allows you to run containerized microservices and integrating &lt;strong&gt;Dapr (Distributed Application Runtime)&lt;/strong&gt; can simplify the communication between services, manage state, and handle pub/sub messaging. This blog also shows how to set up Azure Container Apps, and how to deploy two Dapr-enabled microservices that communicate with each other using .NET.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio</title>
       <link>https://www.beneathabstraction.com/post/ai-security-against-prompt-injection/</link>
       <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/ai-security-against-prompt-injection/</guid>
-      <description>Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio Introduction In the fast-changing landscape of Generative AI and its applications, keeping AI models secure and reliable is very important. Prompt injection is one of the prominent attack identified against AI Implementations. Azure AI Studio offers a solutions to tackle these threats and is called Prompt Shield. This blog will explain what prompt injection attacks are, their possible effects, and how Azure AI Studio&amp;rsquo;s Prompt Shield can protect against them.</description>
+      <description>&lt;h2 id=&#34;understanding-and-mitigating-prompt-injection-attacks-with-prompt-shield-in-azure-ai-studio&#34;&gt;Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio&lt;/h2&gt;
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;In the fast-changing landscape of Generative AI and its applications, keeping AI models secure and reliable is very important. Prompt injection is one of the prominent attack identified against AI Implementations. Azure AI Studio offers a solutions to tackle these threats and is called Prompt Shield. This blog will explain what prompt injection attacks are, their possible effects, and how Azure AI Studio&amp;rsquo;s Prompt Shield can protect against them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Securely calling Azure API from PowerApp Portal</title>
       <link>https://www.beneathabstraction.com/post/powerportalapicall/</link>
       <pubDate>Sun, 19 Jun 2022 19:23:15 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/powerportalapicall/</guid>
-      <description>Context Powerapps Portal gives a quick and easy way to build public facing websites. Data in the portal is mostly fetched from Microsoft Dataverse using Powerplatform FetchXML or the portal&amp;rsquo;s Web API. These operations are secured using portal&amp;rsquo;s application session, as explained here. Often there are requirements to consume an externally hosted API, in this particular example an API hosted in Azure behind an API Management. With Javascript the only option to trigger an API, implementing a secret based authentication is out of scope.</description>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;Powerapps Portal gives a quick and easy way to build public facing websites. Data in the portal is mostly fetched from Microsoft Dataverse using Powerplatform FetchXML or the portal&amp;rsquo;s Web API. These operations are secured using portal&amp;rsquo;s application session, as explained &lt;a href=&#34;https://docs.microsoft.com/en-us/power-apps/maker/portals/web-api-overview&#34;&gt;here&lt;/a&gt;. Often there are requirements to consume an externally hosted API, in this particular example an API hosted in Azure behind an API Management. With Javascript the only option to trigger an API, implementing a secret based authentication is out of scope. But there is an alternate approach.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Client Certificate authentication using Azure API Management</title>
       <link>https://www.beneathabstraction.com/post/clientcertauthapim/</link>
       <pubDate>Sun, 27 Feb 2022 20:03:08 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/clientcertauthapim/</guid>
-      <description>Introduction APIs have become so popular that almost all websites and applications rely on APIs to get data from server. Often user impersonation is used to authenticate as well as authorize access to the resource exposed by an API, but there are also use cases where application itself needs data from an API for functioning. Currently the most used authentication mechanism is OAuth, where identity management is performed by a third provider and both the client and resource server trusts this identity provider.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;APIs have become so popular that almost all websites and applications rely on APIs to get data from server. Often user impersonation is used to authenticate as well as authorize access to the resource exposed by an API, but there are also use cases where application itself needs data from an API for functioning. Currently the most used authentication mechanism is OAuth, where identity management is performed by a third provider and both the client and resource server trusts this identity provider. While this works well, there is also another way to authenticate when the interaction is purely machine to machine, and works based on  SSL certificates and is called Client Certificate Authentication.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Identity in Microsoft Azure - Modern Authentication</title>
       <link>https://www.beneathabstraction.com/post/securingusingazure-part2/</link>
       <pubDate>Sun, 01 Aug 2021 18:06:02 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/securingusingazure-part2/</guid>
-      <description>Introduction Continuing from the previous post, the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML. In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Continuing from the &lt;a href=&#34;https://www.beneathabstraction.com/content/post/securingusingazure-part1&#34;&gt;previous post&lt;/a&gt;, the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML.
+In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens. This service is both trusted by the client app as well as the resource api.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Identity in Microsoft Azure - A bit of history</title>
       <link>https://www.beneathabstraction.com/post/securingusingazure-part1/</link>
       <pubDate>Sat, 24 Jul 2021 19:16:16 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/securingusingazure-part1/</guid>
-      <description>Introduction Authentication has been an important component in the world of IT from the time companies required their employees to prove their identity to use the company&amp;rsquo;s computing resources whether it was to execute its business processes or accessing email or file. During the earlier days employees used to login to their computers using a username and password, which was stored in a central server like an active directory (in case of Microsoft tech stack).</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Authentication has been an important component in the world of IT from the time companies required their employees to prove their identity to use the company&amp;rsquo;s computing resources whether it was to execute its business processes or accessing email or file. During the earlier days employees used to login to their computers using a username and password, which was stored in a central server like an active directory (in case of Microsoft tech stack). With the active directory credentials employees where able to use to login to both their windows computers as well as the email application both of which were in the same network. This approach worked well for many years until the softwares and services that the companies used where no longer within their network.&lt;br&gt;
+While active directory protocols like NTLM or Kerberos could work across external networks via technologies like VPN it was complex to setup and maintain such an infrastructure while keeping all the connection secure and stable. Also with growing number of users/services and the pace at which the growth occurred, these technologies were not designed to scale at that pace. Hence new Authentication mechanisms were needed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ASP.Net MVC 5 and Security</title>
       <link>https://www.beneathabstraction.com/post/mvc5security/</link>
       <pubDate>Sat, 14 Oct 2017 10:51:44 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/mvc5security/</guid>
-      <description>Security? Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.
-Authentication Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.
-Authorization Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.</description>
+      <description>&lt;h2 id=&#34;security&#34;&gt;Security?&lt;/h2&gt;
+&lt;p&gt;Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.&lt;/p&gt;
+&lt;h2 id=&#34;authentication&#34;&gt;Authentication&lt;/h2&gt;
+&lt;p&gt;Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.&lt;/p&gt;
+&lt;h2 id=&#34;authorization&#34;&gt;Authorization&lt;/h2&gt;
+&lt;p&gt;Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -9,10 +9,73 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Jul 2024 21:45:08 +1000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2024 21:45:08 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AKS</title>
+      <link>https://www.beneathabstraction.com/tags/aks/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/aks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure</title>
+      <link>https://www.beneathabstraction.com/tags/azure/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/azure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure Container Apps</title>
+      <link>https://www.beneathabstraction.com/tags/azure-container-apps/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/azure-container-apps/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Containers</title>
+      <link>https://www.beneathabstraction.com/tags/containers/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/containers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dapr</title>
+      <link>https://www.beneathabstraction.com/tags/dapr/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/dapr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://www.beneathabstraction.com/tags/kubernetes/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microservices</title>
+      <link>https://www.beneathabstraction.com/tags/microservices/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/microservices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scalability</title>
+      <link>https://www.beneathabstraction.com/tags/scalability/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/scalability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://www.beneathabstraction.com/tags/security/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/security/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI Security</title>
       <link>https://www.beneathabstraction.com/tags/ai-security/</link>
@@ -56,13 +119,6 @@
       <description></description>
     </item>
     <item>
-      <title>Security</title>
-      <link>https://www.beneathabstraction.com/tags/security/</link>
-      <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
-      <guid>https://www.beneathabstraction.com/tags/security/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>LLM</title>
       <link>https://www.beneathabstraction.com/tags/llm/</link>
       <pubDate>Fri, 21 Jun 2024 18:50:46 +1000</pubDate>
@@ -88,13 +144,6 @@
       <link>https://www.beneathabstraction.com/tags/app-gateway/</link>
       <pubDate>Sat, 02 Dec 2023 14:00:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/tags/app-gateway/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Azure</title>
-      <link>https://www.beneathabstraction.com/tags/azure/</link>
-      <pubDate>Sat, 02 Dec 2023 14:00:48 +1100</pubDate>
-      <guid>https://www.beneathabstraction.com/tags/azure/</guid>
       <description></description>
     </item>
     <item>
@@ -473,13 +522,6 @@
       <link>https://www.beneathabstraction.com/tags/infra-as-code/</link>
       <pubDate>Sun, 26 Jul 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/tags/infra-as-code/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kubernetes</title>
-      <link>https://www.beneathabstraction.com/tags/kubernetes/</link>
-      <pubDate>Sun, 26 Jul 2020 18:52:19 +1100</pubDate>
-      <guid>https://www.beneathabstraction.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>

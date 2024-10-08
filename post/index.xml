@@ -9,16 +9,26 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Jul 2024 21:45:08 +1000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2024 21:45:08 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simplified Microservice Deployment with Azure Container Apps and Dapr</title>
+      <link>https://www.beneathabstraction.com/post/microservice-deployment-with-azure-container-apps/</link>
+      <pubDate>Mon, 07 Oct 2024 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/microservice-deployment-with-azure-container-apps/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this blog post we look into a scalable and flexible platforms to run microservices on Azure without the complexity of managing infrastructure. &lt;strong&gt;Azure Container Apps&lt;/strong&gt; allows you to run containerized microservices and integrating &lt;strong&gt;Dapr (Distributed Application Runtime)&lt;/strong&gt; can simplify the communication between services, manage state, and handle pub/sub messaging. This blog also shows how to set up Azure Container Apps, and how to deploy two Dapr-enabled microservices that communicate with each other using .NET.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio</title>
       <link>https://www.beneathabstraction.com/post/ai-security-against-prompt-injection/</link>
       <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/ai-security-against-prompt-injection/</guid>
-      <description>Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio Introduction In the fast-changing landscape of Generative AI and its applications, keeping AI models secure and reliable is very important. Prompt injection is one of the prominent attack identified against AI Implementations. Azure AI Studio offers a solutions to tackle these threats and is called Prompt Shield. This blog will explain what prompt injection attacks are, their possible effects, and how Azure AI Studio&amp;rsquo;s Prompt Shield can protect against them.</description>
+      <description>&lt;h2 id=&#34;understanding-and-mitigating-prompt-injection-attacks-with-prompt-shield-in-azure-ai-studio&#34;&gt;Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio&lt;/h2&gt;
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;In the fast-changing landscape of Generative AI and its applications, keeping AI models secure and reliable is very important. Prompt injection is one of the prominent attack identified against AI Implementations. Azure AI Studio offers a solutions to tackle these threats and is called Prompt Shield. This blog will explain what prompt injection attacks are, their possible effects, and how Azure AI Studio&amp;rsquo;s Prompt Shield can protect against them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Enhancing Language Models Using RAG Architecture in Azure AI Studio</title>
@@ -32,230 +42,304 @@
       <link>https://www.beneathabstraction.com/post/appgatewayurlrewrite/</link>
       <pubDate>Sat, 02 Dec 2023 14:00:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/appgatewayurlrewrite/</guid>
-      <description>Introduction Azure Application Gateway provides a powerful solution for load balancing, SSL termination, and URL-based routing. In this blog post, we will discuss a common scenario where we need to forward traffic to two different Azure API Management instances based on the incoming URL, distinguishing between non-production and production environments.
-Problem Statement Consider a scenario where you have two separate instances of Azure API Management (Sku: any non consumption tier): one for non-production/testing (nonprod) and the other for production (prod).</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Azure Application Gateway provides a powerful solution for load balancing, SSL termination, and URL-based routing. In this blog post, we will discuss a common scenario
+where we need to forward traffic to two different Azure API Management instances based on the incoming URL, distinguishing between non-production and production environments.&lt;/p&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;p&gt;Consider a scenario where you have two separate instances of Azure API Management (Sku: any non consumption tier): one for non-production/testing (nonprod) and the other for production (prod).
+The requirement is to route incoming traffic through an Azure Application Gateway, forwarding requests to the appropriate API Management instance based on the path specified in the URL.
+Specifically, requests with the path /nonprod/* should be directed to the non-production API Management instance, while requests without this path should be forwarded to the production instance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dynamic Menu in MAUI</title>
       <link>https://www.beneathabstraction.com/post/mauimenu/</link>
       <pubDate>Mon, 26 Sep 2022 10:33:05 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/mauimenu/</guid>
-      <description>Context The requirement here is to be able to add dynamic menu items to a MAUI app. The use case chosen here is of selection of a font from a list of fonts installed on the machine. The list of fonts is shows under a menu item in the menu bar.
-More on menu bar from the Microsoft documentation
-Approach Step 1: Mark up
-The component to be used here is the MenuBarItem.</description>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;The requirement here is to be able to add dynamic menu items to a MAUI app. The use case chosen here is of selection of a font from a list of fonts installed on the machine. The list of fonts is shows under a menu item in the menu bar.&lt;/p&gt;
+&lt;p&gt;More on menu bar from the &lt;a href=&#34;https://learn.microsoft.com/en-us/dotnet/maui/user-interface/menubar&#34;&gt;Microsoft documentation&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
+&lt;p&gt;Step 1: Mark up&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The component to be used here is the MenuBarItem. This component support binding context of the content page. As part of the page markup, a menu item is added to the page and the &amp;ldquo;Choose Language&amp;rdquo; menu item is left blank, so that the menu items can be added after fetching it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Securely calling Azure API from PowerApp Portal</title>
       <link>https://www.beneathabstraction.com/post/powerportalapicall/</link>
       <pubDate>Sun, 19 Jun 2022 19:23:15 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/powerportalapicall/</guid>
-      <description>Context Powerapps Portal gives a quick and easy way to build public facing websites. Data in the portal is mostly fetched from Microsoft Dataverse using Powerplatform FetchXML or the portal&amp;rsquo;s Web API. These operations are secured using portal&amp;rsquo;s application session, as explained here. Often there are requirements to consume an externally hosted API, in this particular example an API hosted in Azure behind an API Management. With Javascript the only option to trigger an API, implementing a secret based authentication is out of scope.</description>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;Powerapps Portal gives a quick and easy way to build public facing websites. Data in the portal is mostly fetched from Microsoft Dataverse using Powerplatform FetchXML or the portal&amp;rsquo;s Web API. These operations are secured using portal&amp;rsquo;s application session, as explained &lt;a href=&#34;https://docs.microsoft.com/en-us/power-apps/maker/portals/web-api-overview&#34;&gt;here&lt;/a&gt;. Often there are requirements to consume an externally hosted API, in this particular example an API hosted in Azure behind an API Management. With Javascript the only option to trigger an API, implementing a secret based authentication is out of scope. But there is an alternate approach.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Exposing Azure Storage container via SFTP</title>
       <link>https://www.beneathabstraction.com/post/azurestoragesftp/</link>
       <pubDate>Mon, 13 Jun 2022 12:05:53 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/azurestoragesftp/</guid>
-      <description>Context While most of the application integration patterns are moving towards real-time, near-real-time and stream based solutions, there are still requirement to have batch file based data movement. These requirements are often for reporting or data warehousing scenario or while integrating with a legacy system. While there are many products that help setup SFTP server, Azure was missing a SaaS offering for hosted SFTP server, like Amazon&amp;rsquo;s AWS Transfer on top of S3.</description>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;While most of the application integration patterns are moving towards real-time, near-real-time and stream based solutions, there are still requirement to have batch file based data movement. These requirements are often for reporting or data warehousing scenario or while integrating with a legacy system.
+While there are many products that help setup SFTP server, Azure was missing a SaaS offering for hosted SFTP server, like Amazon&amp;rsquo;s AWS Transfer on top of S3.
+To host SFTP in Azure the customer has to setup their own SFTP workload either using a VM hosting an SFTP server and mounting the blob storage as a VM disk or hosting the SFTP server as a container on services like ACI and mounting the storage account.
+While hosting an SFTP VM is not a complex task, but it adds to the organization&amp;rsquo;s maintenance list, to keep it up and running, securing it and patching updates while maintaining uptime.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Client Certificate authentication using Azure API Management</title>
       <link>https://www.beneathabstraction.com/post/clientcertauthapim/</link>
       <pubDate>Sun, 27 Feb 2022 20:03:08 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/clientcertauthapim/</guid>
-      <description>Introduction APIs have become so popular that almost all websites and applications rely on APIs to get data from server. Often user impersonation is used to authenticate as well as authorize access to the resource exposed by an API, but there are also use cases where application itself needs data from an API for functioning. Currently the most used authentication mechanism is OAuth, where identity management is performed by a third provider and both the client and resource server trusts this identity provider.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;APIs have become so popular that almost all websites and applications rely on APIs to get data from server. Often user impersonation is used to authenticate as well as authorize access to the resource exposed by an API, but there are also use cases where application itself needs data from an API for functioning. Currently the most used authentication mechanism is OAuth, where identity management is performed by a third provider and both the client and resource server trusts this identity provider. While this works well, there is also another way to authenticate when the interaction is purely machine to machine, and works based on  SSL certificates and is called Client Certificate Authentication.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cloning a Azure Function App</title>
       <link>https://www.beneathabstraction.com/post/functionappclone/</link>
       <pubDate>Thu, 10 Feb 2022 14:22:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/functionappclone/</guid>
-      <description>Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.
-One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch.</description>
+      <description>&lt;p&gt;Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.&lt;/p&gt;
+&lt;p&gt;One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch. So we had to setup a pipeline, give the pipeline service account access to the POC resource group, then actually triggering the deployment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Policy Execution in Azure APIM.</title>
       <link>https://www.beneathabstraction.com/post/apimpolicyexecution/</link>
       <pubDate>Wed, 27 Oct 2021 18:50:46 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/apimpolicyexecution/</guid>
-      <description>What are APIM Policies? APIM policies are statements executed by Azure APIM to modify the behavior of API request, response and exception flows. The logic/conditions written as part of the policies are executed at various stages of API execution like, request received (inbound), before request sent to backend service/API (backend), before sending response to requester (outbound) and in case of any exceptions during the request processing (on-error). Policies are defined as an XML format with different tag to define the execution stage and the actual policy.</description>
+      <description>&lt;h2 id=&#34;what-are-apim-policies&#34;&gt;What are APIM Policies?&lt;/h2&gt;
+&lt;p&gt;APIM policies are statements executed by Azure APIM to modify the behavior of API request, response and exception flows. The logic/conditions written as part of the policies are executed at various stages of API execution like,  &lt;em&gt;request received (inbound)&lt;/em&gt;, &lt;em&gt;before request sent to backend service/API (backend)&lt;/em&gt;, &lt;em&gt;before sending  response to requester (outbound)&lt;/em&gt; and &lt;em&gt;in case of any exceptions during the request processing (on-error)&lt;/em&gt;. Policies are defined as an XML format with different tag to define the execution stage and the actual policy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Move azure resources between resource groups</title>
       <link>https://www.beneathabstraction.com/post/moveresources/</link>
       <pubDate>Tue, 12 Oct 2021 17:20:59 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/moveresources/</guid>
-      <description>Problem While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.
-Solution In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;While working with Azure cloud platform, often there will be instances where resources needs moving across resource groups for maintenance reasons or because of re-organising of products. There might even cases where the resource may need to be moved across subscriptions.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;In Azure resources can be moved across resource groups from the portal UI or Azure CLI or powershell or from the rest APIs. Moving the resource using the portal UI is as easy as going through a wizard like steps and clicking finish at the end of it. The process also validates if the resource can be moved or not, for example an Azure SQL Database cannot be moved without moving the SQL Server instance, and when a SQL Server instance is moved across, all the databases gets moved automatically.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Deploying &#39;JUST&#39; the modified ARM templates</title>
       <link>https://www.beneathabstraction.com/post/selectedarmdeployment/</link>
       <pubDate>Sun, 05 Sep 2021 10:00:46 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/selectedarmdeployment/</guid>
-      <description>Problem The project has a bunch of ARM templates as part of IAC scripts and more often only couple, if not few templates get modified. But when deploying using Azure pipeline all the templates gets deployed. Even though ARM template deployment support incremental mode, if a templates is deployed with exact same properties, the resource gets recreated. The project does not want to recreate all the templates when only a few are changed.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;The project has a bunch of ARM templates as part of IAC scripts and more often only couple, if not few templates get modified. But when deploying using Azure pipeline all the templates gets deployed. Even though ARM template deployment support incremental mode, if a templates is deployed with exact same properties, the resource gets recreated. The project does not want to recreate all the templates when only a few are changed. Currently there is no out-of-the-box tasks that support this behavior (&lt;em&gt;or I could not find any&lt;/em&gt;). &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deployment-modes&#34;&gt;Deployment Mode Reference&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>utterances: Comments section for your static web site</title>
       <link>https://www.beneathabstraction.com/post/utterance/</link>
       <pubDate>Fri, 13 Aug 2021 09:49:48 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/utterance/</guid>
-      <description>Problem When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;When your website is a bunch of html, css, image and js files with no backend and is a blog (like mine) and you are expecting your readers to give feedback on your content and be interactive, you definitely need a comments section for your posts. Without an actual server for storage, it is impossible to implement user comments. With non revenue generating sites like mine it would not be an option to spend money every month to maintain few user comments if any.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Identity in Microsoft Azure - Modern Authentication</title>
       <link>https://www.beneathabstraction.com/post/securingusingazure-part2/</link>
       <pubDate>Sun, 01 Aug 2021 18:06:02 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/securingusingazure-part2/</guid>
-      <description>Introduction Continuing from the previous post, the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML. In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Continuing from the &lt;a href=&#34;https://www.beneathabstraction.com/content/post/securingusingazure-part1&#34;&gt;previous post&lt;/a&gt;, the new generation of authentication mechanism was created to satisfy the new generation of application, starting from apps that run just in the browser to apps that run on micro-controllers. This new generation of authentication mechanism called as the modern authentication protocols are built on top of the OAuth protocol and taking inspiration from SAML.
+In the below article the term IDP refers to the Identity provider, the external service that is responsible for authenticating a user and issuing authorization tokens. This service is both trusted by the client app as well as the resource api.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Identity in Microsoft Azure - A bit of history</title>
       <link>https://www.beneathabstraction.com/post/securingusingazure-part1/</link>
       <pubDate>Sat, 24 Jul 2021 19:16:16 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/securingusingazure-part1/</guid>
-      <description>Introduction Authentication has been an important component in the world of IT from the time companies required their employees to prove their identity to use the company&amp;rsquo;s computing resources whether it was to execute its business processes or accessing email or file. During the earlier days employees used to login to their computers using a username and password, which was stored in a central server like an active directory (in case of Microsoft tech stack).</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Authentication has been an important component in the world of IT from the time companies required their employees to prove their identity to use the company&amp;rsquo;s computing resources whether it was to execute its business processes or accessing email or file. During the earlier days employees used to login to their computers using a username and password, which was stored in a central server like an active directory (in case of Microsoft tech stack). With the active directory credentials employees where able to use to login to both their windows computers as well as the email application both of which were in the same network. This approach worked well for many years until the softwares and services that the companies used where no longer within their network.&lt;br&gt;
+While active directory protocols like NTLM or Kerberos could work across external networks via technologies like VPN it was complex to setup and maintain such an infrastructure while keeping all the connection secure and stable. Also with growing number of users/services and the pace at which the growth occurred, these technologies were not designed to scale at that pace. Hence new Authentication mechanisms were needed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cloud Resume Challenge - Azure Serverless </title>
       <link>https://www.beneathabstraction.com/post/azureserverlessresume/</link>
       <pubDate>Mon, 28 Jun 2021 10:18:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/azureserverlessresume/</guid>
-      <description>I recently came across the site https://cloudresumechallenge.dev/ and decided to give it a try using Azure services. To start simple I decided to ignore the DB, CDN part etc and just have the the UI and the middler layer of the app. Below is the high level architecture.
-The front end of the app will be hosted a static web site in Azure Blob storage. Backend will be an Azure function that will feed the resume data to the frontend over HTTP, the azure function will be a HTTP triggered function.</description>
+      <description>&lt;p&gt;I recently came across the site &lt;a href=&#34;https://cloudresumechallenge.dev/&#34;&gt;https://cloudresumechallenge.dev/&lt;/a&gt; and decided to give it a try using Azure services. To start simple I decided to ignore the DB, CDN part etc and just have the the UI and the middler layer of the app. Below is the high level architecture.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://www.beneathabstraction.com/blogimages/ResumeApp_arch.png&#34; alt=&#34;Blog Arch &#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;The front end of the app will be hosted a static web site in Azure Blob storage. Backend will be an Azure function that will feed the resume data to the frontend over HTTP, the azure function will be a HTTP triggered function.
+Currently the resume data in JSON format hardcoded in the Azure Function code. As an upgrade to the app, the JSON data can be moved to a CosmosDB instance and put an Azure CDN in front of the UI to deliver content fast to users.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Implementing Custom Feature flags - Your own logic to shutoff a feature - Azure App Configuration </title>
       <link>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</link>
       <pubDate>Tue, 22 Jun 2021 10:18:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/azurecustomfeatureflags/</guid>
-      <description>This is a continuation from the previous article on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.
-Introduction The previous article described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag.</description>
+      <description>&lt;p&gt;This is a continuation from the &lt;a href=&#34;../azurefeatureflags&#34;&gt;previous article&lt;/a&gt; on feature flags implemented using Azure App configuration service to maintain the flags. Just to reiterate, feature management can be implemented using config files but this article is trying to implement feature flags connecting to Azure App configuration service.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&#34;../azurefeatureflags&#34;&gt;previous article&lt;/a&gt; described about implementing a boolean feature flag to turn on/off a feature. In this article I am trying to implement a custom feature flag. Microsoft provides few predefined custom feature flags or feature filters (as they are called) Targeting, TimeWindow, and Percentage (more about it &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-feature-filters-aspnet-core&#34;&gt;here&lt;/a&gt;), which covers most usecases, however, there might be situations where you find the predefined ones falling short. In this article I am building a filter ground up with a made up custom logic.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Implementing Feature flags using azure </title>
       <link>https://www.beneathabstraction.com/post/azurefeatureflags/</link>
       <pubDate>Sun, 16 May 2021 10:00:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/azurefeatureflags/</guid>
-      <description>Feature flag is a very popular practice in modern application development, which is used to specifically hide features implemented that are not yet ready to be used by wider audience, and when ready can be enabled by a flip of a switch. The flags can also be used as a kill switch for application feature when it not working as expected.
-With feature flags implemented, it would be effective to have the features enabled or disabled from a location outside of the application infrastructure or configuration, this way we can have features spanning across applications be controlled via a centralized flag.</description>
+      <description>&lt;p&gt;Feature flag is a very popular practice in modern application development, which is used to specifically hide features implemented that are not yet ready to be used by wider audience, and when ready can be enabled by a flip of a switch. The flags can also be used as a kill switch for application feature when it not working as expected.&lt;/p&gt;
+&lt;p&gt;With feature flags implemented, it would be effective to have the features enabled or disabled from a location outside of the application infrastructure or configuration, this way we can have features spanning across applications be controlled via a centralized flag. Azure has feature management as part of the Azure App configuration service which can manage feature flags and maintain it separate from your hosting model and will act as a centralized repository for feature flags. Microsoft also provides libraries for different programing languages to consume Azure App Configuration service. More about it can be &lt;a href=&#34;https://docs.microsoft.com/en-us/azure/azure-app-configuration/manage-feature-flags&#34;&gt;found here&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Radio Player using  Blazor 5</title>
       <link>https://www.beneathabstraction.com/post/blazor5/</link>
       <pubDate>Tue, 11 May 2021 16:35:28 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazor5/</guid>
-      <description>I have been reading the Blazor 5 documentation and decided to create a simple project to give its features a try. As always, there were a ton of ideas in my mind but while scanning through dev.to i came across a post by Aleks Popovic, where he made a Radio player using react, so i decided to create one using Blazor 5. I used the same service as Aleks to get the radio stations, called the Radio-Browser.</description>
+      <description>&lt;p&gt;I have been reading the Blazor 5 documentation and decided to create a simple project to give its features a try. As always, there were a ton of ideas in my mind but while scanning through dev.to i came across a post by &lt;a href=&#34;https://dev.to/alekswritescode/radio-player-app-in-react-84k&#34;&gt;Aleks Popovic, where he made a Radio player using react&lt;/a&gt;, so i decided to create one using Blazor 5. I used the same service as Aleks to get the radio stations, called the &lt;a href=&#34;https://www.radio-browser.info/&#34;&gt;Radio-Browser&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Switch off auto formatting in Visual Studio 2019 </title>
       <link>https://www.beneathabstraction.com/post/switchoffautoformating/</link>
       <pubDate>Wed, 17 Feb 2021 08:51:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/switchoffautoformating/</guid>
-      <description>If you have landed here searching how to switch off auto formatting of code files in Visual Studio, you are either a code purist who does not like the formatting the IDE is performing or you are like me editing a large auto-generated class file (due to unfortunate situations) and Visual studio hangs or crashes on you every time you do a small change.
-The good news is there is an option in the IDE to switch feature off.</description>
+      <description>&lt;p&gt;If you have landed here searching how to switch off auto formatting of code files in Visual Studio, you are either a code purist who does not like the formatting the IDE is performing or you are like me editing a large auto-generated class file (&lt;em&gt;due to unfortunate situations&lt;/em&gt;) and Visual studio hangs or crashes on you every time you do a small change.&lt;/p&gt;
+&lt;p&gt;The good news is there is an option in the IDE to switch feature off. Through out the generations of visual studio this option may have moved between sections, but fortunately been called the same. The flag you are looking for is&lt;/p&gt;</description>
     </item>
     <item>
       <title>Deploy Pihole on RaspberryPi ZeroW to adblock your home network</title>
       <link>https://www.beneathabstraction.com/post/deploypihole/</link>
       <pubDate>Wed, 10 Feb 2021 20:42:44 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/deploypihole/</guid>
-      <description>Problem We all have seen and annoyed seeing those google ads or facebook ads on websites and apps. Mostly of the times the ads over takes the actual content of the website, especially on those forums. Ads also shows up on free email services, apps on your phones, smart tv, they are everywhere. More than annoyance, they eat up a lot of bandwidth and ofter makes the website/apps slower to respond.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;We all have seen and annoyed seeing those google ads or facebook ads on websites and apps. Mostly of the times the ads over takes the actual content of the website, especially on those forums. Ads also shows up on free email services, apps on your phones, smart tv, they are everywhere. More than annoyance, they eat up a lot of bandwidth and ofter makes the website/apps slower to respond. There are ad blockers available for your browsers, but that just solves the problem on that device, but devices like smart tv doesn&amp;rsquo;t have an easy way to block ad on the device.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Migrated my blog out of Blogger</title>
       <link>https://www.beneathabstraction.com/post/blogonhugo/</link>
       <pubDate>Wed, 10 Feb 2021 18:07:46 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blogonhugo/</guid>
-      <description>Problem While blogger is an amazing platform for hosting your blog, with perks of easy linking custom domains and google analytics integration, the main issue is with styling/rendering of your website and most of all blogger &amp;ldquo;owns&amp;rdquo; the content and if its decides it can just take it out or make parts paid. I had bitter experience with another hosting platform, where my account was in-accessible and had to spend hours writing to customer support with little support from them .</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;While blogger is an amazing platform for hosting your blog, with perks of easy linking custom domains and google analytics integration, the main issue is with styling/rendering of your website and most of all blogger &amp;ldquo;owns&amp;rdquo; the content and if its decides it can just take it out or make parts paid. I had bitter experience with another hosting platform, where my account was in-accessible and had to spend hours writing to customer support with little support from them . So decided to make the big move.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Infrastructure as C#</title>
       <link>https://www.beneathabstraction.com/post/infraascsharp/</link>
       <pubDate>Sun, 26 Jul 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/infraascsharp/</guid>
-      <description>Introduction After attempting the .Net tutorial on deploying a simple WebAPI based microservice to Azure Kubernetes Service (AKS), wanted a better way to represent my infrastructure than the YAML.xml file. This was partly because of me being novice in YAML format and partly to have a way to abstract the infrastructure in order to make it repeatable and it should be not just confined to AKS. The first solution to this problem was to use a framework like Terraform to define my infrastructure as code.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;After attempting the .Net tutorial on deploying a simple WebAPI based microservice to Azure Kubernetes Service (AKS), wanted a better way to represent my infrastructure than the YAML.xml file. This was partly because of me being novice in YAML format and partly to have a way to abstract the infrastructure in order to make it repeatable and it should be not just confined to AKS.
+The first solution to this problem was to use a framework like Terraform to define my infrastructure as code. But this will lead me learn new language and language constructs like loops, conditions etc.
+The search was over pretty soon after I found a framework called Pulumi, that lets me write my infrastructure in many of the populate programming language including C#. So i decided to convert the .Net tutorial YAML into a pulumi project and see how well it runs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Azure for integration and process automation</title>
       <link>https://www.beneathabstraction.com/post/azureintegration/</link>
       <pubDate>Sun, 21 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/azureintegration/</guid>
-      <description>Problem Businesses run on multiple applications and services, how well the business runs is often impacted on how efficiently data is distributed to the correct task. Automating this flow of data is a way to streamline the business. The problem here is to choose the right technology for this data integration and process automation.
-Objective This article is describing the azure technologies that are available during time of writing to solve the business need.</description>
+      <description>&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Businesses run on multiple applications and services, how well the business runs is often impacted on how efficiently data is distributed to the correct task. Automating this flow of data is a way to streamline the business. The problem here is to choose the right technology  for this data integration and process automation.&lt;/p&gt;
+&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
+&lt;p&gt;This article is describing the azure technologies that are available during time of writing to solve the business need.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Steps for Deploying a Blazor as Static Site with Docker and Nginx</title>
       <link>https://www.beneathabstraction.com/post/blazorhostdocker/</link>
       <pubDate>Thu, 11 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorhostdocker/</guid>
-      <description>Step 1 Publish the Blazor WebAssembly project Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.
-Step 2 Create a dockerfile The docker file is very straightforward, pull the nginx image and copy the published Blazor WebAssembly file from the WWWRoot folder to the html folder in nginx
-FROM nginx:alpine EXPOSE 80 COPY bin/Release/netcoreapp3.</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dev-to-uploads.s3.amazonaws.com/i/57a76kbj8isstq42nlga.png&#34; alt=&#34;Blazor meets nginx&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;step-1-publish-the-blazor-webassembly-project&#34;&gt;Step 1 Publish the Blazor WebAssembly project&lt;/h2&gt;
+&lt;p&gt;Publish the project from Visual Studio,this ensures that the projects is linked which removes all the unwanted dependencies from the output, reducing the size of the assemblies created.&lt;/p&gt;
+&lt;h2 id=&#34;step-2-create-a-dockerfile&#34;&gt;Step 2 Create a dockerfile&lt;/h2&gt;
+&lt;p&gt;The docker file is very straightforward, pull the nginx image and copy the published Blazor WebAssembly file from the WWWRoot folder to the html folder in nginx&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hosting Blazor WebAssembly on ASP.Net Core WebAPI</title>
       <link>https://www.beneathabstraction.com/post/blazorhostwebapi/</link>
       <pubDate>Tue, 09 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorhostwebapi/</guid>
-      <description>Background My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.
-The Changes Create a new solution and add the already created Blazor WebAssembly project Add a new ASPNet core web project and choose WebAPI template and call it the .</description>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;My WebAssembly project has now been configured to be a PWA (refer the previous article in series). It time to introduce hosting. Since the WebAssembly project handles the client side, I want it to be unchanged but be hosted it in a project that can be used as backend for the UI, hence chose WebAPI.&lt;/p&gt;
+&lt;h2 id=&#34;the-changes&#34;&gt;The Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a new solution and add the already created Blazor WebAssembly project&lt;/li&gt;
+&lt;li&gt;Add a new ASPNet core web project and choose WebAPI template and call it the .Server project&lt;/li&gt;
+&lt;li&gt;Add reference of the WebAssembly Project to the .Server project.&lt;/li&gt;
+&lt;li&gt;Install package Microsoft.AspNetCore.Components.WebAssembly.Server to the .Server project. This package contains the runtime server for Blazor application.&lt;/li&gt;
+&lt;li&gt;In the startup class add configuration to the request pipeline to handle Blazor and its routing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// This methods serves the WebAssembly framework files when a request is made to root path. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//This method also take path parameter that can be used if the WebAssembly project is only served &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//from part of the project, giving options to combine web assembly project with a web application&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UseBlazorFrameworkFiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//This configuration helps in serving the static files like &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Javascript and CSS that is part of the Blazor WebAssembly&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UseStaticFiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c#&#34; data-lang=&#34;c#&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Add the below configuration to the end of the UseEndpoint configuration, &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//this will serve the index.html file from the WebAssembly when the WebAPI route &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//does not find a match in the routing table&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;n&#34;&gt;endpoints&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MapFallbackToFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;index.html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your ASPNet Core hosted WebAssembly project is ready to be published and deployed. Pretty easy!&lt;/p&gt;</description>
     </item>
     <item>
       <title>How can I turn my Blazor WebAssembly to PWA?</title>
       <link>https://www.beneathabstraction.com/post/blazorwasntopwa/</link>
       <pubDate>Thu, 04 Jun 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorwasntopwa/</guid>
-      <description>Lets get started with an existing Blazor WebAssembly project I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here Repo: https://github.com/gopkumr/BlazorTourOfHeroes.git Branch: Release
-Next step is making this into PWA As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.</description>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://dev-to-uploads.s3.amazonaws.com/i/g9e27g1fckgxdipathy2.png&#34; alt=&#34;PWAmeetsBlazor&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;lets-get-started-with-an-existing-blazor-webassembly-project&#34;&gt;Lets get started with an existing Blazor WebAssembly project&lt;/h2&gt;
+&lt;p&gt;I already have a Blazor WebAssembly project created implementing Angular Tour of heros application. You can find the project in my GitHub repository here
+Repo: &lt;a href=&#34;https://github.com/gopkumr/BlazorTourOfHeroes.git&#34;&gt;https://github.com/gopkumr/BlazorTourOfHeroes.git&lt;/a&gt;
+Branch: Release&lt;/p&gt;
+&lt;h2 id=&#34;next-step-is-making-this-into-pwa&#34;&gt;Next step is making this into PWA&lt;/h2&gt;
+&lt;p&gt;As with any web application, adding PWA capabilities to Blazor follows the web standard process of adding a manifest json file and the service workers js file.&lt;/p&gt;</description>
     </item>
     <item>
       <title>An attempt to convert Blazor WebAssembly Project to Blazor Server App</title>
       <link>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</link>
       <pubDate>Sat, 25 Apr 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/blazorwebasmtoserv/</guid>
-      <description>Blazor Web-Assembly Project This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in GitHub
-This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.</description>
+      <description>&lt;h2 id=&#34;blazor-web-assembly-project&#34;&gt;Blazor Web-Assembly Project&lt;/h2&gt;
+&lt;p&gt;This starts from my Blazor Web-Assembly project that I create as a replica of the Angular TourOfHeros tutorial. The source code of project is in &lt;a href=&#34;https://github.com/gopkumr/BlazorTourOfHeroes.git&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is an attempt to convert the existing project to a Blazor server app with few changes to the wiring up and hosting configuration. Since this article is written with a pre-release version of Blazor Web-Assembly, there could be changes to the steps after the actual release expected in May 2020.&lt;/p&gt;</description>
     </item>
     <item>
       <title>a sneak peek into Blazor WebAssembly</title>
       <link>https://www.beneathabstraction.com/post/introblazor/</link>
       <pubDate>Sun, 12 Jan 2020 18:52:19 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/introblazor/</guid>
-      <description>an attempt to create tour of heroes&amp;rsquo; using Blazor preface WebAssembly is an exciting piece of software, along with HTML, CSS and JavaScript WebAssembly (or WASM) is the fourth language that modern browsers can run natively, WASM is run in the browser in the same security sandbox as the JavaScript frameworks run. WASM also lets you invoke JavaScript and vice versa, making it coexist with JavaScript, More on WebAssembly here: https://webassembly.</description>
+      <description>&lt;h1 id=&#34;an-attempt-to-create-tour-of-heroes-using-blazor&#34;&gt;an attempt to create tour of heroes&amp;rsquo; using Blazor&lt;/h1&gt;
+&lt;h2 id=&#34;preface&#34;&gt;preface&lt;/h2&gt;
+&lt;p&gt;WebAssembly is an exciting piece of software, along with HTML, CSS and JavaScript WebAssembly (or WASM) is the fourth language that modern browsers can run natively, WASM is run in the browser in the same security sandbox as the JavaScript frameworks run. WASM also lets you invoke JavaScript and vice versa, making it coexist with JavaScript, More on WebAssembly here: &lt;a href=&#34;https://webassembly.org/&#34;&gt;https://webassembly.org/&lt;/a&gt; and Blazor is an open-source implementation of WASM by Microsoft and it has made web development even more exciting by letting run the ever loved C# in the browser. Lets dive right into writing some code, you can read more about Blazor right from its creators here: &lt;a href=&#34;http://blazor.net/&#34;&gt;http://blazor.net/&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tired of updating namespaces? With VS2019 you won&#39;t.</title>
       <link>https://www.beneathabstraction.com/post/namespaceupdate/</link>
       <pubDate>Thu, 17 Oct 2019 18:50:46 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/namespaceupdate/</guid>
-      <description>Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).
-With Visual Studio 2019, this mundane task of changing the namespaces while moving folder is now automated, which means, visual studio updates the namespace to match the folder structure by itself.</description>
+      <description>&lt;p&gt;Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).&lt;/p&gt;
+&lt;p&gt;With Visual Studio 2019, this mundane task of changing the namespaces while moving folder is now automated, which means, visual studio updates the namespace to match the folder structure by itself.
+Even if for some reason, you move the folder using the file explorer rather than the visual studio, in such case, you can go into the code file and you get an option to update the namespace to match the folder structure or change it any other existing namespace from your project.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A brave move by Brave</title>
       <link>https://www.beneathabstraction.com/post/brave/</link>
       <pubDate>Tue, 20 Aug 2019 18:39:11 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/brave/</guid>
-      <description>Current online ads landscape
-Advertisers and publishers are always in search of targeting the right user group and the actual presenting of ads to the user. Users are the most undervalued actor of the use case. The ads intrude into the viewing area, uses up bandwidth, make the overall experience poor. In most cases, the users enjoy the service for free by viewing the ads e.g. Youtube. Brave browser has taken this use case and improvised to make it a win-win situation for all.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Current online ads landscape&lt;/strong&gt;&lt;br&gt;
+Advertisers and publishers are always in search of targeting the right user group and the actual presenting of ads to the user. Users are the most undervalued actor of the use case. The ads intrude into the viewing area, uses up bandwidth, make the overall experience poor. In most cases, the users enjoy the service for free by viewing the ads e.g. Youtube.
+Brave browser has taken this use case and improvised to make it a win-win situation for all. Here is what Brave has done.&lt;/p&gt;</description>
     </item>
     <item>
       <title>ASP.Net MVC 5 and Security</title>
       <link>https://www.beneathabstraction.com/post/mvc5security/</link>
       <pubDate>Sat, 14 Oct 2017 10:51:44 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/mvc5security/</guid>
-      <description>Security? Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.
-Authentication Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.
-Authorization Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.</description>
+      <description>&lt;h2 id=&#34;security&#34;&gt;Security?&lt;/h2&gt;
+&lt;p&gt;Security is one of the most important cross-cutting concern for any web application. All applications (except for static web sites) require to identify a user and restrict the users from viewing or performing actions on pages.&lt;/p&gt;
+&lt;h2 id=&#34;authentication&#34;&gt;Authentication&lt;/h2&gt;
+&lt;p&gt;Authentication is the method by which an application identifies a user. By identifying a user, the application can decide whether the user is a valid user to access the application.&lt;/p&gt;
+&lt;h2 id=&#34;authorization&#34;&gt;Authorization&lt;/h2&gt;
+&lt;p&gt;Authorization is the way the application decides if the identified user can view a particular page or perform a particular action.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Clean your code using Code cleanup in Visual Studio 2019</title>
       <link>https://www.beneathabstraction.com/post/vs2019codecleanup/</link>
       <pubDate>Fri, 16 Sep 2016 14:22:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/vs2019codecleanup/</guid>
-      <description>All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.</description>
+      <description>&lt;p&gt;All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

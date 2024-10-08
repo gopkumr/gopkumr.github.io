@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 17 Oct 2019 18:50:46 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/features/index.xml" rel="self" type="application/rss+xml" />
@@ -18,23 +18,25 @@
       <link>https://www.beneathabstraction.com/post/namespaceupdate/</link>
       <pubDate>Thu, 17 Oct 2019 18:50:46 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/namespaceupdate/</guid>
-      <description>Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).
-With Visual Studio 2019, this mundane task of changing the namespaces while moving folder is now automated, which means, visual studio updates the namespace to match the folder structure by itself.</description>
+      <description>&lt;p&gt;Most of us programmers would have moved code files around to different folders at a different stages of the application development, this might be due to refactoring or redesigning or re-organizing. While moving around the code files, most .Net developers would have spent enough time changing the namespaces to match the folder structure (as better practice).&lt;/p&gt;
+&lt;p&gt;With Visual Studio 2019, this mundane task of changing the namespaces while moving folder is now automated, which means, visual studio updates the namespace to match the folder structure by itself.
+Even if for some reason, you move the folder using the file explorer rather than the visual studio, in such case, you can go into the code file and you get an option to update the namespace to match the folder structure or change it any other existing namespace from your project.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A brave move by Brave</title>
       <link>https://www.beneathabstraction.com/post/brave/</link>
       <pubDate>Tue, 20 Aug 2019 18:39:11 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/brave/</guid>
-      <description>Current online ads landscape
-Advertisers and publishers are always in search of targeting the right user group and the actual presenting of ads to the user. Users are the most undervalued actor of the use case. The ads intrude into the viewing area, uses up bandwidth, make the overall experience poor. In most cases, the users enjoy the service for free by viewing the ads e.g. Youtube. Brave browser has taken this use case and improvised to make it a win-win situation for all.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Current online ads landscape&lt;/strong&gt;&lt;br&gt;
+Advertisers and publishers are always in search of targeting the right user group and the actual presenting of ads to the user. Users are the most undervalued actor of the use case. The ads intrude into the viewing area, uses up bandwidth, make the overall experience poor. In most cases, the users enjoy the service for free by viewing the ads e.g. Youtube.
+Brave browser has taken this use case and improvised to make it a win-win situation for all. Here is what Brave has done.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Clean your code using Code cleanup in Visual Studio 2019</title>
       <link>https://www.beneathabstraction.com/post/vs2019codecleanup/</link>
       <pubDate>Fri, 16 Sep 2016 14:22:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/vs2019codecleanup/</guid>
-      <description>All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.</description>
+      <description>&lt;p&gt;All we developers would have spent time in cleaning up the code after we are done with a long day of code and coffee! for .Net developers it is to do with removing all the using clause added automatically by visual studio/nuget that you no longer need, removing variables that was not put to use, adding read only to eligible private variables, adding or removing braces from single statement blocks etc etc.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

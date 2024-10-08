@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Sat, 13 Jul 2024 21:45:08 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,9 @@
       <link>https://www.beneathabstraction.com/post/ai-security-against-prompt-injection/</link>
       <pubDate>Sat, 13 Jul 2024 21:45:08 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/ai-security-against-prompt-injection/</guid>
-      <description>Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio Introduction In the fast-changing landscape of Generative AI and its applications, keeping AI models secure and reliable is very important. Prompt injection is one of the prominent attack identified against AI Implementations. Azure AI Studio offers a solutions to tackle these threats and is called Prompt Shield. This blog will explain what prompt injection attacks are, their possible effects, and how Azure AI Studio&amp;rsquo;s Prompt Shield can protect against them.</description>
+      <description>&lt;h2 id=&#34;understanding-and-mitigating-prompt-injection-attacks-with-prompt-shield-in-azure-ai-studio&#34;&gt;Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio&lt;/h2&gt;
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;In the fast-changing landscape of Generative AI and its applications, keeping AI models secure and reliable is very important. Prompt injection is one of the prominent attack identified against AI Implementations. Azure AI Studio offers a solutions to tackle these threats and is called Prompt Shield. This blog will explain what prompt injection attacks are, their possible effects, and how Azure AI Studio&amp;rsquo;s Prompt Shield can protect against them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Enhancing Language Models Using RAG Architecture in Azure AI Studio</title>

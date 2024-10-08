@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Thu, 10 Feb 2022 14:22:48 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/azure-cli/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,8 @@
       <link>https://www.beneathabstraction.com/post/functionappclone/</link>
       <pubDate>Thu, 10 Feb 2022 14:22:48 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/functionappclone/</guid>
-      <description>Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.
-One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch.</description>
+      <description>&lt;p&gt;Recently I had a requirement to make a copy of a Function App from the production version to support a POC implementation of an solution upgrade.&lt;/p&gt;
+&lt;p&gt;One option was to deploy the Release branch which had the version same as in PROD (we already made updates to that function app post release, so DEV was already a lot of commits ahead). The challenge with this approach was, since we did not had a hotfix release, there were no Pipelines setup for Release branch. So we had to setup a pipeline, give the pipeline service account access to the POC resource group, then actually triggering the deployment.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

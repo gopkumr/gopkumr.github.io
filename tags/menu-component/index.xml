@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.128.2</generator>
+    <generator>Hugo -- 0.135.0</generator>
     <language>en</language>
     <lastBuildDate>Mon, 26 Sep 2022 10:33:05 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/menu-component/index.xml" rel="self" type="application/rss+xml" />
@@ -18,10 +18,13 @@
       <link>https://www.beneathabstraction.com/post/mauimenu/</link>
       <pubDate>Mon, 26 Sep 2022 10:33:05 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/mauimenu/</guid>
-      <description>Context The requirement here is to be able to add dynamic menu items to a MAUI app. The use case chosen here is of selection of a font from a list of fonts installed on the machine. The list of fonts is shows under a menu item in the menu bar.
-More on menu bar from the Microsoft documentation
-Approach Step 1: Mark up
-The component to be used here is the MenuBarItem.</description>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;The requirement here is to be able to add dynamic menu items to a MAUI app. The use case chosen here is of selection of a font from a list of fonts installed on the machine. The list of fonts is shows under a menu item in the menu bar.&lt;/p&gt;
+&lt;p&gt;More on menu bar from the &lt;a href=&#34;https://learn.microsoft.com/en-us/dotnet/maui/user-interface/menubar&#34;&gt;Microsoft documentation&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
+&lt;p&gt;Step 1: Mark up&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The component to be used here is the MenuBarItem. This component support binding context of the content page. As part of the page markup, a menu item is added to the page and the &amp;ldquo;Choose Language&amp;rdquo; menu item is left blank, so that the menu items can be added after fetching it.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
