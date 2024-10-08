@@ -24,7 +24,7 @@ Dapr is an open-source, portable runtime that simplifies building microservices 
 
 AKS offers more control over the underlying infrastructure and is ideal for more complex Kubernetes workloads. However, if simplicity without sacrificing flexibility is the requirement, then Azure Container Apps and Dapr is a great fit.
 
-### Deploying Two Dapr-enabled .NET Microservices on Azure Container Apps
+### Deploying Dapr-enabled .NET Microservices on Azure Container Apps
 
 Below we are deploying two microservices using **Azure Container Apps** and **Dapr**. One microservice will call another service privately using Dapr's service-to-service invocation feature.
 
