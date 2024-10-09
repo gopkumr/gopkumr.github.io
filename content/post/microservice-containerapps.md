@@ -34,9 +34,10 @@ Components we are implementing
 #### Step 1: Prerequisites
 
 - [**Azure CLI**](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [**Docker**](https://docs.docker.com/get-docker/)
 - [**.NET SDK**](https://dotnet.microsoft.com/download)
 - **Azure Subscription** with sufficient permission
+- [**Docker**](https://docs.docker.com/get-docker/) to run locally
+- [**Dapr CLI**](https://docs.dapr.io/getting-started/install-dapr-cli/) to run locally.
 
 #### Step 2: Create .NET Web APIs
 
@@ -63,93 +64,67 @@ We will create two simple APIs: **Products Service** and **Orders Service**. The
    dotnet new webapi -n OrdersService
    cd OrdersService
    ```
+   Install Dapr SDK packages to support invoking product service via Dapr Service invocation
+   ```bash
+    dotnet add package Dapr.AspNetCore
+   ```
 
-   Modify `program.cs` to add an order minimal api endpoint that invokes the **Products Service** using Dapr's service invocation:
+   Modify `program.cs`
+   - Add Dapr Client to Dependency scope
    ```csharp
-      app.MapGet("/orders/{id}", async (int id, IHttpClientFactory httpClientFactory) =>
+   using Dapr.Client;
+
+   builder.Services.AddDaprClient();
+   ```
+   - Add an order minimal api endpoint that invokes the **Products Service** using Dapr's service invocation:
+   ```csharp
+      app.MapGet("/orders/{id}", async (int id, [FromServices]DaprClient client) =>
       {
-         var httpClient = httpClientFactory.CreateClient();
-         var product = await httpClient.GetStringAsync($"http://localhost:3500/v1.0/invoke/products-service/method/products/{id}");
+         var product = await client.InvokeMethodAsync<object>(HttpMethod.Get,"products-service", $"products/{id}");
          return new { OrderId = id, Product = product };
       })
       .WithName("GetOrder")
       .WithOpenApi();
    ```
 
-   Note the URL format for invoking Dapr: `http://localhost:3500/v1.0/invoke/{app-id}/method/{method}`. The `app-id` here is `products-service`.
+   Note the parameters passed for invoking Dapr: 
+    - `HttpMethod.Get`: Http method implemented in Product API in Step 1.  
+    - `{app-id}`: The `app-id` of the product service. Set as `products-service` later in the post.
+    - `products/{id}`: API Path to get a product as implemented in Step 1.
 
 #### Step 3: Dockerize Both APIs
-
-1. **`Dockerfile` for Products Service**:
-   ```Dockerfile
-   FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-   WORKDIR /app
-   EXPOSE 8080
-
-   FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-   WORKDIR /src
-   COPY . .
-   RUN dotnet restore
-   RUN dotnet build -c Release -o /app/build
-
-   FROM build AS publish
-   RUN dotnet publish -c Release -o /app/publish
-
-   FROM base AS final
-   ENV ASPNETCORE_HTTP_PORTS=8080
-   WORKDIR /app
-   COPY --from=publish /app/publish .
-   ENTRYPOINT ["dotnet", "ProductsService.dll"]
-   ```
-
-2. **`Dockerfile` for Orders Service**:
-   ```Dockerfile
-   FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-   WORKDIR /app
-   EXPOSE 8080
-
-   FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-   WORKDIR /src
-   COPY . .
-   RUN dotnet restore
-   RUN dotnet build -c Release -o /app/build
-
-   FROM build AS publish
-   RUN dotnet publish -c Release -o /app/publish
-
-   FROM base AS final
-   ENV ASPNETCORE_HTTP_PORTS=8080
-   WORKDIR /app
-   COPY --from=publish /app/publish .
-   ENTRYPOINT ["dotnet", "OrdersService.dll"]
-   ```
-   >*Please note: Update the aspnet and sdk versions based on what framework the projects are targeting*
-
-#### Step 4: Push Docker Images to Azure Container Registry (ACR)
 
 1. **Create an Azure Container Registry**:
    ```bash
    az acr create --resource-group <your-resource-group> --name <your-registry-name> --sku Basic
    ```
+2. **Push Docker Images to Azure Container Registry (ACR)**:
 
-2. **Push Docker images**:
-   - Build, Tag and push the **Products Service** image:
-     ```bash
-     docker build -t productsservice .
-     docker tag productsservice <your-registry-name>.azurecr.io/productsservice:v1
-     az acr login --name <your-registry-name>
-     docker push <your-registry-name>.azurecr.io/productsservice:v1
-     ```
+   Starting dotnet 7 `dotnet publish` command can publish projects directly to docker container registry. By default it pushes to the local docker daemon. 
+   We will use it to push to the  Azure Container Registry created in Step 1.
+   - Login to Azure Container Registry:
+   ```bash
+    az acr login --name <your-registry-name>
+   ```
+   - Publish and push the **Products Service**:
+   ```bash
+    dotnet publish -c Release -r linux-x64 
+    -p:PublishProfile=DefaultContainer \
+    -p:ContainerRepository=productsservice \
+    -p:ContainerImageTag=v1 --no-self-contained \
+    -p:ContainerRegistry=<your-registry-name>.azurecr.io \
+   ```
 
-   - Build, Tag and push the **Orders Service** image:
-     ```bash
-     docker build -t ordersservice .
-     docker tag ordersservice <your-registry-name>.azurecr.io/ordersservice:v1
-     az acr login --name <your-registry-name>
-     docker push <your-registry-name>.azurecr.io/ordersservice:v1
-     ```
+   - Publish and push the **Orders Service**:
+   ```bash
+    dotnet publish -c Release -r linux-x64 
+    -p:PublishProfile=DefaultContainer \
+    -p:ContainerRepository=orderssservice \
+    -p:ContainerImageTag=v1 --no-self-contained \
+    -p:ContainerRegistry=<your-registry-name>.azurecr.io \
+   ```
 
-#### Step 5: Set Up Azure Container Apps with Dapr enabled
+#### Step 4: Set Up Azure Container Apps with Dapr enabled
 
 1. **Create an Azure Container Apps Environment**:
    ```bash
@@ -203,7 +178,7 @@ Here, both services are Dapr enabled, and the **Orders Service** invokes the **P
 >   az extension add --name containerapp --upgrade
 > ```
 
-#### Step 6: Test the Order Service
+#### Step 5: Test the Order Service
 
 Retrieve the external URL for the **Orders Service**:
 ```bash
