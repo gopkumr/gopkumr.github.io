@@ -8,6 +8,11 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+pagination:
+  disableAliases: false
+  pagerSize: 7
+  path: page
+
 minify:
   disableXML: true
   minifyOutput: true
