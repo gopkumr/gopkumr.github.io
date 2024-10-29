@@ -1,6 +1,5 @@
 baseURL: "https://www.beneathabstraction.com/"
 title: "Beneath Abstraction"
-paginate: 7
 theme: PaperModLocal
 
 enableRobotsTXT: true
@@ -50,6 +49,7 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: false
+  Social: true
 
   assets:
     # disableHLJS: true # to disable highlight.js
