@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.beneathabstraction.com/</loc>
+    <lastmod>2024-11-15T10:43:40+11:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/post/</loc>
+    <lastmod>2024-11-15T10:43:40+11:00</lastmod>
+  </url><url>
     <loc>https://www.beneathabstraction.com/tags/aks/</loc>
     <lastmod>2024-10-07T21:45:08+10:00</lastmod>
   </url><url>
@@ -9,9 +15,6 @@
     <lastmod>2024-10-07T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/azure-container-apps/</loc>
-    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/</loc>
     <lastmod>2024-10-07T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/containers/</loc>
@@ -24,9 +27,6 @@
     <lastmod>2024-10-07T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/microservices/</loc>
-    <lastmod>2024-10-07T21:45:08+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/post/</loc>
     <lastmod>2024-10-07T21:45:08+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/scalability/</loc>
