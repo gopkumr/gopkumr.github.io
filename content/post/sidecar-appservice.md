@@ -1,7 +1,7 @@
 ---
 title: "Running Sidecar Containers in Azure App Service: An experiment with Dapr"
-date: 2024-11-15T10:43:40+11:00
-draft: true 
+date: 2024-11-16T10:43:40+11:00
+draft: false 
 tags: ["Azure", "Azure App Services", "Docker", "Azure Container Registry", "Sidecar Pattern", "Azure Cache for Redis"]
 ---
 
