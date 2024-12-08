@@ -9,10 +9,19 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.139.2</generator>
+    <generator>Hugo -- 0.139.3</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2020 18:52:19 +1100</lastBuildDate>
+    <lastBuildDate>Sat, 16 Nov 2024 10:43:40 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running Sidecar Containers in Azure App Service: An experiment with Dapr</title>
+      <link>https://www.beneathabstraction.com/post/sidecar-appservice/</link>
+      <pubDate>Sat, 16 Nov 2024 10:43:40 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/sidecar-appservice/</guid>
+      <description>&lt;h3 id=&#34;running-sidecar-containers-in-azure-app-service-an-experiment-with-dapr&#34;&gt;Running Sidecar Containers in Azure App Service: An experiment with Dapr&lt;/h3&gt;
+&lt;p&gt;Today I decided to try Azure App Service&amp;rsquo;s new ability to run &lt;strong&gt;sidecar containers&lt;/strong&gt;.&lt;br&gt;
+My goal, To create a simple .NET API, run it in Azure App Service, and pair it with Dapr as a sidecar container and use it for state management. Locally, Dapr would connect to a local Redis docker container, and once deployed to Azure, it would seamlessly switch to Azure Cache for Redis.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Steps for Deploying a Blazor as Static Site with Docker and Nginx</title>
       <link>https://www.beneathabstraction.com/post/blazorhostdocker/</link>
