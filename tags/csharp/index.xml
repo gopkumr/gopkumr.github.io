@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Dotnet on Beneath Abstraction</title>
-    <link>https://www.beneathabstraction.com/tags/dotnet/</link>
-    <description>Recent content in Dotnet on Beneath Abstraction</description>
+    <title>Csharp on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/csharp/</link>
+    <description>Recent content in Csharp on Beneath Abstraction</description>
     <image>
       <title>Beneath Abstraction</title>
       <url>https://www.beneathabstraction.com/images/logo.png</url>
@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
     <lastBuildDate>Sat, 15 Feb 2025 21:45:08 +1000</lastBuildDate>
-    <atom:link href="https://www.beneathabstraction.com/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.beneathabstraction.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Multi-Agent Application with Semantic Kernel Agent Framework</title>
       <link>https://www.beneathabstraction.com/post/multi-agent-application-sk-agent-framework/</link>
@@ -23,19 +23,6 @@
 &lt;p&gt;Here’s my take on it, including what I built, the key parts I used, and how it made my life easier.&lt;/p&gt;
 &lt;h2 id=&#34;what-i-wanted-to-create&#34;&gt;What I wanted to create&lt;/h2&gt;
 &lt;p&gt;I wanted to create a multi-agent application that seamlessly integrates business functions with AI agents. Here are the key capabilities I was looking for:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Dynamic Menu in MAUI</title>
-      <link>https://www.beneathabstraction.com/post/mauimenu/</link>
-      <pubDate>Mon, 26 Sep 2022 10:33:05 +1000</pubDate>
-      <guid>https://www.beneathabstraction.com/post/mauimenu/</guid>
-      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
-&lt;p&gt;The requirement here is to be able to add dynamic menu items to a MAUI app. The use case chosen here is of selection of a font from a list of fonts installed on the machine. The list of fonts is shows under a menu item in the menu bar.&lt;/p&gt;
-&lt;p&gt;More on menu bar from the &lt;a href=&#34;https://learn.microsoft.com/en-us/dotnet/maui/user-interface/menubar&#34;&gt;Microsoft documentation&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;
-&lt;p&gt;Step 1: Mark up&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The component to be used here is the MenuBarItem. This component support binding context of the content page. As part of the page markup, a menu item is added to the page and the &amp;ldquo;Choose Language&amp;rdquo; menu item is left blank, so that the menu items can be added after fetching it.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
