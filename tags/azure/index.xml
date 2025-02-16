@@ -9,10 +9,21 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.139.3</generator>
+    <generator>Hugo -- 0.143.1</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Nov 2024 10:43:40 +1100</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2025 21:45:08 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Multi-Agent Application with Semantic Kernel Agent Framework</title>
+      <link>https://www.beneathabstraction.com/post/multi-agent-application-sk-agent-framework/</link>
+      <pubDate>Sat, 15 Feb 2025 21:45:08 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/multi-agent-application-sk-agent-framework/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Recently, I explored Microsoft’s &lt;strong&gt;Semantic Kernel Agent Framework&lt;/strong&gt;, an experimental extension (at the time of writing) designed to build AI agents and integrate applications using the same features as Semantic Kernel. &lt;/p&gt;
+&lt;p&gt;Here’s my take on it, including what I built, the key parts I used, and how it made my life easier.&lt;/p&gt;
+&lt;h2 id=&#34;what-i-wanted-to-create&#34;&gt;What I wanted to create&lt;/h2&gt;
+&lt;p&gt;I wanted to create a multi-agent application that seamlessly integrates business functions with AI agents. Here are the key capabilities I was looking for:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Running Sidecar Containers in Azure App Service: An experiment with Dapr</title>
       <link>https://www.beneathabstraction.com/post/sidecar-appservice/</link>
