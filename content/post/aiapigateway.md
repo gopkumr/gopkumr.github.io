@@ -34,7 +34,7 @@ Here’s the high-level solution 
 *   Configured the AI project’s inference endpoint as a backend and exposed it as an API in API Management. API Management can handle calls from users and processes them via policies such as authentication/authorization, API rate limiting per subscriber, request/response transformation, etc., securing and protecting backend LLM endpoints.
     
 
-![APIM Backend Config](/blogimages/ai-gateway-api-backend-config.png.png)
+![APIM Backend Config](/blogimages/ai-gateway-api-backend-config.png)
 _APIM backend configuration_
 
 > Note: Policies used in this blog are in preview at the time of writing this blog, so refer to the latest documentation GA version. 
@@ -85,14 +85,14 @@ Enable Custom Metrics in App Insights.
 1.  Navigate to App Insights > Usage and estimated costs
 2.  Open Custom metrics > Enable “With Dimensions”
 
-![App Insights Custom Metrics](/blogimages/ai-gateway-app-insights-custommetrics.png.png)
+![App Insights Custom Metrics](/blogimages/ai-gateway-app-insights-custommetrics.png)
 
 Enable Custom Metrics in API Management API
 
 1.  Navigate to API Management > Select the API > Open Settings
 2.  Check the “Enable custom metrics”
 
-![API Custom Metrics](/blogimages/ai-gateway-api-custommetrics.pnge.png)
+![API Custom Metrics](/blogimages/ai-gateway-api-custommetrics.png)
 
 Testing and Validating the Integration
 --------------------------------------
@@ -137,7 +137,7 @@ Querying the `customMetrics` table in App Insights gives the following response.
 
 Each entry has custom dimensions as configured in the policy
 
-![Custom Metrics Dimensions](ai-gateway-cusommetrics-dimensions.png)
+![Custom Metrics Dimensions](/blogimages/ai-gateway-cusommetrics-dimensions.png)
 
 Conclusion
 ----------
