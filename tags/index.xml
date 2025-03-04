@@ -9,10 +9,45 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.143.1</generator>
+    <generator>Hugo -- 0.145.0</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Feb 2025 21:45:08 +1000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Mar 2025 19:33:51 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Gateway</title>
+      <link>https://www.beneathabstraction.com/tags/ai-gateway/</link>
+      <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/ai-gateway/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure AI</title>
+      <link>https://www.beneathabstraction.com/tags/azure-ai/</link>
+      <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/azure-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure AI Foundry</title>
+      <link>https://www.beneathabstraction.com/tags/azure-ai-foundry/</link>
+      <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/azure-ai-foundry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure API Management</title>
+      <link>https://www.beneathabstraction.com/tags/azure-api-management/</link>
+      <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/azure-api-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure OpenAI</title>
+      <link>https://www.beneathabstraction.com/tags/azure-openai/</link>
+      <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/azure-openai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://www.beneathabstraction.com/tags/ai/</link>
@@ -39,20 +74,6 @@
       <link>https://www.beneathabstraction.com/tags/azure/</link>
       <pubDate>Sat, 15 Feb 2025 21:45:08 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/tags/azure/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Azure AI</title>
-      <link>https://www.beneathabstraction.com/tags/azure-ai/</link>
-      <pubDate>Sat, 15 Feb 2025 21:45:08 +1000</pubDate>
-      <guid>https://www.beneathabstraction.com/tags/azure-ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Azure AI Foundry</title>
-      <link>https://www.beneathabstraction.com/tags/azure-ai-foundry/</link>
-      <pubDate>Sat, 15 Feb 2025 21:45:08 +1000</pubDate>
-      <guid>https://www.beneathabstraction.com/tags/azure-ai-foundry/</guid>
       <description></description>
     </item>
     <item>
