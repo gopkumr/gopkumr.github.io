@@ -19,9 +19,8 @@
       <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/post/expose-ai-endpoints-via-api-management/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Azure AI Foundry is a powerful platform for deploying and managing large language models (LLMs) for all sorts of AI-driven applications. These AI capabilities are available via API endpoints. &lt;br&gt;
-Azure API Management offers a range of capabilities such as enhanced security, rate limiting, and monitoring etc.&lt;/p&gt;
-&lt;p&gt;In this blog post, we’ll dive into how to expose Azure AI Foundry endpoints through API Management, protect the APIs from overuse with token-based rate limiting, and monitor token usage per API subscriber. These features in API Management are known as GenAI gateway capabilities. &lt;/p&gt;</description>
+&lt;p&gt;In this blog post, we’ll dive into how to expose Azure AI Foundry endpoints through API Management, protect the APIs from overuse with token-based rate limiting, and monitor token usage per API subscriber. These features in API Management are known as GenAI gateway capabilities. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Azure AI Foundry&lt;/strong&gt; is a powerful platform for deploying and managing large language models (LLMs) for all sorts of AI-driven applications. These AI capabilities are available via API endpoints. &lt;strong&gt;Azure API Management&lt;/strong&gt; is a platform designed to streamline and enhance the management of APIs, which offers a range of capabilities such as enhanced security, rate limiting, and monitoring etc.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding and Mitigating Prompt Injection Attacks with Prompt Shield in Azure AI Studio</title>
