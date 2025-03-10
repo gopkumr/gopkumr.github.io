@@ -9,10 +9,9 @@ tags: ["Azure AI", "Azure AI Foundry", "Azure OpenAI", "Azure API Management", "
 Introduction
 ------------
 
-Azure AI Foundry is a powerful platform for deploying and managing large language models (LLMs) for all sorts of AI-driven applications. These AI capabilities are available via API endpoints.   
-Azure API Management offers a range of capabilities such as enhanced security, rate limiting, and monitoring etc.
-
 In this blog post, we’ll dive into how to expose Azure AI Foundry endpoints through API Management, protect the APIs from overuse with token-based rate limiting, and monitor token usage per API subscriber. These features in API Management are known as GenAI gateway capabilities. 
+
+**Azure AI Foundry** is a powerful platform for deploying and managing large language models (LLMs) for all sorts of AI-driven applications. These AI capabilities are available via API endpoints. **Azure API Management** is a platform designed to streamline and enhance the management of APIs, which offers a range of capabilities such as enhanced security, rate limiting, and monitoring etc.
 
 We’ll cover generic LLM policies supported in API Management, equivalent Azure OpenAI policies are available for OpenAI LLM deployment.
 
@@ -37,7 +36,8 @@ Here’s the high-level solution 
 ![APIM Backend Config](/blogimages/ai-gateway-api-backend-config.png)
 _APIM backend configuration_
 
-> Note: Policies used in this blog are in preview at the time of writing this blog, so refer to the latest documentation GA version. 
+> Note: Policies used in this blog are in preview at the time of writing this blog, so refer to the latest documentation for the GA version [llm-token-limit-policy](https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy),[llm-emit-token-metric-policy](https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy).
+
 
 Managing & Monitoring Token-Based Usage with Policies
 -----------------------------------------------------
