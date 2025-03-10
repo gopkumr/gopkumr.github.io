@@ -36,7 +36,7 @@ Here’s the high-level solution 
 ![APIM Backend Config](/blogimages/ai-gateway-api-backend-config.png)
 _APIM backend configuration_
 
-> Note: Policies used in this blog are in preview at the time of writing this blog, so refer to the latest documentation for the GA version [llm-token-limit-policy](https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy),[llm-emit-token-metric-policy](https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy).
+> Note: Policies used in this blog are in preview at the time of writing this blog, please refer to the documentation for the latest version and GA [llm-token-limit-policy](https://learn.microsoft.com/en-us/azure/api-management/llm-token-limit-policy),[llm-emit-token-metric-policy](https://learn.microsoft.com/en-us/azure/api-management/llm-emit-token-metric-policy).
 
 
 Managing & Monitoring Token-Based Usage with Policies
