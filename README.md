@@ -1,4 +1,7 @@
 # Repository for my personal blog
+Github Pages Deployment: ![Github Pages Deployment](https://github.com/gopkumr/gopkumr.github.io/actions/workflows/GithubPagesBuild.yml/badge.svg?branch=main)
+
+
 This repository contains all the content and files required to generate a static website for the my personal blog.   
 **The blog uses the below technology stack**
 - **Content** is written as markdown file for easy and consistent formatting. 
