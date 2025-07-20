@@ -95,7 +95,7 @@ CMD ["run","--app-id", "api-app", "--resources-path", "/components", "--dapr-htt
 
 ### Running Locally with Docker  
 
-Docker Compose made orchastrating the container easy by running the Dapr and Redis containers together.  
+Docker Compose made orchestrating the container easy by running the Dapr and Redis containers together.  
 
 My `docker-compose.yml` looked like this:  
 
@@ -292,5 +292,14 @@ Both worked perfectly. Locally, Dapr connected to Redis, and in deployed environ
 
 ### Final Thoughts  
 
-The simplicity of managing sidecars, coupled with the power of tools like Dapr, makes this a game-changer for developers building modern cloud-native applications.  
+The simplicity of managing sidecars, coupled with the power of tools like Dapr, makes this a game-changer for developers building modern cloud-native applications.
+All the code artifacts and CLI commands are available on my github repo: [gopkumr/app-service-sidecar](https://github.com/gopkumr/app-service-sidecar)
+
+References
+
+- [Tutorial: Configure a sidecar for a custom container app – Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/tutorial-custom-container-sidecar)
+- [Sidecar pattern – Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar)
+- [Introducing Sidecars for Azure App Service for Linux: Now Generally Available](https://azure.github.io/AppService/2024/11/08/Global-Availability-Sidecars.html)
+
+   
 
