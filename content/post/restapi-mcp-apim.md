@@ -175,6 +175,4 @@ Regardless of which approach you choose, you can implement APIMs robust security
 
 Azure API Management provides powerful capabilities for exposing REST APIs as MCP servers through two distinct approaches. The custom MCP server application offers maximum flexibility and control, making it ideal for complex scenarios with specific requirements. The one-click MCP server feature provides a rapid path to MCP adoption with minimal development effort.
 
-Both approaches leverage Azure API Management's enterprise-grade security, monitoring, and governance capabilities, ensuring your MCP servers meet production requirements. By following the patterns and best practices outlined in this guide, you can successfully implement secure, scalable, and maintainable MCP servers that enhance your AI applications' capabilities.
-
-Whether you're just starting with MCP or looking to scale existing implementations, Azure API Management provides the tools and flexibility needed to succeed in today's AI-driven landscape.
+Whether you're just starting with MCP or looking to scale existing implementations, Azure API Management provides the tools and flexibility needed in AI-driven landscape.
