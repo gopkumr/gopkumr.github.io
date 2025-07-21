@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/ai/</link>
+    <description>Recent content in AI on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 20 Jul 2025 19:00:51 +1000</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exposing REST APIs as MCP Servers with Azure API Management: Two Approaches</title>
+      <link>https://www.beneathabstraction.com/post/exposing-rest-apis-as-mcp-servers-with-azure-api-management/</link>
+      <pubDate>Sun, 20 Jul 2025 19:00:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/post/exposing-rest-apis-as-mcp-servers-with-azure-api-management/</guid>
+      <description>&lt;h1 id=&#34;exposing-rest-apis-as-mcp-servers-with-azure-api-management-two-approaches&#34;&gt;Exposing REST APIs as MCP Servers with Azure API Management: Two Approaches&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The Model Context Protocol (MCP) has changed the way how AI applications interact with external data sources and services, and the need to securely expose REST APIs as MCP servers has becomes more critical. Azure API Management provides an enterprise-grade solution that facilitates this transformation and along with its robust security, monitoring, and governance capabilities.&lt;/p&gt;
+&lt;p&gt;In this post, I explore two approaches to expose REST APIs as MCP servers using Azure API Management:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

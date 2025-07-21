@@ -9,15 +9,43 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.145.0</generator>
+    <generator>Hugo -- 0.148.1</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Mar 2025 19:33:51 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Jul 2025 19:00:51 +1000</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://www.beneathabstraction.com/tags/ai/</link>
+      <pubDate>Sun, 20 Jul 2025 19:00:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/ai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI Gateway</title>
       <link>https://www.beneathabstraction.com/tags/ai-gateway/</link>
-      <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
+      <pubDate>Sun, 20 Jul 2025 19:00:51 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/tags/ai-gateway/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure API Management</title>
+      <link>https://www.beneathabstraction.com/tags/azure-api-management/</link>
+      <pubDate>Sun, 20 Jul 2025 19:00:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/azure-api-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>https://www.beneathabstraction.com/tags/mcp/</link>
+      <pubDate>Sun, 20 Jul 2025 19:00:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model Context Protocol</title>
+      <link>https://www.beneathabstraction.com/tags/model-context-protocol/</link>
+      <pubDate>Sun, 20 Jul 2025 19:00:51 +1000</pubDate>
+      <guid>https://www.beneathabstraction.com/tags/model-context-protocol/</guid>
       <description></description>
     </item>
     <item>
@@ -32,13 +60,6 @@
       <link>https://www.beneathabstraction.com/tags/azure-ai-foundry/</link>
       <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
       <guid>https://www.beneathabstraction.com/tags/azure-ai-foundry/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Azure API Management</title>
-      <link>https://www.beneathabstraction.com/tags/azure-api-management/</link>
-      <pubDate>Tue, 04 Mar 2025 19:33:51 +1000</pubDate>
-      <guid>https://www.beneathabstraction.com/tags/azure-api-management/</guid>
       <description></description>
     </item>
     <item>
