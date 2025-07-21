@@ -6,7 +6,7 @@ slug: "Exposing REST APIs as MCP Servers with Azure API Management"
 tags: ["AI", "MCP", "Model Context Protocol "Azure API Management", "AI Gateway"]
 ---
 
-# Exposing REST APIs as MCP Servers with Azure API Management: Two Powerful Approaches
+# Exposing REST APIs as MCP Servers with Azure API Management: Two Approaches
 
 ## Introduction
 
