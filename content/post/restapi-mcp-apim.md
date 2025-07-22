@@ -2,7 +2,7 @@
 title: "Exposing REST APIs as MCP Servers with Azure API Management: Two Approaches"
 date: 2025-07-20T19:00:50+10:00
 draft: false
-slug: "Exposing REST APIs as MCP Servers with Azure API Management"
+slug: "APIs as MCP Servers with API Management"
 tags: ["AI", "MCP", "Model Context Protocol", "Azure API Management", "AI Gateway"]
 ---
 
