@@ -32,6 +32,7 @@ Create an MCP server using any supported language and esstentially create "tool"
 [McpServerToolType]
 public class WeatherPredictionTool(WeatherService weatherService)
 {
+    //Wraps the logic to call the Weather REST API.
     private readonly WeatherService _weatherService = weatherService;
 
     [McpServerTool, Description("Calls the Weather Prediction API and returns a weather forecast for a given city.")]
