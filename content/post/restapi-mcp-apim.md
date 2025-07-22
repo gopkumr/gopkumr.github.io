@@ -120,7 +120,7 @@ resource mcpMessageOperation 'Microsoft.ApiManagement/service/apis/operations@20
 
 2. **Apply Policies**: Implement security and transformation policies.
 
-### Sample API Management Policy with just rate limiting, this could any supported policy.
+### Sample API Management Policy with just rate limiting, this could be any supported policy.
 
 ````xml
 <policies>
