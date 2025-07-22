@@ -20,7 +20,7 @@
       <guid>https://www.beneathabstraction.com/post/exposing-rest-apis-as-mcp-servers-with-azure-api-management/</guid>
       <description>&lt;h1 id=&#34;exposing-rest-apis-as-mcp-servers-with-azure-api-management-two-approaches&#34;&gt;Exposing REST APIs as MCP Servers with Azure API Management: Two Approaches&lt;/h1&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The Model Context Protocol (MCP) has changed the way how AI applications interact with external data sources and services, and the need to securely expose REST APIs as MCP servers has becomes more critical. Azure API Management provides an enterprise-grade solution that facilitates this transformation and along with its robust security, monitoring, and governance capabilities.&lt;/p&gt;
+&lt;p&gt;The Model Context Protocol (MCP) has changed the way how AI applications interact with external data sources and services, and the need to securely expose REST APIs as MCP servers has become more critical. Azure API Management provides an enterprise-grade solution that facilitates this transformation and along with its robust security, monitoring, and governance capabilities.&lt;/p&gt;
 &lt;p&gt;In this post, I explore two approaches to expose REST APIs as MCP servers using Azure API Management:&lt;/p&gt;</description>
     </item>
   </channel>
