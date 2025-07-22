@@ -149,11 +149,11 @@ Azure API Management's one-click MCP server feature (currently in preview) allow
 
 To use the one-click MCP server feature:
 
-1. Navigate to your Azure API Management instance
-2. Follow these only if you are on classic skus (non v2)
+1. Follow these only if you are on classic skus (non v2)
    * Go to the “Deployment + Infrastructure” section and open “Service Updates” page
    * Edit Update Group and enable “AI Gateway Early”, wait for around couple of hours or so to receive the update
-3. Navigate to the portal using https://portal.azure.com/?Microsoft_Azure_ApiManagement=mcp and open APIM
+2. Navigate to the portal using https://portal.azure.com/?Microsoft_Azure_ApiManagement=mcp and open APIM
+3. Navigate to your Azure API Management instance
 
 ### Configuring One-Click MCP Server
 
