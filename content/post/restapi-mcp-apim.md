@@ -150,9 +150,10 @@ Azure API Management's one-click MCP server feature (currently in preview) allow
 To use the one-click MCP server feature:
 
 1. Navigate to your Azure API Management instance
-2. Go to the "Deployment + Infrastructure" section and open "Service Updates" page 
-3. Edit Update Group and enable "AI Gateway Early", wait for around couple of hours or so to recieive the update
-4. Navigate to the portal using https://portal.azure.com/?Microsoft_Azure_ApiManagement=mcp and open APIM
+2. Follow these only if you are on classic skus (non v2)
+   * Go to the “Deployment + Infrastructure” section and open “Service Updates” page
+   * Edit Update Group and enable “AI Gateway Early”, wait for around couple of hours or so to receive the update
+3. Navigate to the portal using https://portal.azure.com/?Microsoft_Azure_ApiManagement=mcp and open APIM
 
 ### Configuring One-Click MCP Server
 
@@ -173,6 +174,11 @@ Regardless of which approach you choose, you can implement APIMs robust security
 
 ## Conclusion
 
-Azure API Management provides powerful capabilities for exposing REST APIs as MCP servers through two distinct approaches. The custom MCP server application offers maximum flexibility and control, making it ideal for complex scenarios with specific requirements. The one-click MCP server feature provides a rapid path to MCP adoption with minimal development effort.
+Azure API Management provides powerful capabilities for exposing REST APIs as MCP servers through two distinct approaches. 
 
-Whether you're just starting with MCP or looking to scale existing implementations, Azure API Management provides the tools and flexibility needed in AI-driven landscape.
+The custom MCP server application provides maximum flexibility and control, making it perfect for complex scenarios with specific needs—especially when the backend data source go beyond just REST API or involve aggregating multiple REST APIs
+
+The one-click MCP server feature provides a rapid path to MCP adoption with minimal development effort where a REST API already available in API Management and MCP client is a consumer.
+Whether you’re just starting with MCP or looking to scale existing implementations, Azure API Management provides the tools and flexibility needed in AI-driven landscape.
+
+All samples used in this post is available in my github repo: https://github.com/gopkumr/restapi-mcp-apim
