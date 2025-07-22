@@ -10,7 +10,7 @@ tags: ["AI", "MCP", "Model Context Protocol", "Azure API Management", "AI Gatewa
 
 ## Introduction
 
-The Model Context Protocol (MCP) has changed the way how AI applications interact with external data sources and services, and the need to securely expose REST APIs as MCP servers has becomes more critical. Azure API Management provides an enterprise-grade solution that facilitates this transformation and along with its robust security, monitoring, and governance capabilities.
+The Model Context Protocol (MCP) has changed the way how AI applications interact with external data sources and services, and the need to securely expose REST APIs as MCP servers has become more critical. Azure API Management provides an enterprise-grade solution that facilitates this transformation and along with its robust security, monitoring, and governance capabilities.
 
 In this post, I explore two approaches to expose REST APIs as MCP servers using Azure API Management:
 
@@ -25,7 +25,7 @@ The first approach involves creating a custom MCP server application and then ex
 
 ### Building the Custom MCP Server
 
-Create an MCP server using any supported language and esstentially create "tool" wrapping the API functionality. Below is a sample i created using dotnet and the ModelContextProtocol library
+Create an MCP server using any supported language and essentially create "tool" wrapping the API functionality. Below is a sample i created using dotnet and the ModelContextProtocol library
 
 ### Tool
 ````csharp
@@ -36,7 +36,7 @@ public class WeatherPredictionTool(WeatherService weatherService)
     private readonly WeatherService _weatherService = weatherService;
 
     [McpServerTool, Description("Calls the Weather Prediction API and returns a weather forecast for a given city.")]
-    public string ForcastWeather(string city)
+    public string ForecastWeather(string city)
     {
         return _weatherService.ForecastWeather(city)
              .ContinueWith(task =>
@@ -67,7 +67,7 @@ await app.RunAsync();
 
 ### Deploying to Azure API Management
 
-Once your custom MCP server is built and deployed to a suiatable hosting service (App Service or Container Apps) you'll need to configure endpoints in Azure API Management:
+Once your custom MCP server is built and deployed to a suitable hosting service (App Service or Container Apps) you'll need to configure endpoints in Azure API Management:
 
 1. **Deploy API**: Deploy an API with the backend as the MCP server exposing POST /message and GET /sse operations. Use bicep to deploy the API and Operations
 
@@ -144,7 +144,7 @@ resource mcpMessageOperation 'Microsoft.ApiManagement/service/apis/operations@20
 ## Approach 2: One-Click MCP Server (Preview Feature)
 
 Azure API Management's one-click MCP server feature (currently in preview) allows you to instantly convert existing REST APIs into MCP-compatible servers without writing custom code. 
-```Please note: Since this feature is preview while writing this post, the feature and functionality may change when it gets general availaiblity.```
+```Please note: Since this feature is preview while writing this post, the feature and functionality may change when it gets general availability.```
 
 ### Enabling the Preview Feature
 
@@ -167,7 +167,7 @@ Import the REST API into API Management using OpenAPI spec or deploying API, Ope
 ![MCP Server Page](/blogimages/apim-mcp-1.png)
 3. Click on the Create MCP Server page and select the imported API and all the operations that you want to expose as tools
 ![MCP Server create](/blogimages/apim-mcp-2.png)
-4. Hit Create and you have the MCP server availalble with an /sse endpoint ready to use
+4. Hit Create and you have the MCP server available with an /sse endpoint ready to use
 5. Clicking on the MCP Server name, directs you to a page where you can configure policies for the MCP server
 
 Regardless of which approach you choose, you can implement APIMs robust security, monitoring and caching capabilities .
