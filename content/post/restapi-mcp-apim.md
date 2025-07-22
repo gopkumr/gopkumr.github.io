@@ -6,8 +6,6 @@ slug: "APIs as MCP Servers with API Management"
 tags: ["AI", "MCP", "Model Context Protocol", "Azure API Management", "AI Gateway"]
 ---
 
-# Exposing REST APIs as MCP Servers with Azure API Management: 2 Approaches
-
 ## Introduction
 
 The Model Context Protocol (MCP) has changed the way how AI applications interact with external data sources and services, and the need to securely expose REST APIs as MCP servers has become more critical. Azure API Management provides an enterprise-grade solution that facilitates this transformation and along with its robust security, monitoring, and governance capabilities.
