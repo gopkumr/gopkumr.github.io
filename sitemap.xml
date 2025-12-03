@@ -2,8 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.beneathabstraction.com/tags/azure-devops/</loc>
+    <lastmod>2025-12-03T17:39:11+11:00</lastmod>
+  </url><url>
     <loc>https://www.beneathabstraction.com/</loc>
-    <lastmod>2025-11-15T13:49:48+10:00</lastmod>
+    <lastmod>2025-12-03T17:39:11+11:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/c%2314/</loc>
+    <lastmod>2025-12-03T17:39:11+11:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/dotnet/</loc>
+    <lastmod>2025-12-03T17:39:11+11:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/dotnet10/</loc>
+    <lastmod>2025-12-03T17:39:11+11:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/post/file-based-apps-dotnet-10/</loc>
+    <lastmod>2025-12-03T17:39:11+11:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/post/</loc>
+    <lastmod>2025-12-03T17:39:11+11:00</lastmod>
+  </url><url>
+    <loc>https://www.beneathabstraction.com/tags/</loc>
+    <lastmod>2025-12-03T17:39:11+11:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/c%23-14/</loc>
     <lastmod>2025-11-15T13:49:48+10:00</lastmod>
@@ -14,16 +35,7 @@
     <loc>https://www.beneathabstraction.com/tags/csharp/</loc>
     <lastmod>2025-11-15T13:49:48+10:00</lastmod>
   </url><url>
-    <loc>https://www.beneathabstraction.com/tags/dotnet/</loc>
-    <lastmod>2025-11-15T13:49:48+10:00</lastmod>
-  </url><url>
     <loc>https://www.beneathabstraction.com/tags/field-backed-properties/</loc>
-    <lastmod>2025-11-15T13:49:48+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/post/</loc>
-    <lastmod>2025-11-15T13:49:48+10:00</lastmod>
-  </url><url>
-    <loc>https://www.beneathabstraction.com/tags/</loc>
     <lastmod>2025-11-15T13:49:48+10:00</lastmod>
   </url><url>
     <loc>https://www.beneathabstraction.com/tags/ai/</loc>

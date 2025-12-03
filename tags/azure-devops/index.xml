@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Azure DevOps on Beneath Abstraction</title>
+    <link>https://www.beneathabstraction.com/tags/azure-devops/</link>
+    <description>Recent content in Azure DevOps on Beneath Abstraction</description>
+    <image>
+      <title>Beneath Abstraction</title>
+      <url>https://www.beneathabstraction.com/images/logo.png</url>
+      <link>https://www.beneathabstraction.com/images/logo.png</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 03 Dec 2025 17:39:11 +1100</lastBuildDate>
+    <atom:link href="https://www.beneathabstraction.com/tags/azure-devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring File-Based C# Scripts in Azure DevOps Pipelines</title>
+      <link>https://www.beneathabstraction.com/post/file-based-apps-dotnet-10/</link>
+      <pubDate>Wed, 03 Dec 2025 17:39:11 +1100</pubDate>
+      <guid>https://www.beneathabstraction.com/post/file-based-apps-dotnet-10/</guid>
+      <description>&lt;p&gt;What if you could replace your Bash or PowerShell scripts with C#? With .NET 10&amp;rsquo;s &lt;strong&gt;File-Based Apps&lt;/strong&gt;, you can run a &lt;code&gt;.cs&lt;/code&gt; file directly—no project files, no build step.&lt;/p&gt;
+&lt;p&gt;In this post, we&amp;rsquo;ll explore how to use C# scripts in Azure DevOps pipelines, using a real example: deploying an AI agent with a single &lt;code&gt;.cs&lt;/code&gt; file.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-c-for-pipeline-scripts&#34;&gt;Why C# for Pipeline Scripts?&lt;/h2&gt;
+&lt;p&gt;Pipeline scripts are typically written in Bash or PowerShell. But what if you already know C#? With .NET 10&amp;rsquo;s file-based apps, you can now use C# as a scripting language—similar to how Node.js or Python work.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
