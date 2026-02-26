@@ -9,7 +9,7 @@
       <url>https://www.beneathabstraction.com/images/logo.png</url>
       <link>https://www.beneathabstraction.com/images/logo.png</link>
     </image>
-    <generator>Hugo -- 0.152.2</generator>
+    <generator>Hugo -- 0.157.0</generator>
     <language>en</language>
     <lastBuildDate>Wed, 03 Dec 2025 17:39:11 +1100</lastBuildDate>
     <atom:link href="https://www.beneathabstraction.com/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,8 @@
       <link>https://www.beneathabstraction.com/post/file-based-apps-dotnet-10/</link>
       <pubDate>Wed, 03 Dec 2025 17:39:11 +1100</pubDate>
       <guid>https://www.beneathabstraction.com/post/file-based-apps-dotnet-10/</guid>
-      <description>&lt;p&gt;What if you could replace your Bash or PowerShell scripts with C#? With .NET 10&amp;rsquo;s &lt;strong&gt;File-Based Apps&lt;/strong&gt;, you can run a &lt;code&gt;.cs&lt;/code&gt; file directly—no project files, no build step.&lt;/p&gt;
+      <description>&lt;h1 id=&#34;exploring-file-based-c-scripts-in-azure-devops-pipelines&#34;&gt;Exploring File-Based C# Scripts in Azure DevOps Pipelines&lt;/h1&gt;
+&lt;p&gt;What if you could replace your Bash or PowerShell scripts with C#? With .NET 10&amp;rsquo;s &lt;strong&gt;File-Based Apps&lt;/strong&gt;, you can run a &lt;code&gt;.cs&lt;/code&gt; file directly—no project files, no build step.&lt;/p&gt;
 &lt;p&gt;In this post, we&amp;rsquo;ll explore how to use C# scripts in Azure DevOps pipelines, using a real example: deploying an AI agent with a single &lt;code&gt;.cs&lt;/code&gt; file.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;why-c-for-pipeline-scripts&#34;&gt;Why C# for Pipeline Scripts?&lt;/h2&gt;
