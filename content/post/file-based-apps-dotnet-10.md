@@ -5,6 +5,8 @@ draft: false
 tags: ["dotnet", "c#14", "dotnet10","Azure DevOps"]
 ---
 
+# Exploring File-Based C# Scripts in Azure DevOps Pipelines
+
 What if you could replace your Bash or PowerShell scripts with C#? With .NET 10's **File-Based Apps**, you can run a `.cs` file directly—no project files, no build step.
 
 In this post, we'll explore how to use C# scripts in Azure DevOps pipelines, using a real example: deploying an AI agent with a single `.cs` file.
